@@ -1,24 +1,24 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { useState } from "react";
 import { observer } from "mobx-react";
-// plane imports
-import { useTranslation } from "@plane/i18n";
-import type { TIssue, TIssueServiceType } from "@plane/types";
-import { EIssueServiceType } from "@plane/types";
-import { Collapsible } from "@plane/ui";
+// taskflow imports
+import { useTranslation } from "@taskflow/i18n";
+import type { TIssue, TIssueServiceType } from "@taskflow/types";
+import { EIssueServiceType } from "@taskflow/types";
+import { Collapsible } from "@taskflow/ui";
 // components
 import { CreateUpdateIssueModal } from "@/components/issues/issue-modal/modal";
 // hooks
 import { useIssueDetail } from "@/hooks/store/use-issue-detail";
-// Plane-web
-import { CreateUpdateEpicModal } from "@/plane-web/components/epics/epic-modal";
-import { useTimeLineRelationOptions } from "@/plane-web/components/relations";
-import type { TIssueRelationTypes } from "@/plane-web/types";
+// Taskflow-web
+import { CreateUpdateEpicModal } from "@/taskflow-web/components/epics/epic-modal";
+import { useTimeLineRelationOptions } from "@/taskflow-web/components/relations";
+import type { TIssueRelationTypes } from "@/taskflow-web/types";
 // helper
 import { DeleteIssueModal } from "../../delete-issue-modal";
 import { RelationIssueList } from "../../relations/issue-list";
@@ -43,7 +43,7 @@ export type TRelationObject = {
 
 export const RelationsCollapsibleContent = observer(function RelationsCollapsibleContent(props: Props) {
   const { workspaceSlug, issueId, disabled = false, issueServiceType = EIssueServiceType.ISSUES } = props;
-  // plane hooks
+  // taskflow hooks
   const { t } = useTranslation();
   // state
   const [issueCrudState, setIssueCrudState] = useState<{

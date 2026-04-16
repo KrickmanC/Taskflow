@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -18,14 +18,14 @@ import {
   UserPlus2,
   Users,
 } from "lucide-react";
-// plane imports
-import { EUserPermissionsLevel } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { LinkIcon, TrashIcon, ContrastIcon, DiceIcon, DoubleCircleIcon } from "@plane/propel/icons";
-import { setToast, TOAST_TYPE } from "@plane/propel/toast";
-import type { ICycle, IIssueLabel, IModule, TIssue, TIssuePriorities } from "@plane/types";
-import { EIssueServiceType, EUserPermissions } from "@plane/types";
-import { copyTextToClipboard } from "@plane/utils";
+// taskflow imports
+import { EUserPermissionsLevel } from "@taskflow/constants";
+import { useTranslation } from "@taskflow/i18n";
+import { LinkIcon, TrashIcon, ContrastIcon, DiceIcon, DoubleCircleIcon } from "@taskflow/propel/icons";
+import { setToast, TOAST_TYPE } from "@taskflow/propel/toast";
+import type { ICycle, IIssueLabel, IModule, TIssue, TIssuePriorities } from "@taskflow/types";
+import { EIssueServiceType, EUserPermissions } from "@taskflow/types";
+import { copyTextToClipboard } from "@taskflow/utils";
 // components
 import type { TPowerKCommandConfig } from "@/components/power-k/core/types";
 // hooks

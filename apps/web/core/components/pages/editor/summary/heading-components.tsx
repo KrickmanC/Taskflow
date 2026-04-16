@@ -1,12 +1,12 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
-// plane imports
-import type { IMarking } from "@plane/editor";
-import { cn } from "@plane/utils";
+// taskflow imports
+import type { IMarking } from "@taskflow/editor";
+import { cn } from "@taskflow/utils";
 
 export type THeadingComponentProps = {
   marking: IMarking;

@@ -1,20 +1,20 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import React from "react";
-// plane imports
-import { LiteTextEditorWithRef } from "@plane/editor";
-import type { EditorRefApi, ILiteTextEditorProps, TFileHandler } from "@plane/editor";
-import type { MakeOptional } from "@plane/types";
-import { cn, isCommentEmpty } from "@plane/utils";
+// taskflow imports
+import { LiteTextEditorWithRef } from "@taskflow/editor";
+import type { EditorRefApi, ILiteTextEditorProps, TFileHandler } from "@taskflow/editor";
+import type { MakeOptional } from "@taskflow/types";
+import { cn, isCommentEmpty } from "@taskflow/utils";
 // helpers
 import { getEditorFileHandlers } from "@/helpers/editor.helper";
 // hooks
 import { useParseEditorContent } from "@/hooks/use-parse-editor-content";
-// plane web imports
+// taskflow web imports
 import { useEditorFlagging } from "@/hooks/use-editor-flagging";
 // local imports
 import { EditorMentionsRoot } from "./embeds/mentions";

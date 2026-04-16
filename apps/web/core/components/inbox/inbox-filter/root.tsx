@@ -1,14 +1,14 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { ListFilter } from "lucide-react";
-import { getButtonStyling } from "@plane/propel/button";
-// plane imports
-import { ChevronDownIcon } from "@plane/propel/icons";
-import { cn } from "@plane/utils";
+import { getButtonStyling } from "@taskflow/propel/button";
+// taskflow imports
+import { ChevronDownIcon } from "@taskflow/propel/icons";
+import { cn } from "@taskflow/utils";
 // components
 import { FiltersDropdown } from "@/components/issues/issue-layouts/filters";
 // hooks

@@ -1,17 +1,17 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { useEffect } from "react";
 import { observer } from "mobx-react";
-// plane imports
-import type { EditorRefApi } from "@plane/editor";
-import { EFileAssetType } from "@plane/types";
-import type { TNameDescriptionLoader } from "@plane/types";
+// taskflow imports
+import type { EditorRefApi } from "@taskflow/editor";
+import { EFileAssetType } from "@taskflow/types";
+import type { TNameDescriptionLoader } from "@taskflow/types";
 // components
-import { getTextContent } from "@plane/utils";
+import { getTextContent } from "@taskflow/utils";
 // components
 import { DescriptionVersionsRoot } from "@/components/core/description-versions";
 import { DescriptionInput } from "@/components/editor/rich-text/description-input";
@@ -21,11 +21,11 @@ import { useMember } from "@/hooks/store/use-member";
 import { useProject } from "@/hooks/store/use-project";
 import { useUser } from "@/hooks/store/user";
 import useReloadConfirmations from "@/hooks/use-reload-confirmation";
-// plane web components
-import { DeDupeIssuePopoverRoot } from "@/plane-web/components/de-dupe/duplicate-popover";
-import { IssueTypeSwitcher } from "@/plane-web/components/issues/issue-details/issue-type-switcher";
-// plane web hooks
-import { useDebouncedDuplicateIssues } from "@/plane-web/hooks/use-debounced-duplicate-issues";
+// taskflow web components
+import { DeDupeIssuePopoverRoot } from "@/taskflow-web/components/de-dupe/duplicate-popover";
+import { IssueTypeSwitcher } from "@/taskflow-web/components/issues/issue-details/issue-type-switcher";
+// taskflow web hooks
+import { useDebouncedDuplicateIssues } from "@/taskflow-web/hooks/use-debounced-duplicate-issues";
 // services
 import { WorkItemVersionService } from "@/services/issue";
 // local components

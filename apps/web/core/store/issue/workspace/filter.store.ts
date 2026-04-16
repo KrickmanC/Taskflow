@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -7,9 +7,9 @@
 import { isEmpty, set } from "lodash-es";
 import { action, computed, makeObservable, observable, runInAction } from "mobx";
 import { computedFn } from "mobx-utils";
-// plane imports
-import type { TSupportedFilterTypeForUpdate } from "@plane/constants";
-import { EIssueFilterType } from "@plane/constants";
+// taskflow imports
+import type { TSupportedFilterTypeForUpdate } from "@taskflow/constants";
+import { EIssueFilterType } from "@taskflow/constants";
 import type {
   IIssueDisplayFilterOptions,
   IIssueDisplayProperties,
@@ -20,9 +20,9 @@ import type {
   IssuePaginationOptions,
   TWorkItemFilterExpression,
   TSupportedFilterForUpdate,
-} from "@plane/types";
-import { EIssuesStoreType, EIssueLayoutTypes, STATIC_VIEW_TYPES } from "@plane/types";
-import { handleIssueQueryParamsByLayout } from "@plane/utils";
+} from "@taskflow/types";
+import { EIssuesStoreType, EIssueLayoutTypes, STATIC_VIEW_TYPES } from "@taskflow/types";
+import { handleIssueQueryParamsByLayout } from "@taskflow/utils";
 // services
 import { WorkspaceService } from "@/services/workspace.service";
 // local imports

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -9,17 +9,17 @@ import { isEmpty } from "lodash-es";
 import { observer } from "mobx-react";
 import { useSearchParams } from "next/navigation";
 import { Disclosure, Transition } from "@headlessui/react";
-// plane imports
-import { useTranslation } from "@plane/i18n";
-import { ChevronUpIcon, ChevronDownIcon } from "@plane/propel/icons";
-import type { ICycle, TCyclePlotType, TProgressSnapshot } from "@plane/types";
-import { EIssuesStoreType } from "@plane/types";
-import { getDate } from "@plane/utils";
+// taskflow imports
+import { useTranslation } from "@taskflow/i18n";
+import { ChevronUpIcon, ChevronDownIcon } from "@taskflow/propel/icons";
+import type { ICycle, TCyclePlotType, TProgressSnapshot } from "@taskflow/types";
+import { EIssuesStoreType } from "@taskflow/types";
+import { getDate } from "@taskflow/utils";
 // hooks
 import { useCycle } from "@/hooks/store/use-cycle";
-// plane web components
+// taskflow web components
 import { useWorkItemFilters } from "@/hooks/store/work-item-filters/use-work-item-filters";
-import { SidebarChartRoot } from "@/plane-web/components/cycles";
+import { SidebarChartRoot } from "@/taskflow-web/components/cycles";
 // local imports
 import { CycleProgressStats } from "./progress-stats";
 
@@ -63,7 +63,7 @@ export const CycleAnalyticsProgress = observer(function CycleAnalyticsProgress(p
   // router
   const searchParams = useSearchParams();
   const peekCycle = searchParams.get("peekCycle") || undefined;
-  // plane hooks
+  // taskflow hooks
   const { t } = useTranslation();
   // store hooks
   const { getPlotTypeByCycleId, getEstimateTypeByCycleId, getCycleById } = useCycle();

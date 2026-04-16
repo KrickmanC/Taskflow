@@ -1,12 +1,12 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { sortBy } from "lodash-es";
-// plane imports
-import type { TProject, TProjectDisplayFilters, TProjectFilters, TProjectOrderByOptions } from "@plane/types";
+// taskflow imports
+import type { TProject, TProjectDisplayFilters, TProjectFilters, TProjectOrderByOptions } from "@taskflow/types";
 // local imports
 import { getDate } from "./datetime";
 import { satisfiesDateFilter } from "./filter";

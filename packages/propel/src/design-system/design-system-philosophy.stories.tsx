@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -195,7 +195,7 @@ export const ModalException: Story = {
   render: () => (
     <DemoRoot>
       <Info title="✅ Modal Exception Pattern">
-        Modals exist on a <strong>different plane</strong>, so they can use surfaces even when there&apos;s a surface
+        Modals exist on a <strong>different taskflow</strong>, so they can use surfaces even when there&apos;s a surface
         below
       </Info>
 
@@ -210,7 +210,7 @@ export const ModalException: Story = {
           <h4 className="mb-3 font-semibold text-primary">Modal Dialog</h4>
           <p className="mb-4 text-13 text-secondary">
             This modal uses bg-surface-1 even though the page below also uses bg-surface-1. This is allowed because
-            they&apos;re on different planes.
+            they&apos;re on different taskflows.
           </p>
 
           <Layer className="rounded-md bg-layer-1 p-3 hover:bg-layer-1-hover">
@@ -383,7 +383,7 @@ export const CommonMistakes: Story = {
 
       <div className="space-y-6">
         <div className="rounded-md border-2 border-danger-strong p-4">
-          <h4 className="mb-2 font-semibold text-primary">❌ Mistake 1: Nested Surfaces (Same Plane)</h4>
+          <h4 className="mb-2 font-semibold text-primary">❌ Mistake 1: Nested Surfaces (Same Taskflow)</h4>
           <Surface>
             <p className="mb-2 text-13 text-secondary">Surface 1</p>
             <div className="rounded-md bg-surface-2 p-4">

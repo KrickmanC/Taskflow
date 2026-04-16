@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -9,15 +9,15 @@ import { observer } from "mobx-react";
 import { useParams } from "next/navigation";
 import { FormProvider, useForm } from "react-hook-form";
 // editor
-import { ETabIndices, DEFAULT_WORK_ITEM_FORM_VALUES } from "@plane/constants";
-import type { EditorRefApi } from "@plane/editor";
+import { ETabIndices, DEFAULT_WORK_ITEM_FORM_VALUES } from "@taskflow/constants";
+import type { EditorRefApi } from "@taskflow/editor";
 // i18n
-import { useTranslation } from "@plane/i18n";
-import { Button } from "@plane/propel/button";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import type { TIssue, TWorkspaceDraftIssue } from "@plane/types";
+import { useTranslation } from "@taskflow/i18n";
+import { Button } from "@taskflow/propel/button";
+import { TOAST_TYPE, setToast } from "@taskflow/propel/toast";
+import type { TIssue, TWorkspaceDraftIssue } from "@taskflow/types";
 // hooks
-import { ToggleSwitch } from "@plane/ui";
+import { ToggleSwitch } from "@taskflow/ui";
 import {
   convertWorkItemDataToSearchResponse,
   getUpdateFormDataForReset,
@@ -25,7 +25,7 @@ import {
   getTextContent,
   getChangedIssuefields,
   getTabIndex,
-} from "@plane/utils";
+} from "@taskflow/utils";
 // components
 import {
   IssueDefaultProperties,
@@ -43,12 +43,12 @@ import { useProjectState } from "@/hooks/store/use-project-state";
 import { useWorkspaceDraftIssues } from "@/hooks/store/workspace-draft";
 import { usePlatformOS } from "@/hooks/use-platform-os";
 import { useProjectIssueProperties } from "@/hooks/use-project-issue-properties";
-// plane web imports
-import { DeDupeButtonRoot } from "@/plane-web/components/de-dupe/de-dupe-button";
-import { DuplicateModalRoot } from "@/plane-web/components/de-dupe/duplicate-modal";
-import { IssueTypeSelect, WorkItemTemplateSelect } from "@/plane-web/components/issues/issue-modal";
-import { WorkItemModalAdditionalProperties } from "@/plane-web/components/issues/issue-modal/modal-additional-properties";
-import { useDebouncedDuplicateIssues } from "@/plane-web/hooks/use-debounced-duplicate-issues";
+// taskflow web imports
+import { DeDupeButtonRoot } from "@/taskflow-web/components/de-dupe/de-dupe-button";
+import { DuplicateModalRoot } from "@/taskflow-web/components/de-dupe/duplicate-modal";
+import { IssueTypeSelect, WorkItemTemplateSelect } from "@/taskflow-web/components/issues/issue-modal";
+import { WorkItemModalAdditionalProperties } from "@/taskflow-web/components/issues/issue-modal/modal-additional-properties";
+import { useDebouncedDuplicateIssues } from "@/taskflow-web/hooks/use-debounced-duplicate-issues";
 
 export interface IssueFormProps {
   data?: Partial<TIssue>;

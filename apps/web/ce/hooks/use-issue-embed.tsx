@@ -1,15 +1,15 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 // editor
-import type { TEmbedConfig } from "@plane/editor";
-// plane types
-import type { TSearchEntityRequestPayload, TSearchResponse } from "@plane/types";
-// plane web components
-import { IssueEmbedUpgradeCard } from "@/plane-web/components/pages";
+import type { TEmbedConfig } from "@taskflow/editor";
+// taskflow types
+import type { TSearchEntityRequestPayload, TSearchResponse } from "@taskflow/types";
+// taskflow web components
+import { IssueEmbedUpgradeCard } from "@/taskflow-web/components/pages";
 
 export type TIssueEmbedHookProps = {
   fetchEmbedSuggestions?: (payload: TSearchEntityRequestPayload) => Promise<TSearchResponse>;

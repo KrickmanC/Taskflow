@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -7,9 +7,9 @@
 import { Fragment, useState } from "react";
 import { usePopper } from "react-popper";
 import { Popover } from "@headlessui/react";
-// plane imports
-import { useTranslation } from "@plane/i18n";
-import { CloseIcon } from "@plane/propel/icons";
+// taskflow imports
+import { useTranslation } from "@taskflow/i18n";
+import { CloseIcon } from "@taskflow/propel/icons";
 
 export function ForgotPasswordPopover() {
   // popper-js refs
@@ -27,7 +27,7 @@ export function ForgotPasswordPopover() {
       },
     ],
   });
-  // plane hooks
+  // taskflow hooks
   const { t } = useTranslation();
 
   return (

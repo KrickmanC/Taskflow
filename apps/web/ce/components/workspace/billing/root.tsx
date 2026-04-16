@@ -1,16 +1,16 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { useState } from "react";
 import { observer } from "mobx-react";
-// plane imports
-import { DEFAULT_PRODUCT_BILLING_FREQUENCY, SUBSCRIPTION_WITH_BILLING_FREQUENCY } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import type { TBillingFrequency, TProductBillingFrequency } from "@plane/types";
-import { EProductSubscriptionEnum } from "@plane/types";
+// taskflow imports
+import { DEFAULT_PRODUCT_BILLING_FREQUENCY, SUBSCRIPTION_WITH_BILLING_FREQUENCY } from "@taskflow/constants";
+import { useTranslation } from "@taskflow/i18n";
+import type { TBillingFrequency, TProductBillingFrequency } from "@taskflow/types";
+import { EProductSubscriptionEnum } from "@taskflow/types";
 // components
 import { SettingsBoxedControlItem } from "@/components/settings/boxed-control-item";
 import { SettingsHeading } from "@/components/settings/heading";

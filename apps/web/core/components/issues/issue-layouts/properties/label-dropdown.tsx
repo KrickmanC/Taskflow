@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -10,17 +10,17 @@ import { useParams } from "next/navigation";
 import { usePopper } from "react-popper";
 import { Loader } from "lucide-react";
 import { Combobox } from "@headlessui/react";
-// plane imports
-import { EUserPermissionsLevel, getRandomLabelColor } from "@plane/constants";
-import { useOutsideClickDetector } from "@plane/hooks";
-import { useTranslation } from "@plane/i18n";
-import { CheckIcon, SearchIcon, ChevronDownIcon } from "@plane/propel/icons";
+// taskflow imports
+import { EUserPermissionsLevel, getRandomLabelColor } from "@taskflow/constants";
+import { useOutsideClickDetector } from "@taskflow/hooks";
+import { useTranslation } from "@taskflow/i18n";
+import { CheckIcon, SearchIcon, ChevronDownIcon } from "@taskflow/propel/icons";
 // types
-import type { IIssueLabel } from "@plane/types";
-import { EUserProjectRoles } from "@plane/types";
+import type { IIssueLabel } from "@taskflow/types";
+import { EUserProjectRoles } from "@taskflow/types";
 // components
-import { ComboDropDown } from "@plane/ui";
-import { sortBySelectedFirst } from "@plane/utils";
+import { ComboDropDown } from "@taskflow/ui";
+import { sortBySelectedFirst } from "@taskflow/utils";
 // hooks
 import { useLabel } from "@/hooks/store/use-label";
 import { useUserPermissions } from "@/hooks/store/user";

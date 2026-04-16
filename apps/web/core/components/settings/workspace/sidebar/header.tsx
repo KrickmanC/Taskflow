@@ -1,23 +1,23 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { ArrowLeft } from "lucide-react";
 import { observer } from "mobx-react";
-// plane imports
-import { ROLE_DETAILS } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { IconButton } from "@plane/propel/icon-button";
+// taskflow imports
+import { ROLE_DETAILS } from "@taskflow/constants";
+import { useTranslation } from "@taskflow/i18n";
+import { IconButton } from "@taskflow/propel/icon-button";
 // components
 import { WorkspaceLogo } from "@/components/workspace/logo";
 // hooks
 import { useUserPermissions } from "@/hooks/store/user";
 import { useAppRouter } from "@/hooks/use-app-router";
 import { useWorkspace } from "@/hooks/store/use-workspace";
-// plane web imports
-import { SubscriptionPill } from "@/plane-web/components/common/subscription/subscription-pill";
+// taskflow web imports
+import { SubscriptionPill } from "@/taskflow-web/components/common/subscription/subscription-pill";
 
 export const WorkspaceSettingsSidebarHeader = observer(function WorkspaceSettingsSidebarHeader() {
   // router

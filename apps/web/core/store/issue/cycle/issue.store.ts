@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -7,8 +7,8 @@
 import { get, set, concat, uniq, update } from "lodash-es";
 import { action, observable, makeObservable, runInAction } from "mobx";
 import { computedFn } from "mobx-utils";
-// plane imports
-import { ALL_ISSUES } from "@plane/constants";
+// taskflow imports
+import { ALL_ISSUES } from "@taskflow/constants";
 import type {
   TIssue,
   TLoader,
@@ -16,9 +16,9 @@ import type {
   TIssuesResponse,
   ViewFlags,
   TBulkOperationsPayload,
-} from "@plane/types";
+} from "@taskflow/types";
 // helpers
-import { getDistributionPathsPostUpdate } from "@plane/utils";
+import { getDistributionPathsPostUpdate } from "@taskflow/utils";
 //local
 import { storage } from "@/lib/local-storage";
 import type { IBaseIssuesStore } from "../helpers/base-issues.store";

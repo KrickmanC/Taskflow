@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -8,11 +8,11 @@ import { useCallback, useMemo, useState } from "react";
 import { observer } from "mobx-react";
 import { useParams } from "next/navigation";
 import { GripVertical, X } from "lucide-react";
-// plane imports
-import { WORKSPACE_SIDEBAR_DYNAMIC_NAVIGATION_ITEMS_LINKS, EUserPermissionsLevel } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { Checkbox, EModalPosition, EModalWidth, ModalCore, Sortable } from "@plane/ui";
-import { cn } from "@plane/utils";
+// taskflow imports
+import { WORKSPACE_SIDEBAR_DYNAMIC_NAVIGATION_ITEMS_LINKS, EUserPermissionsLevel } from "@taskflow/constants";
+import { useTranslation } from "@taskflow/i18n";
+import { Checkbox, EModalPosition, EModalWidth, ModalCore, Sortable } from "@taskflow/ui";
+import { cn } from "@taskflow/utils";
 // hooks
 import { useUserPermissions } from "@/hooks/store/user";
 import {
@@ -21,7 +21,7 @@ import {
   useWorkspaceNavigationPreferences,
 } from "@/hooks/use-navigation-preferences";
 // helpers
-import { getSidebarNavigationItemIcon } from "@/plane-web/components/workspace/sidebar/helper";
+import { getSidebarNavigationItemIcon } from "@/taskflow-web/components/workspace/sidebar/helper";
 // types
 import type { TPersonalNavigationItemKey } from "@/types/navigation-preferences";
 

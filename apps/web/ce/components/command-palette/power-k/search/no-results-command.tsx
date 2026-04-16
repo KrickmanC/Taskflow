@@ -1,16 +1,16 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { Command } from "cmdk";
-import { useTranslation } from "@plane/i18n";
-import { SearchIcon } from "@plane/propel/icons";
-// plane imports
+import { useTranslation } from "@taskflow/i18n";
+import { SearchIcon } from "@taskflow/propel/icons";
+// taskflow imports
 // components
 import type { TPowerKContext } from "@/components/power-k/core/types";
-// plane web imports
+// taskflow web imports
 import { PowerKModalCommandItem } from "@/components/power-k/ui/modal/command-item";
 
 export type TPowerKModalNoSearchResultsCommandProps = {

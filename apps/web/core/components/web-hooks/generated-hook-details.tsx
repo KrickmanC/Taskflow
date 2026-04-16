@@ -1,14 +1,14 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 // components
 // ui
-import { useTranslation } from "@plane/i18n";
-import { Button } from "@plane/propel/button";
-import type { IWebhook } from "@plane/types";
+import { useTranslation } from "@taskflow/i18n";
+import { Button } from "@taskflow/propel/button";
+import type { IWebhook } from "@taskflow/types";
 // types
 import { WebhookSecretKey } from "./form";
 

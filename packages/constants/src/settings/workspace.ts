@@ -1,12 +1,12 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
-// plane imports
-import type { TWorkspaceSettingsItem, TWorkspaceSettingsTabs } from "@plane/types";
-import { EUserWorkspaceRoles } from "@plane/types";
+// taskflow imports
+import type { TWorkspaceSettingsItem, TWorkspaceSettingsTabs } from "@taskflow/types";
+import { EUserWorkspaceRoles } from "@taskflow/types";
 
 export enum WORKSPACE_SETTINGS_CATEGORY {
   ADMINISTRATION = "administration",

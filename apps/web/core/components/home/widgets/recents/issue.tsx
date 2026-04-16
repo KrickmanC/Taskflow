@@ -1,17 +1,17 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { observer } from "mobx-react";
-// plane types
-import { PriorityIcon, StateGroupIcon, WorkItemsIcon } from "@plane/propel/icons";
-import { Tooltip } from "@plane/propel/tooltip";
-import type { TActivityEntityData, TIssueEntityData } from "@plane/types";
-import { EIssueServiceType } from "@plane/types";
-// plane ui
-import { calculateTimeAgo, generateWorkItemLink } from "@plane/utils";
+// taskflow types
+import { PriorityIcon, StateGroupIcon, WorkItemsIcon } from "@taskflow/propel/icons";
+import { Tooltip } from "@taskflow/propel/tooltip";
+import type { TActivityEntityData, TIssueEntityData } from "@taskflow/types";
+import { EIssueServiceType } from "@taskflow/types";
+// taskflow ui
+import { calculateTimeAgo, generateWorkItemLink } from "@taskflow/utils";
 // components
 import { ListItem } from "@/components/core/list";
 import { MemberDropdown } from "@/components/dropdowns/member/dropdown";
@@ -20,8 +20,8 @@ import { MemberDropdown } from "@/components/dropdowns/member/dropdown";
 import { useIssueDetail } from "@/hooks/store/use-issue-detail";
 import { useProject } from "@/hooks/store/use-project";
 import { useProjectState } from "@/hooks/store/use-project-state";
-// plane web components
-import { IssueIdentifier } from "@/plane-web/components/issues/issue-details/issue-identifier";
+// taskflow web components
+import { IssueIdentifier } from "@/taskflow-web/components/issues/issue-details/issue-identifier";
 
 type BlockProps = {
   activity: TActivityEntityData;

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -7,17 +7,17 @@
 import type { MutableRefObject } from "react";
 import { Fragment, forwardRef, useRef, useState } from "react";
 import { observer } from "mobx-react";
-import { useTranslation } from "@plane/i18n";
-// plane types
+import { useTranslation } from "@taskflow/i18n";
+// taskflow types
 import type {
   IGroupByColumn,
   TIssueGroupByOptions,
   IIssueDisplayProperties,
   TPaginationData,
   TLoader,
-} from "@plane/types";
-// plane utils
-import { cn } from "@plane/utils";
+} from "@taskflow/types";
+// taskflow utils
+import { cn } from "@taskflow/utils";
 // hooks
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 //

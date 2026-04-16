@@ -1,13 +1,13 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { isEmpty } from "lodash-es";
 import { observer } from "mobx-react";
-// plane helpers
-import { EUserPermissions, EUserPermissionsLevel } from "@plane/constants";
+// taskflow helpers
+import { EUserPermissions, EUserPermissionsLevel } from "@taskflow/constants";
 // components
 import { SidebarWrapper } from "@/components/sidebar/sidebar-wrapper";
 import { SidebarFavoritesMenu } from "@/components/workspace/sidebar/favorites/favorites-menu";
@@ -17,8 +17,8 @@ import { SidebarMenuItems } from "@/components/workspace/sidebar/sidebar-menu-it
 // hooks
 import { useFavorite } from "@/hooks/store/use-favorite";
 import { useUserPermissions } from "@/hooks/store/user";
-// plane web components
-import { SidebarTeamsList } from "@/plane-web/components/workspace/sidebar/teams-sidebar-list";
+// taskflow web components
+import { SidebarTeamsList } from "@/taskflow-web/components/workspace/sidebar/teams-sidebar-list";
 
 export const AppSidebar = observer(function AppSidebar() {
   // store hooks

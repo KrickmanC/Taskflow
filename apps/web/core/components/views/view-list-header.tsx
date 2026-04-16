@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -8,18 +8,18 @@ import React, { useEffect, useRef, useState } from "react";
 import { observer } from "mobx-react";
 // icons
 import { ListFilter } from "lucide-react";
-import { useOutsideClickDetector } from "@plane/hooks";
-import { SearchIcon, CloseIcon } from "@plane/propel/icons";
-// plane helpers
+import { useOutsideClickDetector } from "@taskflow/hooks";
+import { SearchIcon, CloseIcon } from "@taskflow/propel/icons";
+// taskflow helpers
 // helpers
-import { cn } from "@plane/utils";
+import { cn } from "@taskflow/utils";
 // hooks
 import { useMember } from "@/hooks/store/use-member";
 import { useProjectView } from "@/hooks/store/use-project-view";
 import { FiltersDropdown } from "../issues/issue-layouts/filters";
 import { ViewFiltersSelection } from "./filters/filter-selection";
 import { ViewOrderByDropdown } from "./filters/order-by";
-import { IconButton } from "@plane/propel/icon-button";
+import { IconButton } from "@taskflow/propel/icon-button";
 
 export const ViewListHeader = observer(function ViewListHeader() {
   // states

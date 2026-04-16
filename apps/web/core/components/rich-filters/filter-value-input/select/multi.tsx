@@ -1,21 +1,21 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import React, { useState, useEffect, useMemo } from "react";
 import { observer } from "mobx-react";
-// plane imports
+// taskflow imports
 import type {
   SingleOrArray,
   IFilterOption,
   TFilterProperty,
   TMultiSelectFilterFieldConfig,
   TFilterConditionNodeForDisplay,
-} from "@plane/types";
-import { CustomSearchSelect } from "@plane/ui";
-import { toFilterArray, getFilterValueLength } from "@plane/utils";
+} from "@taskflow/types";
+import { CustomSearchSelect } from "@taskflow/ui";
+import { toFilterArray, getFilterValueLength } from "@taskflow/utils";
 // local imports
 import { SelectedOptionsDisplay } from "./selected-options-display";
 import { getCommonCustomSearchSelectProps, getFormattedOptions, loadOptions } from "./shared";

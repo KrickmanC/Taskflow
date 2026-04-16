@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -8,14 +8,14 @@ import { unset, set } from "lodash-es";
 import { makeObservable, observable, runInAction, action, reaction, computed } from "mobx";
 import { computedFn } from "mobx-utils";
 // types
-import { EUserPermissions } from "@plane/constants";
-import type { TPage, TPageFilters, TPageNavigationTabs } from "@plane/types";
-import { EUserProjectRoles } from "@plane/types";
+import { EUserPermissions } from "@taskflow/constants";
+import type { TPage, TPageFilters, TPageNavigationTabs } from "@taskflow/types";
+import { EUserProjectRoles } from "@taskflow/types";
 // helpers
-import { filterPagesByPageType, getPageName, orderPages, shouldFilterPage } from "@plane/utils";
-// plane web constants
-// plane web store
-import type { RootStore } from "@/plane-web/store/root.store";
+import { filterPagesByPageType, getPageName, orderPages, shouldFilterPage } from "@taskflow/utils";
+// taskflow web constants
+// taskflow web store
+import type { RootStore } from "@/taskflow-web/store/root.store";
 // services
 import { ProjectPageService } from "@/services/page";
 // store

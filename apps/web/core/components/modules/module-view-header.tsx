@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -8,17 +8,17 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 import { observer } from "mobx-react";
 import { useParams } from "next/navigation";
 import { ListFilter } from "lucide-react";
-// plane helpers
-import { MODULE_VIEW_LAYOUTS } from "@plane/constants";
-import { useOutsideClickDetector } from "@plane/hooks";
+// taskflow helpers
+import { MODULE_VIEW_LAYOUTS } from "@taskflow/constants";
+import { useOutsideClickDetector } from "@taskflow/hooks";
 // types
-import { useTranslation } from "@plane/i18n";
-import { SearchIcon, CloseIcon } from "@plane/propel/icons";
-import { Tooltip } from "@plane/propel/tooltip";
-import type { TModuleFilters } from "@plane/types";
+import { useTranslation } from "@taskflow/i18n";
+import { SearchIcon, CloseIcon } from "@taskflow/propel/icons";
+import { Tooltip } from "@taskflow/propel/tooltip";
+import type { TModuleFilters } from "@taskflow/types";
 // ui
-import { cn, calculateTotalFilters } from "@plane/utils";
-// plane utils
+import { cn, calculateTotalFilters } from "@taskflow/utils";
+// taskflow utils
 // components
 import { FiltersDropdown } from "@/components/issues/issue-layouts/filters";
 import { ModuleFiltersSelection, ModuleOrderByDropdown } from "@/components/modules/dropdowns";
@@ -29,7 +29,7 @@ import { useMember } from "@/hooks/store/use-member";
 import { useModuleFilter } from "@/hooks/store/use-module-filter";
 import { usePlatformOS } from "@/hooks/use-platform-os";
 import { ModuleLayoutIcon } from "./module-layout-icon";
-import { IconButton } from "@plane/propel/icon-button";
+import { IconButton } from "@taskflow/propel/icon-button";
 // i18n
 
 export const ModuleViewHeader = observer(function ModuleViewHeader() {

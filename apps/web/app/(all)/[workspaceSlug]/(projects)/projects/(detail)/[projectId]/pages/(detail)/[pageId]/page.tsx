@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -8,13 +8,13 @@ import { useCallback, useEffect, useMemo } from "react";
 import { observer } from "mobx-react";
 import Link from "next/link";
 import useSWR from "swr";
-// plane types
-import { getButtonStyling } from "@plane/propel/button";
-import type { TSearchEntityRequestPayload, TWebhookConnectionQueryParams } from "@plane/types";
-import { EFileAssetType } from "@plane/types";
-// plane ui
-// plane utils
-import { cn } from "@plane/utils";
+// taskflow types
+import { getButtonStyling } from "@taskflow/propel/button";
+import type { TSearchEntityRequestPayload, TWebhookConnectionQueryParams } from "@taskflow/types";
+import { EFileAssetType } from "@taskflow/types";
+// taskflow ui
+// taskflow utils
+import { cn } from "@taskflow/utils";
 // components
 import { LogoSpinner } from "@/components/common/logo-spinner";
 import { PageHead } from "@/components/core/page-title";
@@ -26,9 +26,9 @@ import { useEditorConfig } from "@/hooks/editor";
 import { useEditorAsset } from "@/hooks/store/use-editor-asset";
 import { useWorkspace } from "@/hooks/store/use-workspace";
 import { useAppRouter } from "@/hooks/use-app-router";
-// plane web hooks
-import { EPageStoreType, usePage, usePageStore } from "@/plane-web/hooks/store";
-// plane web services
+// taskflow web hooks
+import { EPageStoreType, usePage, usePageStore } from "@/taskflow-web/hooks/store";
+// taskflow web services
 import { WorkspaceService } from "@/services/workspace.service";
 // services
 import { ProjectPageService, ProjectPageVersionService } from "@/services/page";

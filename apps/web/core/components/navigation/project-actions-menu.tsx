@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -7,11 +7,11 @@
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router";
 import { LogOut, MoreHorizontal, Settings, Share2, ArchiveIcon } from "lucide-react";
-// plane imports
-import { MEMBER_TRACKER_ELEMENTS } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { LinkIcon } from "@plane/propel/icons";
-import { CustomMenu } from "@plane/ui";
+// taskflow imports
+import { MEMBER_TRACKER_ELEMENTS } from "@taskflow/constants";
+import { useTranslation } from "@taskflow/i18n";
+import { LinkIcon } from "@taskflow/propel/icons";
+import { CustomMenu } from "@taskflow/ui";
 
 type Props = {
   workspaceSlug: string;

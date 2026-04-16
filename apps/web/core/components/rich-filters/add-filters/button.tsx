@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -7,13 +7,13 @@
 import React from "react";
 import { observer } from "mobx-react";
 import { ListFilter } from "lucide-react";
-// plane imports
-import type { TButtonSize, TButtonVariant } from "@plane/propel/button";
-import { getButtonStyling } from "@plane/propel/button";
-import type { IFilterInstance } from "@plane/shared-state";
-import type { TExternalFilter, TFilterProperty, TSupportedOperators } from "@plane/types";
-import { LOGICAL_OPERATOR } from "@plane/types";
-import { cn } from "@plane/utils";
+// taskflow imports
+import type { TButtonSize, TButtonVariant } from "@taskflow/propel/button";
+import { getButtonStyling } from "@taskflow/propel/button";
+import type { IFilterInstance } from "@taskflow/shared-state";
+import type { TExternalFilter, TFilterProperty, TSupportedOperators } from "@taskflow/types";
+import { LOGICAL_OPERATOR } from "@taskflow/types";
+import { cn } from "@taskflow/utils";
 // local imports
 import { AddFilterDropdown } from "./dropdown";
 

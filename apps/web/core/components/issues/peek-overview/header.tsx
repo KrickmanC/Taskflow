@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -8,15 +8,15 @@ import { useRef } from "react";
 import { observer } from "mobx-react";
 import Link from "next/link";
 import { MoveDiagonal, MoveRight } from "lucide-react";
-// plane imports
-import { useTranslation } from "@plane/i18n";
-import { CenterPanelIcon, CopyLinkIcon, FullScreenPanelIcon, SidePanelIcon } from "@plane/propel/icons";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import { Tooltip } from "@plane/propel/tooltip";
-import type { TNameDescriptionLoader } from "@plane/types";
-import { EIssuesStoreType } from "@plane/types";
-import { CustomSelect } from "@plane/ui";
-import { copyUrlToClipboard, generateWorkItemLink } from "@plane/utils";
+// taskflow imports
+import { useTranslation } from "@taskflow/i18n";
+import { CenterPanelIcon, CopyLinkIcon, FullScreenPanelIcon, SidePanelIcon } from "@taskflow/propel/icons";
+import { TOAST_TYPE, setToast } from "@taskflow/propel/toast";
+import { Tooltip } from "@taskflow/propel/tooltip";
+import type { TNameDescriptionLoader } from "@taskflow/types";
+import { EIssuesStoreType } from "@taskflow/types";
+import { CustomSelect } from "@taskflow/ui";
+import { copyUrlToClipboard, generateWorkItemLink } from "@taskflow/utils";
 // hooks
 import { useIssueDetail } from "@/hooks/store/use-issue-detail";
 import { useIssues } from "@/hooks/store/use-issues";
@@ -27,7 +27,7 @@ import { usePlatformOS } from "@/hooks/use-platform-os";
 import { IssueSubscription } from "../issue-detail/subscription";
 import { WorkItemDetailQuickActions } from "../issue-layouts/quick-action-dropdowns";
 import { NameDescriptionUpdateStatus } from "../issue-update-status";
-import { IconButton } from "@plane/propel/icon-button";
+import { IconButton } from "@taskflow/propel/icon-button";
 
 export type TPeekModes = "side-peek" | "modal" | "full-screen";
 

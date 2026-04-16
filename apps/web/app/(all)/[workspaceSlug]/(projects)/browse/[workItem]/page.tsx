@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -8,11 +8,11 @@ import { useEffect } from "react";
 import { observer } from "mobx-react";
 import { useTheme } from "next-themes";
 import useSWR from "swr";
-// plane imports
-import { useTranslation } from "@plane/i18n";
-import type { TIssue } from "@plane/types";
-import { EIssueServiceType } from "@plane/types";
-import { Loader } from "@plane/ui";
+// taskflow imports
+import { useTranslation } from "@taskflow/i18n";
+import type { TIssue } from "@taskflow/types";
+import { EIssueServiceType } from "@taskflow/types";
+import { Loader } from "@taskflow/ui";
 // assets
 import emptyIssueDark from "@/app/assets/empty-state/search/issues-dark.webp?url";
 import emptyIssueLight from "@/app/assets/empty-state/search/issues-light.webp?url";
@@ -26,9 +26,9 @@ import { useProject } from "@/hooks/store/use-project";
 import { useAppRouter } from "@/hooks/use-app-router";
 // layouts
 import { ProjectAuthWrapper } from "@/layouts/auth-layout/project-wrapper";
-// plane web imports
-import { useWorkItemProperties } from "@/plane-web/hooks/use-issue-properties";
-import { WorkItemDetailRoot } from "@/plane-web/components/browse/workItem-detail";
+// taskflow web imports
+import { useWorkItemProperties } from "@/taskflow-web/hooks/use-issue-properties";
+import { WorkItemDetailRoot } from "@/taskflow-web/components/browse/workItem-detail";
 
 import type { Route } from "./+types/page";
 

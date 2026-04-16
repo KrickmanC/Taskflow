@@ -1,18 +1,18 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { cloneDeep, set } from "lodash-es";
 import { action, makeObservable, observable, runInAction, computed } from "mobx";
-// plane imports
-import { EUserPermissions, API_BASE_URL } from "@plane/constants";
-import type { IUser, TUserPermissions } from "@plane/types";
-// plane web imports
-import type { RootStore } from "@/plane-web/store/root.store";
-import type { IUserPermissionStore } from "@/plane-web/store/user/permission.store";
-import { UserPermissionStore } from "@/plane-web/store/user/permission.store";
+// taskflow imports
+import { EUserPermissions, API_BASE_URL } from "@taskflow/constants";
+import type { IUser, TUserPermissions } from "@taskflow/types";
+// taskflow web imports
+import type { RootStore } from "@/taskflow-web/store/root.store";
+import type { IUserPermissionStore } from "@/taskflow-web/store/user/permission.store";
+import { UserPermissionStore } from "@/taskflow-web/store/user/permission.store";
 // services
 import { AuthService } from "@/services/auth.service";
 import { UserService } from "@/services/user.service";

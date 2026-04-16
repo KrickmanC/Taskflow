@@ -1,14 +1,14 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { memo } from "react";
 import { ArrowUpWideNarrow, ArrowDownWideNarrow } from "lucide-react";
-// plane package imports
-import { E_SORT_ORDER } from "@plane/constants";
-import { IconButton } from "@plane/propel/icon-button";
+// taskflow package imports
+import { E_SORT_ORDER } from "@taskflow/constants";
+import { IconButton } from "@taskflow/propel/icon-button";
 
 export type TActivitySortRoot = {
   sortOrder: E_SORT_ORDER;

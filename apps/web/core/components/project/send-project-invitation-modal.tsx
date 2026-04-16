@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -7,15 +7,15 @@
 import React, { useEffect } from "react";
 import { observer } from "mobx-react";
 import { useForm, Controller, useFieldArray } from "react-hook-form";
-// plane imports
-import { ROLE, EUserPermissions } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { Button } from "@plane/propel/button";
-import { PlusIcon, CloseIcon, ChevronDownIcon } from "@plane/propel/icons";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import { Avatar, CustomSelect, CustomSearchSelect, EModalPosition, EModalWidth, ModalCore } from "@plane/ui";
+// taskflow imports
+import { ROLE, EUserPermissions } from "@taskflow/constants";
+import { useTranslation } from "@taskflow/i18n";
+import { Button } from "@taskflow/propel/button";
+import { PlusIcon, CloseIcon, ChevronDownIcon } from "@taskflow/propel/icons";
+import { TOAST_TYPE, setToast } from "@taskflow/propel/toast";
+import { Avatar, CustomSelect, CustomSearchSelect, EModalPosition, EModalWidth, ModalCore } from "@taskflow/ui";
 // helpers
-import { getFileURL } from "@plane/utils";
+import { getFileURL } from "@taskflow/utils";
 // hooks
 import { useMember } from "@/hooks/store/use-member";
 import { useUserPermissions } from "@/hooks/store/user";
@@ -48,7 +48,7 @@ const defaultValues: FormValues = {
 
 export const SendProjectInvitationModal = observer(function SendProjectInvitationModal(props: Props) {
   const { isOpen, onClose, onSuccess, projectId, workspaceSlug } = props;
-  // plane hooks
+  // taskflow hooks
   const { t } = useTranslation();
   // store hooks
   const { getProjectRoleByWorkspaceSlugAndProjectId } = useUserPermissions();

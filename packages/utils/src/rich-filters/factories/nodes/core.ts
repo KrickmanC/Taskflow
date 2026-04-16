@@ -1,11 +1,11 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { v4 as uuidv4 } from "uuid";
-// plane imports
+// taskflow imports
 import type {
   TFilterAndGroupNode,
   TFilterConditionNode,
@@ -13,8 +13,8 @@ import type {
   TFilterExpression,
   TFilterProperty,
   TFilterValue,
-} from "@plane/types";
-import { FILTER_NODE_TYPE, LOGICAL_OPERATOR } from "@plane/types";
+} from "@taskflow/types";
+import { FILTER_NODE_TYPE, LOGICAL_OPERATOR } from "@taskflow/types";
 
 /**
  * Creates a condition node with a unique ID.

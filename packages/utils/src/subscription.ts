@@ -1,13 +1,13 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { orderBy } from "lodash-es";
-// plane imports
-import type { IPaymentProduct, TProductSubscriptionType, TSubscriptionPrice } from "@plane/types";
-import { EProductSubscriptionEnum } from "@plane/types";
+// taskflow imports
+import type { IPaymentProduct, TProductSubscriptionType, TSubscriptionPrice } from "@taskflow/types";
+import { EProductSubscriptionEnum } from "@taskflow/types";
 
 /**
  * Calculates the yearly discount percentage when switching from monthly to yearly billing

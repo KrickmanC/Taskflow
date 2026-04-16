@@ -1,20 +1,20 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { observer } from "mobx-react";
 import { ArrowDownWideNarrow, ArrowUpWideNarrow } from "lucide-react";
-import { INBOX_ISSUE_ORDER_BY_OPTIONS, INBOX_ISSUE_SORT_BY_OPTIONS } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { getButtonStyling } from "@plane/propel/button";
-import { CheckIcon, ChevronDownIcon } from "@plane/propel/icons";
-import type { TInboxIssueSortingOrderByKeys, TInboxIssueSortingSortByKeys } from "@plane/types";
-import { CustomMenu } from "@plane/ui";
+import { INBOX_ISSUE_ORDER_BY_OPTIONS, INBOX_ISSUE_SORT_BY_OPTIONS } from "@taskflow/constants";
+import { useTranslation } from "@taskflow/i18n";
+import { getButtonStyling } from "@taskflow/propel/button";
+import { CheckIcon, ChevronDownIcon } from "@taskflow/propel/icons";
+import type { TInboxIssueSortingOrderByKeys, TInboxIssueSortingSortByKeys } from "@taskflow/types";
+import { CustomMenu } from "@taskflow/ui";
 // constants
 // helpers
-import { cn } from "@plane/utils";
+import { cn } from "@taskflow/utils";
 // hooks
 import { useProjectInbox } from "@/hooks/store/use-project-inbox";
 import useSize from "@/hooks/use-window-size";

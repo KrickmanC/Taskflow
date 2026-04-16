@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -11,13 +11,13 @@ import { useParams } from "next/navigation";
 import { createPortal } from "react-dom";
 import { usePopper } from "react-popper";
 import { Combobox } from "@headlessui/react";
-// plane imports
-import { useTranslation } from "@plane/i18n";
-import { CheckIcon, SearchIcon, SuspendedUserIcon } from "@plane/propel/icons";
-import { EPillSize, EPillVariant, Pill } from "@plane/propel/pill";
-import type { IUserLite } from "@plane/types";
-import { Avatar } from "@plane/ui";
-import { cn, getFileURL, sortByCurrentUserThenSelected } from "@plane/utils";
+// taskflow imports
+import { useTranslation } from "@taskflow/i18n";
+import { CheckIcon, SearchIcon, SuspendedUserIcon } from "@taskflow/propel/icons";
+import { EPillSize, EPillVariant, Pill } from "@taskflow/propel/pill";
+import type { IUserLite } from "@taskflow/types";
+import { Avatar } from "@taskflow/ui";
+import { cn, getFileURL, sortByCurrentUserThenSelected } from "@taskflow/utils";
 // hooks
 import { useMember } from "@/hooks/store/use-member";
 import { useUser } from "@/hooks/store/user";
@@ -53,7 +53,7 @@ export const MemberOptions = observer(function MemberOptions(props: Props) {
   // states
   const [query, setQuery] = useState("");
   const [popperElement, setPopperElement] = useState<HTMLDivElement | null>(null);
-  // plane hooks
+  // taskflow hooks
   const { t } = useTranslation();
   // store hooks
   const { data: currentUser } = useUser();

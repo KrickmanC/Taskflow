@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -7,12 +7,12 @@
 import { useEffect, useRef, useState } from "react";
 import { addDays } from "date-fns";
 import { observer } from "mobx-react";
-import { PlusIcon } from "@plane/propel/icons";
+import { PlusIcon } from "@taskflow/propel/icons";
 // ui
-import { Tooltip } from "@plane/propel/tooltip";
-import type { IBlockUpdateData, IGanttBlock } from "@plane/types";
+import { Tooltip } from "@taskflow/propel/tooltip";
+import type { IBlockUpdateData, IGanttBlock } from "@taskflow/types";
 // helpers
-import { renderFormattedDate, renderFormattedPayloadDate } from "@plane/utils";
+import { renderFormattedDate, renderFormattedPayloadDate } from "@taskflow/utils";
 // hooks
 import { usePlatformOS } from "@/hooks/use-platform-os";
 import { useTimeLineChartStore } from "@/hooks/use-timeline-chart";

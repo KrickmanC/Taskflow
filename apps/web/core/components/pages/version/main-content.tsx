@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -8,13 +8,13 @@ import { useState } from "react";
 import { observer } from "mobx-react";
 import useSWR from "swr";
 import { EyeIcon, TriangleAlert } from "lucide-react";
-// plane imports
-import { Button } from "@plane/propel/button";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import type { TPageVersion } from "@plane/types";
-import { renderFormattedDate, renderFormattedTime } from "@plane/utils";
+// taskflow imports
+import { Button } from "@taskflow/propel/button";
+import { TOAST_TYPE, setToast } from "@taskflow/propel/toast";
+import type { TPageVersion } from "@taskflow/types";
+import { renderFormattedDate, renderFormattedTime } from "@taskflow/utils";
 // helpers
-import type { EPageStoreType } from "@/plane-web/hooks/store";
+import type { EPageStoreType } from "@/taskflow-web/hooks/store";
 // local imports
 import type { TVersionEditorProps } from "./editor";
 

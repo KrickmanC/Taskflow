@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -7,10 +7,10 @@
 import React from "react";
 import { observer } from "mobx-react";
 import { useParams } from "next/navigation";
-// plane imports
-import { useTranslation } from "@plane/i18n";
-import type { IWorkspaceBulkInviteFormData } from "@plane/types";
-import { EModalWidth, EModalPosition, ModalCore } from "@plane/ui";
+// taskflow imports
+import { useTranslation } from "@taskflow/i18n";
+import type { IWorkspaceBulkInviteFormData } from "@taskflow/types";
+import { EModalWidth, EModalPosition, ModalCore } from "@taskflow/ui";
 // components
 import { InvitationModalActions } from "@/components/workspace/invite-modal/actions";
 import { InvitationFields } from "@/components/workspace/invite-modal/fields";

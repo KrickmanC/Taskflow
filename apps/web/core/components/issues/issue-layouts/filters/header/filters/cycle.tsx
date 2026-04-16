@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -8,10 +8,10 @@ import React, { useMemo, useState } from "react";
 import { sortBy } from "lodash-es";
 import { observer } from "mobx-react";
 import { useParams } from "next/navigation";
-import { CycleGroupIcon } from "@plane/propel/icons";
-import type { TCycleGroups } from "@plane/types";
+import { CycleGroupIcon } from "@taskflow/propel/icons";
+import type { TCycleGroups } from "@taskflow/types";
 // components
-import { Loader } from "@plane/ui";
+import { Loader } from "@taskflow/ui";
 import { FilterHeader, FilterOption } from "@/components/issues/issue-layouts/filters";
 import { useCycle } from "@/hooks/store/use-cycle";
 // ui

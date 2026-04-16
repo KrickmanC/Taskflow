@@ -1,13 +1,13 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import Link from "next/link";
-// plane packages
-import type { TAdminAuthErrorInfo } from "@plane/constants";
-import { SUPPORT_EMAIL, EAdminAuthErrorCodes } from "@plane/constants";
+// taskflow packages
+import type { TAdminAuthErrorInfo } from "@taskflow/constants";
+import { SUPPORT_EMAIL, EAdminAuthErrorCodes } from "@taskflow/constants";
 
 export enum EErrorAlertType {
   BANNER_ALERT = "BANNER_ALERT",

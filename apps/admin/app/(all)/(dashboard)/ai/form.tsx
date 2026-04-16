@@ -1,14 +1,14 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { useForm } from "react-hook-form";
 import { Lightbulb } from "lucide-react";
-import { Button } from "@plane/propel/button";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import type { IFormattedInstanceConfiguration, TInstanceAIConfigurationKeys } from "@plane/types";
+import { Button } from "@taskflow/propel/button";
+import { TOAST_TYPE, setToast } from "@taskflow/propel/toast";
+import type { IFormattedInstanceConfiguration, TInstanceAIConfigurationKeys } from "@taskflow/types";
 // components
 import type { TControllerInputFormField } from "@/components/common/controller-input";
 import { ControllerInput } from "@/components/common/controller-input";
@@ -129,7 +129,7 @@ export function InstanceAIForm(props: IInstanceAIForm) {
           <Lightbulb className="size-4" />
           <div>
             If you have a preferred AI models vendor, please get in{" "}
-            <a className="font-medium underline" href="https://plane.so/contact">
+            <a className="font-medium underline" href="https://taskflow.so/contact">
               touch with us.
             </a>
           </div>

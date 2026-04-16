@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -12,11 +12,11 @@ import {
   DueDatePropertyIcon,
   LabelPropertyIcon,
   DuplicatePropertyIcon,
-} from "@plane/propel/icons";
-import { Tooltip } from "@plane/propel/tooltip";
-import type { TInboxDuplicateIssueDetails, TIssue } from "@plane/types";
-import { ControlLink } from "@plane/ui";
-import { getDate, renderFormattedPayloadDate, generateWorkItemLink } from "@plane/utils";
+} from "@taskflow/propel/icons";
+import { Tooltip } from "@taskflow/propel/tooltip";
+import type { TInboxDuplicateIssueDetails, TIssue } from "@taskflow/types";
+import { ControlLink } from "@taskflow/ui";
+import { getDate, renderFormattedPayloadDate, generateWorkItemLink } from "@taskflow/utils";
 // components
 import { DateDropdown } from "@/components/dropdowns/date";
 import { IntakeStateDropdown } from "@/components/dropdowns/intake-state/dropdown";

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -8,11 +8,11 @@ import { observer } from "mobx-react";
 import { useParams } from "next/navigation";
 import useSWR from "swr";
 // ui
-import { useTranslation } from "@plane/i18n";
-import { Avatar } from "@plane/propel/avatar";
-import { EmptyStateCompact } from "@plane/propel/empty-state";
-import { Loader, Card } from "@plane/ui";
-import { calculateTimeAgo, getFileURL } from "@plane/utils";
+import { useTranslation } from "@taskflow/i18n";
+import { Avatar } from "@taskflow/propel/avatar";
+import { EmptyStateCompact } from "@taskflow/propel/empty-state";
+import { Loader, Card } from "@taskflow/ui";
+import { calculateTimeAgo, getFileURL } from "@taskflow/utils";
 // components
 import { ActivityMessage, IssueLink } from "@/components/core/activity";
 // constants

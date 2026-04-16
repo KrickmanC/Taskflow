@@ -1,22 +1,22 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { observer } from "mobx-react";
 import { ListFilter } from "lucide-react";
-// plane imports
-import type { ENotificationFilterType } from "@plane/constants";
-import { FILTER_TYPE_OPTIONS } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { Tooltip } from "@plane/propel/tooltip";
-import { PopoverMenu } from "@plane/ui";
+// taskflow imports
+import type { ENotificationFilterType } from "@taskflow/constants";
+import { FILTER_TYPE_OPTIONS } from "@taskflow/constants";
+import { useTranslation } from "@taskflow/i18n";
+import { Tooltip } from "@taskflow/propel/tooltip";
+import { PopoverMenu } from "@taskflow/ui";
 // hooks
 import { usePlatformOS } from "@/hooks/use-platform-os";
 // local imports
 import { NotificationFilterOptionItem } from "./menu-option-item";
-import { IconButton } from "@plane/propel/icon-button";
+import { IconButton } from "@taskflow/propel/icon-button";
 
 export const NotificationFilter = observer(function NotificationFilter() {
   // hooks

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -7,22 +7,22 @@
 import { useCallback } from "react";
 import { observer } from "mobx-react";
 import { useParams } from "next/navigation";
-// plane constants
-import { EIssueFilterType, ISSUE_LAYOUTS, ISSUE_DISPLAY_FILTERS_BY_PAGE } from "@plane/constants";
-// plane i18n
-import { useTranslation } from "@plane/i18n";
+// taskflow constants
+import { EIssueFilterType, ISSUE_LAYOUTS, ISSUE_DISPLAY_FILTERS_BY_PAGE } from "@taskflow/constants";
+// taskflow i18n
+import { useTranslation } from "@taskflow/i18n";
 // icons
-import { ChevronDownIcon } from "@plane/propel/icons";
+import { ChevronDownIcon } from "@taskflow/propel/icons";
 // types
 import type {
   IIssueDisplayFilterOptions,
   IIssueDisplayProperties,
   TIssueLayouts,
   EIssueLayoutTypes,
-} from "@plane/types";
-import { EIssuesStoreType } from "@plane/types";
+} from "@taskflow/types";
+import { EIssuesStoreType } from "@taskflow/types";
 // ui
-import { CustomMenu } from "@plane/ui";
+import { CustomMenu } from "@taskflow/ui";
 // components
 import { DisplayFiltersSelection, FiltersDropdown } from "@/components/issues/issue-layouts/filters";
 import { IssueLayoutIcon } from "@/components/issues/issue-layouts/layout-icon";
@@ -30,7 +30,7 @@ import { IssueLayoutIcon } from "@/components/issues/issue-layouts/layout-icon";
 import { useIssues } from "@/hooks/store/use-issues";
 
 export const ProfileIssuesMobileHeader = observer(function ProfileIssuesMobileHeader() {
-  // plane i18n
+  // taskflow i18n
   const { t } = useTranslation();
   // router
   const { workspaceSlug, userId } = useParams();

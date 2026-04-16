@@ -1,19 +1,19 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
-// plane imports
-import { API_BASE_URL } from "@plane/constants";
+// taskflow imports
+import { API_BASE_URL } from "@taskflow/constants";
 // api service
-import type { TDuplicateAssetData, TDuplicateAssetResponse } from "@plane/types";
+import type { TDuplicateAssetData, TDuplicateAssetResponse } from "@taskflow/types";
 import { APIService } from "../api.service";
 // helpers
 import { getAssetIdFromUrl } from "./helper";
 
 /**
- * Service class for managing file operations within plane applications.
+ * Service class for managing file operations within taskflow applications.
  * Extends APIService to handle HTTP requests to the file-related endpoints.
  * @extends {APIService}
  */

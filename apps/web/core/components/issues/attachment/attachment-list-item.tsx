@@ -1,19 +1,19 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { observer } from "mobx-react";
 
-import { useTranslation } from "@plane/i18n";
-import { TrashIcon } from "@plane/propel/icons";
-import { Tooltip } from "@plane/propel/tooltip";
-import type { TIssueServiceType } from "@plane/types";
-import { EIssueServiceType } from "@plane/types";
+import { useTranslation } from "@taskflow/i18n";
+import { TrashIcon } from "@taskflow/propel/icons";
+import { Tooltip } from "@taskflow/propel/tooltip";
+import type { TIssueServiceType } from "@taskflow/types";
+import { EIssueServiceType } from "@taskflow/types";
 // ui
-import { CustomMenu } from "@plane/ui";
-import { convertBytesToSize, getFileExtension, getFileName, getFileURL, renderFormattedDate } from "@plane/utils";
+import { CustomMenu } from "@taskflow/ui";
+import { convertBytesToSize, getFileExtension, getFileName, getFileURL, renderFormattedDate } from "@taskflow/utils";
 // components
 //
 import { ButtonAvatars } from "@/components/dropdowns/member/avatar";

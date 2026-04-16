@@ -1,15 +1,15 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import React from "react";
 import { observer } from "mobx-react";
-import { DueDatePropertyIcon } from "@plane/propel/icons";
+import { DueDatePropertyIcon } from "@taskflow/propel/icons";
 // types
-import type { TIssue } from "@plane/types";
-import { cn, getDate, renderFormattedPayloadDate, shouldHighlightIssueDueDate } from "@plane/utils";
+import type { TIssue } from "@taskflow/types";
+import { cn, getDate, renderFormattedPayloadDate, shouldHighlightIssueDueDate } from "@taskflow/utils";
 // components
 import { DateDropdown } from "@/components/dropdowns/date";
 // helpers

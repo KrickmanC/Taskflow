@@ -1,12 +1,12 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { useState } from "react";
-// plane imports
-import { EModalPosition, EModalWidth, ModalCore } from "@plane/ui";
+// taskflow imports
+import { EModalPosition, EModalWidth, ModalCore } from "@taskflow/ui";
 // hooks
 import useKeypress from "@/hooks/use-keypress";
 // local imports

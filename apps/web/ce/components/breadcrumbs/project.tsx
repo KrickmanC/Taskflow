@@ -1,20 +1,20 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { observer } from "mobx-react";
-import { Logo } from "@plane/propel/emoji-icon-picker";
-import { ProjectIcon } from "@plane/propel/icons";
-// plane imports
-import type { ICustomSearchSelectOption } from "@plane/types";
-import { BreadcrumbNavigationSearchDropdown, Breadcrumbs } from "@plane/ui";
+import { Logo } from "@taskflow/propel/emoji-icon-picker";
+import { ProjectIcon } from "@taskflow/propel/icons";
+// taskflow imports
+import type { ICustomSearchSelectOption } from "@taskflow/types";
+import { BreadcrumbNavigationSearchDropdown, Breadcrumbs } from "@taskflow/ui";
 import { SwitcherLabel } from "@/components/common/switcher-label";
 // hooks
 import { useProject } from "@/hooks/store/use-project";
 import { useAppRouter } from "@/hooks/use-app-router";
-import type { TProject } from "@/plane-web/types";
+import type { TProject } from "@/taskflow-web/types";
 
 type TProjectBreadcrumbProps = {
   workspaceSlug: string;

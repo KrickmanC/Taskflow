@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -7,11 +7,11 @@
 import { useEffect } from "react";
 import { observer } from "mobx-react";
 import { Controller, useForm } from "react-hook-form";
-// plane imports
-import { useTranslation } from "@plane/i18n";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import type { IUserEmailNotificationSettings } from "@plane/types";
-import { ToggleSwitch } from "@plane/ui";
+// taskflow imports
+import { useTranslation } from "@taskflow/i18n";
+import { TOAST_TYPE, setToast } from "@taskflow/propel/toast";
+import type { IUserEmailNotificationSettings } from "@taskflow/types";
+import { ToggleSwitch } from "@taskflow/ui";
 // components
 import { SettingsControlItem } from "@/components/settings/control-item";
 // services

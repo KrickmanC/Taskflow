@@ -1,12 +1,12 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import React, { useState } from "react";
-import type { E_PASSWORD_STRENGTH } from "@plane/constants";
-import { cn, getPasswordStrength } from "@plane/utils";
+import type { E_PASSWORD_STRENGTH } from "@taskflow/constants";
+import { cn, getPasswordStrength } from "@taskflow/utils";
 import { PasswordStrengthIndicator } from "../form-fields/password/indicator";
 import { AuthInput } from "./auth-input";
 

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -8,15 +8,15 @@ import React from "react";
 import { observer } from "mobx-react";
 import { useParams } from "next/navigation";
 import { SquareUser } from "lucide-react";
-// Plane imports
-import { MODULE_STATUS, EUserPermissions, EUserPermissionsLevel, IS_FAVORITE_MENU_OPEN } from "@plane/constants";
-import { useLocalStorage } from "@plane/hooks";
-import { useTranslation } from "@plane/i18n";
-import { TOAST_TYPE, setPromiseToast, setToast } from "@plane/propel/toast";
-import { Tooltip } from "@plane/propel/tooltip";
-import type { IModule } from "@plane/types";
-import { FavoriteStar } from "@plane/ui";
-import { renderFormattedPayloadDate, getDate } from "@plane/utils";
+// Taskflow imports
+import { MODULE_STATUS, EUserPermissions, EUserPermissionsLevel, IS_FAVORITE_MENU_OPEN } from "@taskflow/constants";
+import { useLocalStorage } from "@taskflow/hooks";
+import { useTranslation } from "@taskflow/i18n";
+import { TOAST_TYPE, setPromiseToast, setToast } from "@taskflow/propel/toast";
+import { Tooltip } from "@taskflow/propel/tooltip";
+import type { IModule } from "@taskflow/types";
+import { FavoriteStar } from "@taskflow/ui";
+import { renderFormattedPayloadDate, getDate } from "@taskflow/utils";
 // components
 import { DateRangeDropdown } from "@/components/dropdowns/date-range";
 import { ModuleQuickActions } from "@/components/modules";

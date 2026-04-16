@@ -1,16 +1,16 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { observer } from "mobx-react";
 import { useParams } from "next/navigation";
-// plane imports
-import { EUserPermissionsLevel } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { EmptyStateDetailed } from "@plane/propel/empty-state";
-import { EIssuesStoreType, EUserProjectRoles } from "@plane/types";
+// taskflow imports
+import { EUserPermissionsLevel } from "@taskflow/constants";
+import { useTranslation } from "@taskflow/i18n";
+import { EmptyStateDetailed } from "@taskflow/propel/empty-state";
+import { EIssuesStoreType, EUserProjectRoles } from "@taskflow/types";
 // hooks
 import { useCommandPalette } from "@/hooks/store/use-command-palette";
 import { useUserPermissions } from "@/hooks/store/user";
@@ -20,7 +20,7 @@ export const ProjectEmptyState = observer(function ProjectEmptyState() {
   // router
   const { projectId: routerProjectId } = useParams();
   const projectId = routerProjectId ? routerProjectId.toString() : undefined;
-  // plane imports
+  // taskflow imports
   const { t } = useTranslation();
   // store hooks
   const { toggleCreateIssueModal } = useCommandPalette();

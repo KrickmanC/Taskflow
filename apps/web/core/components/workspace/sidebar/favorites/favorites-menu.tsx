@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -17,25 +17,25 @@ import { observer } from "mobx-react";
 import { useParams } from "next/navigation";
 import { FolderPlus } from "lucide-react";
 import { Disclosure, Transition } from "@headlessui/react";
-import { IS_FAVORITE_MENU_OPEN } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { ChevronRightIcon } from "@plane/propel/icons";
+import { IS_FAVORITE_MENU_OPEN } from "@taskflow/constants";
+import { useTranslation } from "@taskflow/i18n";
+import { ChevronRightIcon } from "@taskflow/propel/icons";
 // ui
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import { Tooltip } from "@plane/propel/tooltip";
-import type { IFavorite } from "@plane/types";
+import { TOAST_TYPE, setToast } from "@taskflow/propel/toast";
+import { Tooltip } from "@taskflow/propel/tooltip";
+import type { IFavorite } from "@taskflow/types";
 // helpers
-import { cn } from "@plane/utils";
+import { cn } from "@taskflow/utils";
 // hooks
 import { useFavorite } from "@/hooks/store/use-favorite";
 import useLocalStorage from "@/hooks/use-local-storage";
-// plane web components
+// taskflow web components
 import { FavoriteFolder } from "./favorite-folder";
 import { FavoriteRoot } from "./favorite-items";
 import type { TargetData } from "./favorites.helpers";
 import { getInstructionFromPayload } from "./favorites.helpers";
 import { NewFavoriteFolder } from "./new-fav-folder";
-import { IconButton } from "@plane/propel/icon-button";
+import { IconButton } from "@taskflow/propel/icon-button";
 
 export const SidebarFavoritesMenu = observer(function SidebarFavoritesMenu() {
   // states

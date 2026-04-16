@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -9,15 +9,15 @@ import { observer } from "mobx-react";
 import { usePopper } from "react-popper";
 import { Loader } from "lucide-react";
 import { Combobox } from "@headlessui/react";
-// plane imports
-import { EUserPermissionsLevel, getRandomLabelColor } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { Button } from "@plane/propel/button";
-import { CheckIcon, SearchIcon, PlusIcon } from "@plane/propel/icons";
-import type { IIssueLabel } from "@plane/types";
-import { EUserProjectRoles } from "@plane/types";
+// taskflow imports
+import { EUserPermissionsLevel, getRandomLabelColor } from "@taskflow/constants";
+import { useTranslation } from "@taskflow/i18n";
+import { Button } from "@taskflow/propel/button";
+import { CheckIcon, SearchIcon, PlusIcon } from "@taskflow/propel/icons";
+import type { IIssueLabel } from "@taskflow/types";
+import { EUserProjectRoles } from "@taskflow/types";
 // helpers
-import { getTabIndex } from "@plane/utils";
+import { getTabIndex } from "@taskflow/utils";
 // hooks
 import { useLabel } from "@/hooks/store/use-label";
 import { useUserPermissions } from "@/hooks/store/user";

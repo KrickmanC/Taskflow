@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -10,17 +10,17 @@ import { combine } from "@atlaskit/pragmatic-drag-and-drop/combine";
 import { draggable, dropTargetForElements } from "@atlaskit/pragmatic-drag-and-drop/element/adapter";
 import { observer } from "mobx-react";
 import { useParams } from "next/navigation";
-// plane helpers
+// taskflow helpers
 import { MoreHorizontal } from "lucide-react";
-import { useOutsideClickDetector } from "@plane/hooks";
+import { useOutsideClickDetector } from "@taskflow/hooks";
 // types
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import { Tooltip } from "@plane/propel/tooltip";
-import type { TIssue, IIssueDisplayProperties, IIssueMap } from "@plane/types";
-import { EIssueServiceType } from "@plane/types";
+import { TOAST_TYPE, setToast } from "@taskflow/propel/toast";
+import { Tooltip } from "@taskflow/propel/tooltip";
+import type { TIssue, IIssueDisplayProperties, IIssueMap } from "@taskflow/types";
+import { EIssueServiceType } from "@taskflow/types";
 // ui
-import { ControlLink, DropIndicator } from "@plane/ui";
-import { cn, generateWorkItemLink } from "@plane/utils";
+import { ControlLink, DropIndicator } from "@taskflow/ui";
+import { cn, generateWorkItemLink } from "@taskflow/utils";
 // components
 import RenderIfVisible from "@/components/core/render-if-visible-HOC";
 import { HIGHLIGHT_CLASS, getIssueBlockId } from "@/components/issues/issue-layouts/utils";
@@ -31,10 +31,10 @@ import { useKanbanView } from "@/hooks/store/use-kanban-view";
 import { useProject } from "@/hooks/store/use-project";
 import useIssuePeekOverviewRedirection from "@/hooks/use-issue-peek-overview-redirection";
 import { usePlatformOS } from "@/hooks/use-platform-os";
-// plane web components
-import { IssueIdentifier } from "@/plane-web/components/issues/issue-details/issue-identifier";
+// taskflow web components
+import { IssueIdentifier } from "@/taskflow-web/components/issues/issue-details/issue-identifier";
 // local components
-import { IssueStats } from "@/plane-web/components/issues/issue-layouts/issue-stats";
+import { IssueStats } from "@/taskflow-web/components/issues/issue-layouts/issue-stats";
 import type { TRenderQuickActions } from "../list/list-view-types";
 import { IssueProperties } from "../properties/all-properties";
 import { WithDisplayPropertiesHOC } from "../properties/with-display-properties-HOC";

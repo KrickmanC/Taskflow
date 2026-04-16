@@ -1,16 +1,16 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import type { useRouter } from "next/navigation";
-// plane web imports
+// taskflow web imports
 import type {
   TPowerKContextTypeExtended,
   TPowerKPageTypeExtended,
   TPowerKSearchResultsKeysExtended,
-} from "@/plane-web/components/command-palette/power-k/types";
+} from "@/taskflow-web/components/command-palette/power-k/types";
 
 export type TPowerKContextType = "work-item" | "page" | "cycle" | "module" | TPowerKContextTypeExtended;
 

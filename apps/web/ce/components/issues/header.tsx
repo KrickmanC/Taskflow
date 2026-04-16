@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -8,20 +8,20 @@ import { observer } from "mobx-react";
 import { useParams } from "next/navigation";
 // icons
 import { Circle } from "lucide-react";
-// plane imports
+// taskflow imports
 import {
   EUserPermissions,
   EUserPermissionsLevel,
   SPACE_BASE_PATH,
   SPACE_BASE_URL,
   WORK_ITEM_TRACKER_ELEMENTS,
-} from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { Button } from "@plane/propel/button";
-import { NewTabIcon, WorkItemsIcon } from "@plane/propel/icons";
-import { Tooltip } from "@plane/propel/tooltip";
-import { EIssuesStoreType } from "@plane/types";
-import { Breadcrumbs, Header } from "@plane/ui";
+} from "@taskflow/constants";
+import { useTranslation } from "@taskflow/i18n";
+import { Button } from "@taskflow/propel/button";
+import { NewTabIcon, WorkItemsIcon } from "@taskflow/propel/icons";
+import { Tooltip } from "@taskflow/propel/tooltip";
+import { EIssuesStoreType } from "@taskflow/types";
+import { Breadcrumbs, Header } from "@taskflow/ui";
 // components
 import { BreadcrumbLink } from "@/components/common/breadcrumb-link";
 import { CountChip } from "@/components/common/count-chip";
@@ -35,8 +35,8 @@ import { useProject } from "@/hooks/store/use-project";
 import { useUserPermissions } from "@/hooks/store/user";
 import { useAppRouter } from "@/hooks/use-app-router";
 import { usePlatformOS } from "@/hooks/use-platform-os";
-// plane web imports
-import { CommonProjectBreadcrumbs } from "@/plane-web/components/breadcrumbs/common";
+// taskflow web imports
+import { CommonProjectBreadcrumbs } from "@/taskflow-web/components/breadcrumbs/common";
 
 export const IssuesHeader = observer(function IssuesHeader() {
   // router

@@ -1,18 +1,18 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import type { ReactNode } from "react";
 import { Network } from "lucide-react";
-// plane imports
-import { Tooltip } from "@plane/propel/tooltip";
-import { renderFormattedTime, renderFormattedDate, calculateTimeAgo } from "@plane/utils";
+// taskflow imports
+import { Tooltip } from "@taskflow/propel/tooltip";
+import { renderFormattedTime, renderFormattedDate, calculateTimeAgo } from "@taskflow/utils";
 import { useIssueDetail } from "@/hooks/store/use-issue-detail";
 import { usePlatformOS } from "@/hooks/use-platform-os";
-// plane web imports
-import { IssueCreatorDisplay } from "@/plane-web/components/issues/issue-details/issue-creator";
+// taskflow web imports
+import { IssueCreatorDisplay } from "@/taskflow-web/components/issues/issue-details/issue-creator";
 // local imports
 import { IssueUser } from "../";
 

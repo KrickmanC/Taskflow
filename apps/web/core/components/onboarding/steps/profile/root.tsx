@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -8,13 +8,13 @@ import { useMemo, useState } from "react";
 import { observer } from "mobx-react";
 import { Controller, useForm } from "react-hook-form";
 import { ImageIcon } from "lucide-react";
-// plane imports
-import { E_PASSWORD_STRENGTH } from "@plane/constants";
-import { Button } from "@plane/propel/button";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import type { IUser } from "@plane/types";
-import { EOnboardingSteps } from "@plane/types";
-import { cn, getFileURL, getPasswordStrength, validatePersonName } from "@plane/utils";
+// taskflow imports
+import { E_PASSWORD_STRENGTH } from "@taskflow/constants";
+import { Button } from "@taskflow/propel/button";
+import { TOAST_TYPE, setToast } from "@taskflow/propel/toast";
+import type { IUser } from "@taskflow/types";
+import { EOnboardingSteps } from "@taskflow/types";
+import { cn, getFileURL, getPasswordStrength, validatePersonName } from "@taskflow/utils";
 // components
 import { UserImageUploadModal } from "@/components/core/modals/user-image-upload-modal";
 // hooks
@@ -147,7 +147,7 @@ export const ProfileSetupStep = observer(function ProfileSetupStep({ handleStepC
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-10">
       {/* Header */}
-      <CommonOnboardingHeader title="Create your profile." description="This is how you will appear in Plane." />
+      <CommonOnboardingHeader title="Create your profile." description="This is how you will appear in Taskflow." />
 
       {/* Profile Picture Section */}
       <Controller

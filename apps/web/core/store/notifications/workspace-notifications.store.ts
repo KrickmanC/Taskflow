@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -7,9 +7,9 @@
 import { orderBy, isEmpty, update, set } from "lodash-es";
 import { action, makeObservable, observable, runInAction } from "mobx";
 import { computedFn } from "mobx-utils";
-// plane imports
-import type { TNotificationTab } from "@plane/constants";
-import { ENotificationTab, ENotificationLoader, ENotificationQueryParamType } from "@plane/constants";
+// taskflow imports
+import type { TNotificationTab } from "@taskflow/constants";
+import { ENotificationTab, ENotificationLoader, ENotificationQueryParamType } from "@taskflow/constants";
 import type {
   TNotification,
   TNotificationFilter,
@@ -17,9 +17,9 @@ import type {
   TNotificationPaginatedInfo,
   TNotificationPaginatedInfoQueryParams,
   TUnreadNotificationsCount,
-} from "@plane/types";
+} from "@taskflow/types";
 // helpers
-import { convertToEpoch } from "@plane/utils";
+import { convertToEpoch } from "@taskflow/utils";
 // services
 import workspaceNotificationService from "@/services/workspace-notification.service";
 // store

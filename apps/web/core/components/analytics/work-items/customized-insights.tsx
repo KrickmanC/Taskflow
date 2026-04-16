@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -7,12 +7,12 @@
 import { observer } from "mobx-react";
 import { useParams } from "next/navigation";
 import { useForm } from "react-hook-form";
-// plane package imports
-import { useTranslation } from "@plane/i18n";
-import type { IAnalyticsParams } from "@plane/types";
-import { ChartXAxisProperty, ChartYAxisMetric } from "@plane/types";
-import { cn } from "@plane/utils";
-// plane web components
+// taskflow package imports
+import { useTranslation } from "@taskflow/i18n";
+import type { IAnalyticsParams } from "@taskflow/types";
+import { ChartXAxisProperty, ChartYAxisMetric } from "@taskflow/types";
+import { cn } from "@taskflow/utils";
+// taskflow web components
 import AnalyticsSectionWrapper from "../analytics-section-wrapper";
 import { AnalyticsSelectParams } from "../select/analytics-params";
 import PriorityChart from "./priority-chart";

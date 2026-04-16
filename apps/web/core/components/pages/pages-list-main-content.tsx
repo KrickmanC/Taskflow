@@ -1,25 +1,25 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { useState } from "react";
 import { observer } from "mobx-react";
-// plane imports
+// taskflow imports
 import { useParams, useRouter } from "next/navigation";
-import { EUserPermissionsLevel, EPageAccess } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { EmptyStateDetailed } from "@plane/propel/empty-state";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import type { TPage, TPageNavigationTabs } from "@plane/types";
-import { EUserProjectRoles } from "@plane/types";
+import { EUserPermissionsLevel, EPageAccess } from "@taskflow/constants";
+import { useTranslation } from "@taskflow/i18n";
+import { EmptyStateDetailed } from "@taskflow/propel/empty-state";
+import { TOAST_TYPE, setToast } from "@taskflow/propel/toast";
+import type { TPage, TPageNavigationTabs } from "@taskflow/types";
+import { EUserProjectRoles } from "@taskflow/types";
 // components
 import { PageLoader } from "@/components/pages/loaders/page-loader";
 import { useProject } from "@/hooks/store/use-project";
 import { useUserPermissions } from "@/hooks/store/user";
-// plane web hooks
-import { EPageStoreType, usePageStore } from "@/plane-web/hooks/store";
+// taskflow web hooks
+import { EPageStoreType, usePageStore } from "@/taskflow-web/hooks/store";
 
 type Props = {
   children: React.ReactNode;
@@ -29,7 +29,7 @@ type Props = {
 
 export const PagesListMainContent = observer(function PagesListMainContent(props: Props) {
   const { children, pageType, storeType } = props;
-  // plane hooks
+  // taskflow hooks
   const { t } = useTranslation();
   // store hooks
   const { currentProjectDetails } = useProject();

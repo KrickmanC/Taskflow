@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -7,18 +7,18 @@
 import { useCallback } from "react";
 import { observer } from "mobx-react";
 import { ListFilter } from "lucide-react";
-// plane imports
-import { useTranslation } from "@plane/i18n";
-import type { TPageFilterProps, TPageNavigationTabs } from "@plane/types";
-import { Header, EHeaderVariant } from "@plane/ui";
-import { calculateTotalFilters } from "@plane/utils";
+// taskflow imports
+import { useTranslation } from "@taskflow/i18n";
+import type { TPageFilterProps, TPageNavigationTabs } from "@taskflow/types";
+import { Header, EHeaderVariant } from "@taskflow/ui";
+import { calculateTotalFilters } from "@taskflow/utils";
 // components
 import { FiltersDropdown } from "@/components/issues/issue-layouts/filters";
 // hooks
 import { useMember } from "@/hooks/store/use-member";
-// plane web hooks
-import type { EPageStoreType } from "@/plane-web/hooks/store";
-import { usePageStore } from "@/plane-web/hooks/store";
+// taskflow web hooks
+import type { EPageStoreType } from "@/taskflow-web/hooks/store";
+import { usePageStore } from "@/taskflow-web/hooks/store";
 // local imports
 import { PageAppliedFiltersList } from "../list/applied-filters";
 import { PageFiltersSelection } from "../list/filters";

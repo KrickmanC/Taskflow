@@ -1,18 +1,18 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { set } from "lodash-es";
 import { action, computed, makeObservable, observable, reaction, runInAction } from "mobx";
-// plane imports
-import { EPageAccess } from "@plane/constants";
-import type { TChangeHandlerProps } from "@plane/propel/emoji-icon-picker";
-import type { TDocumentPayload, TLogoProps, TNameDescriptionLoader, TPage } from "@plane/types";
-// plane web store
-import { ExtendedBasePage } from "@/plane-web/store/pages/extended-base-page";
-import type { RootStore } from "@/plane-web/store/root.store";
+// taskflow imports
+import { EPageAccess } from "@taskflow/constants";
+import type { TChangeHandlerProps } from "@taskflow/propel/emoji-icon-picker";
+import type { TDocumentPayload, TLogoProps, TNameDescriptionLoader, TPage } from "@taskflow/types";
+// taskflow web store
+import { ExtendedBasePage } from "@/taskflow-web/store/pages/extended-base-page";
+import type { RootStore } from "@/taskflow-web/store/root.store";
 // local imports
 import { PageEditorInstance } from "./page-editor-info";
 

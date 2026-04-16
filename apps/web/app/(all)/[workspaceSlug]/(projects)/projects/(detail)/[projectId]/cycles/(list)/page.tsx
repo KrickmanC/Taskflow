@@ -1,21 +1,21 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { useState } from "react";
 import { observer } from "mobx-react";
-// plane imports
+// taskflow imports
 import { useTheme } from "next-themes";
-import { EUserPermissionsLevel, CYCLE_TRACKER_ELEMENTS } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { EmptyStateDetailed } from "@plane/propel/empty-state";
-import type { TCycleFilters } from "@plane/types";
-import { EUserProjectRoles } from "@plane/types";
+import { EUserPermissionsLevel, CYCLE_TRACKER_ELEMENTS } from "@taskflow/constants";
+import { useTranslation } from "@taskflow/i18n";
+import { EmptyStateDetailed } from "@taskflow/propel/empty-state";
+import type { TCycleFilters } from "@taskflow/types";
+import { EUserProjectRoles } from "@taskflow/types";
 // components
-import { Header, EHeaderVariant } from "@plane/ui";
-import { calculateTotalFilters } from "@plane/utils";
+import { Header, EHeaderVariant } from "@taskflow/ui";
+import { calculateTotalFilters } from "@taskflow/utils";
 // assets
 import darkEmptyState from "@/app/assets/empty-state/disabled-feature/cycles-dark.webp?url";
 import lightEmptyState from "@/app/assets/empty-state/disabled-feature/cycles-light.webp?url";
@@ -45,7 +45,7 @@ function ProjectCyclesPage({ params }: Route.ComponentProps) {
   const { workspaceSlug, projectId } = params;
   // theme hook
   const { resolvedTheme } = useTheme();
-  // plane hooks
+  // taskflow hooks
   const { t } = useTranslation();
   // cycle filters hook
   const { clearAllFilters, currentProjectFilters, updateFilters } = useCycleFilter();

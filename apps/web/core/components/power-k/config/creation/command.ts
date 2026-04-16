@@ -1,15 +1,15 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { FileText, FolderPlus, Layers, SquarePlus } from "lucide-react";
-// plane imports
-import { EUserPermissions, EUserPermissionsLevel } from "@plane/constants";
-import { ContrastIcon, DiceIcon, LayersIcon } from "@plane/propel/icons";
+// taskflow imports
+import { EUserPermissions, EUserPermissionsLevel } from "@taskflow/constants";
+import { ContrastIcon, DiceIcon, LayersIcon } from "@taskflow/propel/icons";
 // components
-import { EUserProjectRoles } from "@plane/types";
+import { EUserProjectRoles } from "@taskflow/types";
 import type { TPowerKCommandConfig, TPowerKContext } from "@/components/power-k/core/types";
 // hooks
 import { useCommandPalette } from "@/hooks/store/use-command-palette";

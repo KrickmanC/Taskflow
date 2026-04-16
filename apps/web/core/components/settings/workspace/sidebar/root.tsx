@@ -1,12 +1,12 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
-// plane imports
-import { ScrollArea } from "@plane/propel/scrollarea";
-import { cn } from "@plane/utils";
+// taskflow imports
+import { ScrollArea } from "@taskflow/propel/scrollarea";
+import { cn } from "@taskflow/utils";
 // local imports
 import { WorkspaceSettingsSidebarHeader } from "./header";
 import { WorkspaceSettingsSidebarItemCategories } from "./item-categories";

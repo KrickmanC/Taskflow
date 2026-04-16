@@ -1,13 +1,13 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import React from "react";
 import { observer } from "mobx-react";
-// plane imports
-import type { IFilterInstance } from "@plane/shared-state";
+// taskflow imports
+import type { IFilterInstance } from "@taskflow/shared-state";
 import type {
   SingleOrArray,
   TExternalFilter,
@@ -15,9 +15,9 @@ import type {
   TFilterValue,
   TFilterConditionNodeForDisplay,
   TAllAvailableOperatorsForDisplay,
-} from "@plane/types";
-import { CustomSearchSelect } from "@plane/ui";
-import { cn, getOperatorForPayload } from "@plane/utils";
+} from "@taskflow/types";
+import { CustomSearchSelect } from "@taskflow/ui";
+import { cn, getOperatorForPayload } from "@taskflow/utils";
 // local imports
 import { FilterValueInput } from "../filter-value-input/root";
 import { COMMON_FILTER_ITEM_BORDER_CLASSNAME } from "../shared";

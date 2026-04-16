@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -7,14 +7,14 @@
 import { observer } from "mobx-react";
 import { useParams } from "next/navigation";
 import useSWR from "swr";
-// plane imports
-import { ContentWrapper } from "@plane/ui";
+// taskflow imports
+import { ContentWrapper } from "@taskflow/ui";
 // hooks
 import { useHome } from "@/hooks/store/use-home";
 import { useUserProfile, useUser } from "@/hooks/store/user";
-// plane web imports
-import { HomePeekOverviewsRoot } from "@/plane-web/components/home";
-import { TourRoot } from "@/plane-web/components/onboarding/tour/root";
+// taskflow web imports
+import { HomePeekOverviewsRoot } from "@/taskflow-web/components/home";
+import { TourRoot } from "@/taskflow-web/components/onboarding/tour/root";
 // local imports
 import { DashboardWidgets } from "./home-dashboard-widgets";
 import { UserGreetingsView } from "./user-greetings";

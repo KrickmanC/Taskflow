@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -8,10 +8,10 @@ import { Fragment } from "react";
 import { observer } from "mobx-react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
-// plane imports
-import { useTranslation } from "@plane/i18n";
-import type { ICycle, TCycleEstimateType } from "@plane/types";
-import { Loader } from "@plane/ui";
+// taskflow imports
+import { useTranslation } from "@taskflow/i18n";
+import type { ICycle, TCycleEstimateType } from "@taskflow/types";
+import { Loader } from "@taskflow/ui";
 // assets
 import darkChartAsset from "@/app/assets/empty-state/active-cycle/chart-dark.webp?url";
 import lightChartAsset from "@/app/assets/empty-state/active-cycle/chart-light.webp?url";
@@ -32,7 +32,7 @@ export const ActiveCycleProductivity = observer(function ActiveCycleProductivity
   const { workspaceSlug, projectId, cycle } = props;
   // theme hook
   const { resolvedTheme } = useTheme();
-  // plane hooks
+  // taskflow hooks
   const { t } = useTranslation();
   // hooks
   const { getEstimateTypeByCycleId, setEstimateType } = useCycle();

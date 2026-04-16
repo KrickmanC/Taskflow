@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -8,12 +8,12 @@ import React from "react";
 import { observer } from "mobx-react";
 import Link from "next/link";
 
-import { EditIcon, CloseIcon } from "@plane/propel/icons";
-// Plane
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import { Tooltip } from "@plane/propel/tooltip";
-import type { ISearchIssueResponse } from "@plane/types";
-import { cn, generateWorkItemLink } from "@plane/utils";
+import { EditIcon, CloseIcon } from "@taskflow/propel/icons";
+// Taskflow
+import { TOAST_TYPE, setToast } from "@taskflow/propel/toast";
+import { Tooltip } from "@taskflow/propel/tooltip";
+import type { ISearchIssueResponse } from "@taskflow/types";
+import { cn, generateWorkItemLink } from "@taskflow/utils";
 // components
 import { ExistingIssuesListModal } from "@/components/core/modals/existing-issues-list-modal";
 // hooks
@@ -21,9 +21,9 @@ import { useIssueDetail } from "@/hooks/store/use-issue-detail";
 import { useIssues } from "@/hooks/store/use-issues";
 import { useProject } from "@/hooks/store/use-project";
 import { usePlatformOS } from "@/hooks/use-platform-os";
-// Plane web imports
-import { useTimeLineRelationOptions } from "@/plane-web/components/relations";
-import type { TIssueRelationTypes } from "@/plane-web/types";
+// Taskflow web imports
+import { useTimeLineRelationOptions } from "@/taskflow-web/components/relations";
+import type { TIssueRelationTypes } from "@/taskflow-web/types";
 import type { TRelationObject } from "../issue-detail-widgets/relations";
 
 type TIssueRelationSelect = {

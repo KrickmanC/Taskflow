@@ -1,19 +1,19 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { useCallback } from "react";
-// plane types
-import type { TSearchEntities } from "@plane/types";
+// taskflow types
+import type { TSearchEntities } from "@taskflow/types";
 // helpers
-import { getBase64Image, getEditorAssetSrc } from "@plane/utils";
-import type { TCustomComponentsMetaData } from "@plane/utils";
+import { getBase64Image, getEditorAssetSrc } from "@taskflow/utils";
+import type { TCustomComponentsMetaData } from "@taskflow/utils";
 // hooks
 import { useMember } from "@/hooks/store/use-member";
-// plane web hooks
-import { useAdditionalEditorMention } from "@/plane-web/hooks/use-additional-editor-mention";
+// taskflow web hooks
+import { useAdditionalEditorMention } from "@/taskflow-web/hooks/use-additional-editor-mention";
 
 type TArgs = {
   projectId?: string;

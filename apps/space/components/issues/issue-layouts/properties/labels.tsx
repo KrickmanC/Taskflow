@@ -1,13 +1,13 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { observer } from "mobx-react";
-import { LabelPropertyIcon } from "@plane/propel/icons";
-// plane imports
-import { Tooltip } from "@plane/propel/tooltip";
+import { LabelPropertyIcon } from "@taskflow/propel/icons";
+// taskflow imports
+import { Tooltip } from "@taskflow/propel/tooltip";
 // hooks
 import { useLabel } from "@/hooks/store/use-label";
 

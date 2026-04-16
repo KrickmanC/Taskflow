@@ -1,19 +1,19 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import React from "react";
 import { observer } from "mobx-react";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import type { ISearchIssueResponse, TIssue, TIssueServiceType, TWorkItemWidgets } from "@plane/types";
+import { TOAST_TYPE, setToast } from "@taskflow/propel/toast";
+import type { ISearchIssueResponse, TIssue, TIssueServiceType, TWorkItemWidgets } from "@taskflow/types";
 // components
 import { ExistingIssuesListModal } from "@/components/core/modals/existing-issues-list-modal";
 // hooks
 import { useIssueDetail } from "@/hooks/store/use-issue-detail";
-// plane web imports
-import { WorkItemAdditionalWidgetModals } from "@/plane-web/components/issues/issue-detail-widgets/modals";
+// taskflow web imports
+import { WorkItemAdditionalWidgetModals } from "@/taskflow-web/components/issues/issue-detail-widgets/modals";
 // local imports
 import { IssueLinkCreateUpdateModal } from "../issue-detail/links/create-update-link-modal";
 // helpers

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -10,14 +10,14 @@ import { observer } from "mobx-react";
 import { useParams } from "next/navigation";
 import type { UseFormRegister } from "react-hook-form";
 import { useForm } from "react-hook-form";
-// plane imports
-import { useTranslation } from "@plane/i18n";
-import { PlusIcon } from "@plane/propel/icons";
-import { setPromiseToast } from "@plane/propel/toast";
-import type { IProject, TIssue, EIssueLayoutTypes } from "@plane/types";
-import { cn, createIssuePayload } from "@plane/utils";
-// plane web imports
-import { QuickAddIssueFormRoot } from "@/plane-web/components/issues/quick-add";
+// taskflow imports
+import { useTranslation } from "@taskflow/i18n";
+import { PlusIcon } from "@taskflow/propel/icons";
+import { setPromiseToast } from "@taskflow/propel/toast";
+import type { IProject, TIssue, EIssueLayoutTypes } from "@taskflow/types";
+import { cn, createIssuePayload } from "@taskflow/utils";
+// taskflow web imports
+import { QuickAddIssueFormRoot } from "@/taskflow-web/components/issues/quick-add";
 // local imports
 import { CreateIssueToastActionItems } from "../../create-issue-toast-action-items";
 

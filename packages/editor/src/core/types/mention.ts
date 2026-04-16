@@ -1,11 +1,11 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
-// plane types
-import type { TSearchEntities } from "@plane/types";
+// taskflow types
+import type { TSearchEntities } from "@taskflow/types";
 
 export type TMentionSuggestion = {
   entity_identifier: string;

@@ -1,13 +1,13 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { ArchiveIcon, Earth } from "lucide-react";
-import { EPageAccess } from "@plane/constants";
-import { LockIcon } from "@plane/propel/icons";
-import type { TPage } from "@plane/types";
+import { EPageAccess } from "@taskflow/constants";
+import { LockIcon } from "@taskflow/propel/icons";
+import type { TPage } from "@taskflow/types";
 
 export function PageAccessIcon(page: TPage) {
   return (

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -9,24 +9,24 @@ import { observer } from "mobx-react";
 import { useParams } from "next/navigation";
 // icons
 import { ChartNoAxesColumn, PanelRight, SlidersHorizontal } from "lucide-react";
-// plane imports
+// taskflow imports
 import {
   EIssueFilterType,
   EUserPermissions,
   EUserPermissionsLevel,
   ISSUE_DISPLAY_FILTERS_BY_PAGE,
   WORK_ITEM_TRACKER_ELEMENTS,
-} from "@plane/constants";
-import { usePlatformOS } from "@plane/hooks";
-import { useTranslation } from "@plane/i18n";
-import { Button } from "@plane/propel/button";
-import { IconButton } from "@plane/propel/icon-button";
-import { CycleIcon } from "@plane/propel/icons";
-import { Tooltip } from "@plane/propel/tooltip";
-import type { ICustomSearchSelectOption, IIssueDisplayFilterOptions, IIssueDisplayProperties } from "@plane/types";
-import { EIssuesStoreType, EIssueLayoutTypes } from "@plane/types";
-import { Breadcrumbs, BreadcrumbNavigationSearchDropdown, Header } from "@plane/ui";
-import { cn } from "@plane/utils";
+} from "@taskflow/constants";
+import { usePlatformOS } from "@taskflow/hooks";
+import { useTranslation } from "@taskflow/i18n";
+import { Button } from "@taskflow/propel/button";
+import { IconButton } from "@taskflow/propel/icon-button";
+import { CycleIcon } from "@taskflow/propel/icons";
+import { Tooltip } from "@taskflow/propel/tooltip";
+import type { ICustomSearchSelectOption, IIssueDisplayFilterOptions, IIssueDisplayProperties } from "@taskflow/types";
+import { EIssuesStoreType, EIssueLayoutTypes } from "@taskflow/types";
+import { Breadcrumbs, BreadcrumbNavigationSearchDropdown, Header } from "@taskflow/ui";
+import { cn } from "@taskflow/utils";
 // components
 import { WorkItemsModal } from "@/components/analytics/work-items/modal";
 import { BreadcrumbLink } from "@/components/common/breadcrumb-link";
@@ -47,8 +47,8 @@ import { useProject } from "@/hooks/store/use-project";
 import { useUserPermissions } from "@/hooks/store/user";
 import { useAppRouter } from "@/hooks/use-app-router";
 import useLocalStorage from "@/hooks/use-local-storage";
-// plane web imports
-import { CommonProjectBreadcrumbs } from "@/plane-web/components/breadcrumbs/common";
+// taskflow web imports
+import { CommonProjectBreadcrumbs } from "@/taskflow-web/components/breadcrumbs/common";
 
 export const CycleIssuesHeader = observer(function CycleIssuesHeader() {
   // refs

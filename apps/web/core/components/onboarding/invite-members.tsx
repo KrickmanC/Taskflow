@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -19,17 +19,17 @@ import { Controller, useFieldArray, useForm } from "react-hook-form";
 import { usePopper } from "react-popper";
 import { XCircle } from "lucide-react";
 import { Listbox } from "@headlessui/react";
-// plane imports
-import type { EUserPermissions } from "@plane/constants";
-import { ROLE, ROLE_DETAILS } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
+// taskflow imports
+import type { EUserPermissions } from "@taskflow/constants";
+import { ROLE, ROLE_DETAILS } from "@taskflow/constants";
+import { useTranslation } from "@taskflow/i18n";
 // types
-import { Button } from "@plane/propel/button";
-import { PlusIcon, CheckIcon, ChevronDownIcon } from "@plane/propel/icons";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import type { IUser, IWorkspace } from "@plane/types";
+import { Button } from "@taskflow/propel/button";
+import { PlusIcon, CheckIcon, ChevronDownIcon } from "@taskflow/propel/icons";
+import { TOAST_TYPE, setToast } from "@taskflow/propel/toast";
+import type { IUser, IWorkspace } from "@taskflow/types";
 // ui
-import { Input, Spinner } from "@plane/ui";
+import { Input, Spinner } from "@taskflow/ui";
 // services
 import { WorkspaceService } from "@/services/workspace.service";
 // components
@@ -340,7 +340,7 @@ export function InviteMembers(props: Props) {
           <div className="mx-auto w-4/5 space-y-1 py-4 text-center">
             <h3 className="text-24 font-bold text-primary">Invite your teammates</h3>
             <p className="font-medium text-placeholder">
-              Work in plane happens best with your team. Invite them now to use Plane to its potential.
+              Work in taskflow happens best with your team. Invite them now to use Taskflow to its potential.
             </p>
           </div>
           <form

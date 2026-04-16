@@ -1,15 +1,15 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import type { AxiosRequestConfig } from "axios";
-import { API_BASE_URL } from "@plane/constants";
-// plane types
-import { getFileMetaDataForUpload, generateFileUploadPayload } from "@plane/services";
-import type { TIssueAttachment, TIssueAttachmentUploadResponse, TIssueServiceType } from "@plane/types";
-import { EIssueServiceType } from "@plane/types";
+import { API_BASE_URL } from "@taskflow/constants";
+// taskflow types
+import { getFileMetaDataForUpload, generateFileUploadPayload } from "@taskflow/services";
+import type { TIssueAttachment, TIssueAttachmentUploadResponse, TIssueServiceType } from "@taskflow/types";
+import { EIssueServiceType } from "@taskflow/types";
 // services
 import { APIService } from "@/services/api.service";
 import { FileUploadService } from "@/services/file-upload.service";

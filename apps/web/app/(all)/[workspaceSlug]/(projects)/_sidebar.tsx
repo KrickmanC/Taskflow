@@ -1,15 +1,15 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { useState } from "react";
 import { observer } from "mobx-react";
-// plane imports
+// taskflow imports
 import { useParams, usePathname } from "next/navigation";
-import { SIDEBAR_WIDTH } from "@plane/constants";
-import { useLocalStorage } from "@plane/hooks";
+import { SIDEBAR_WIDTH } from "@taskflow/constants";
+import { useLocalStorage } from "@taskflow/hooks";
 // components
 import { ResizableSidebar } from "@/components/sidebar/resizable-sidebar";
 // hooks

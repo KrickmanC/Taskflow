@@ -1,13 +1,13 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import type { Node as ProseMirrorNode } from "@tiptap/pm/model";
 import type { EditorState, Selection } from "@tiptap/pm/state";
-// plane imports
-import { cn } from "@plane/utils";
+// taskflow imports
+import { cn } from "@taskflow/utils";
 // constants
 import { CORE_EXTENSIONS } from "@/constants/extension";
 

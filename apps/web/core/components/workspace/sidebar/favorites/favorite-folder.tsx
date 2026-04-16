@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -21,15 +21,15 @@ import { useParams } from "next/navigation";
 import { createRoot } from "react-dom/client";
 import { Star, MoreHorizontal, GripVertical } from "lucide-react";
 import { Disclosure, Transition } from "@headlessui/react";
-// plane imports
-import { useOutsideClickDetector } from "@plane/hooks";
-import { useTranslation } from "@plane/i18n";
-import { DraftIcon, FavoriteFolderIcon, ChevronRightIcon } from "@plane/propel/icons";
-import { Tooltip } from "@plane/propel/tooltip";
-import type { IFavorite, InstructionType } from "@plane/types";
-import { CustomMenu, DropIndicator, DragHandle } from "@plane/ui";
+// taskflow imports
+import { useOutsideClickDetector } from "@taskflow/hooks";
+import { useTranslation } from "@taskflow/i18n";
+import { DraftIcon, FavoriteFolderIcon, ChevronRightIcon } from "@taskflow/propel/icons";
+import { Tooltip } from "@taskflow/propel/tooltip";
+import type { IFavorite, InstructionType } from "@taskflow/types";
+import { CustomMenu, DropIndicator, DragHandle } from "@taskflow/ui";
 // helpers
-import { cn } from "@plane/utils";
+import { cn } from "@taskflow/utils";
 // hooks
 import { useFavorite } from "@/hooks/store/use-favorite";
 import { usePlatformOS } from "@/hooks/use-platform-os";

@@ -1,11 +1,11 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
-// plane imports
-import type { TExtendedFileHandler } from "@/plane-editor/types/config";
+// taskflow imports
+import type { TExtendedFileHandler } from "@/taskflow-editor/types/config";
 
 export type TFileHandler = {
   assetsUploadStatus: Record<string, number>; // blockId => progress percentage

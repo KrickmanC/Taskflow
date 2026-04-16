@@ -1,14 +1,14 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { Command } from "cmdk";
 import { observer } from "mobx-react";
-// plane imports
-import { Avatar } from "@plane/ui";
-import { getFileURL } from "@plane/utils";
+// taskflow imports
+import { Avatar } from "@taskflow/ui";
+import { getFileURL } from "@taskflow/utils";
 // hooks
 import { useMember } from "@/hooks/store/use-member";
 // local imports

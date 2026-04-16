@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -9,14 +9,14 @@ import { observer } from "mobx-react";
 import { useParams, useRouter } from "next/navigation";
 import { MoreHorizontal, ArchiveIcon, Settings } from "lucide-react";
 import { Disclosure } from "@headlessui/react";
-// plane imports
-import { EUserPermissionsLevel } from "@plane/constants";
-import { useOutsideClickDetector } from "@plane/hooks";
-import { useTranslation } from "@plane/i18n";
-import { ChevronRightIcon } from "@plane/propel/icons";
-import { EUserWorkspaceRoles } from "@plane/types";
-import { CustomMenu } from "@plane/ui";
-import { cn } from "@plane/utils";
+// taskflow imports
+import { EUserPermissionsLevel } from "@taskflow/constants";
+import { useOutsideClickDetector } from "@taskflow/hooks";
+import { useTranslation } from "@taskflow/i18n";
+import { ChevronRightIcon } from "@taskflow/propel/icons";
+import { EUserWorkspaceRoles } from "@taskflow/types";
+import { CustomMenu } from "@taskflow/ui";
+import { cn } from "@taskflow/utils";
 // store hooks
 import { useUserPermissions } from "@/hooks/store/user";
 

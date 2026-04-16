@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -8,21 +8,21 @@ import { useState } from "react";
 import { observer } from "mobx-react";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
 // constants
-import { EPageAccess } from "@plane/constants";
-// plane types
-import { Button } from "@plane/propel/button";
-import { PageIcon } from "@plane/propel/icons";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import type { TPage } from "@plane/types";
-// plane ui
-import { Breadcrumbs, Header } from "@plane/ui";
+import { EPageAccess } from "@taskflow/constants";
+// taskflow types
+import { Button } from "@taskflow/propel/button";
+import { PageIcon } from "@taskflow/propel/icons";
+import { TOAST_TYPE, setToast } from "@taskflow/propel/toast";
+import type { TPage } from "@taskflow/types";
+// taskflow ui
+import { Breadcrumbs, Header } from "@taskflow/ui";
 // helpers
 import { BreadcrumbLink } from "@/components/common/breadcrumb-link";
 // hooks
 import { useProject } from "@/hooks/store/use-project";
-// plane web imports
-import { CommonProjectBreadcrumbs } from "@/plane-web/components/breadcrumbs/common";
-import { EPageStoreType, usePageStore } from "@/plane-web/hooks/store";
+// taskflow web imports
+import { CommonProjectBreadcrumbs } from "@/taskflow-web/components/breadcrumbs/common";
+import { EPageStoreType, usePageStore } from "@/taskflow-web/hooks/store";
 
 export const PagesListHeader = observer(function PagesListHeader() {
   // states

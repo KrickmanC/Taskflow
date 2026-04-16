@@ -1,15 +1,15 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import React from "react";
 // ui
-import { Tooltip } from "@plane/propel/tooltip";
-import { ControlLink, Row } from "@plane/ui";
+import { Tooltip } from "@taskflow/propel/tooltip";
+import { ControlLink, Row } from "@taskflow/ui";
 // helpers
-import { cn } from "@plane/utils";
+import { cn } from "@taskflow/utils";
 // hooks
 import { useAppRouter } from "@/hooks/use-app-router";
 

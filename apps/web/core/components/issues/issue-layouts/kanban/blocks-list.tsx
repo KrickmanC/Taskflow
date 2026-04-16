@@ -1,13 +1,13 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import type { MutableRefObject } from "react";
 import { observer } from "mobx-react";
-// plane imports
-import type { TIssue, IIssueDisplayProperties, IIssueMap } from "@plane/types";
+// taskflow imports
+import type { TIssue, IIssueDisplayProperties, IIssueMap } from "@taskflow/types";
 // local imports
 import type { TRenderQuickActions } from "../list/list-view-types";
 import { KanbanIssueBlock } from "./block";

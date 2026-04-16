@@ -1,14 +1,14 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import type { Editor } from "@tiptap/core";
 import { Plugin, PluginKey } from "@tiptap/pm/state";
-// plane imports
-import { convertHTMLToMarkdown } from "@plane/utils";
-import type { TCustomComponentsMetaData } from "@plane/utils";
+// taskflow imports
+import { convertHTMLToMarkdown } from "@taskflow/utils";
+import type { TCustomComponentsMetaData } from "@taskflow/utils";
 
 type TArgs = {
   editor: Editor;
@@ -38,7 +38,7 @@ export const MarkdownClipboardPlugin = (args: TArgs): Plugin => {
             });
             event.clipboardData?.setData("text/plain", markdown);
             event.clipboardData?.setData("text/html", clipboardHTML);
-            event.clipboardData?.setData("text/plane-editor-html", clipboardHTML);
+            event.clipboardData?.setData("text/taskflow-editor-html", clipboardHTML);
             return true;
           } catch (error) {
             console.error("Failed to copy markdown content to clipboard:", error);

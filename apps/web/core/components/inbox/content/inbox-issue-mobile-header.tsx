@@ -1,12 +1,12 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { observer } from "mobx-react";
 import { Clock, FileStack, MoreHorizontal, PanelLeft, MoveRight } from "lucide-react";
-import { IconButton, getIconButtonStyling } from "@plane/propel/icon-button";
+import { IconButton, getIconButtonStyling } from "@taskflow/propel/icon-button";
 import {
   LinkIcon,
   NewTabIcon,
@@ -15,11 +15,11 @@ import {
   ChevronUpIcon,
   CheckCircleFilledIcon,
   CloseCircleFilledIcon,
-} from "@plane/propel/icons";
-import type { TNameDescriptionLoader } from "@plane/types";
+} from "@taskflow/propel/icons";
+import type { TNameDescriptionLoader } from "@taskflow/types";
 
-import { Header, CustomMenu, EHeaderVariant } from "@plane/ui";
-import { cn, findHowManyDaysLeft, generateWorkItemLink } from "@plane/utils";
+import { Header, CustomMenu, EHeaderVariant } from "@taskflow/ui";
+import { cn, findHowManyDaysLeft, generateWorkItemLink } from "@taskflow/utils";
 // components
 import { NameDescriptionUpdateStatus } from "@/components/issues/issue-update-status";
 // hooks

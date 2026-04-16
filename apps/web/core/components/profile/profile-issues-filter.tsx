@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -7,13 +7,13 @@
 import { useCallback } from "react";
 import { observer } from "mobx-react";
 import { useParams } from "next/navigation";
-// plane constants
-import { EIssueFilterType, ISSUE_DISPLAY_FILTERS_BY_PAGE } from "@plane/constants";
+// taskflow constants
+import { EIssueFilterType, ISSUE_DISPLAY_FILTERS_BY_PAGE } from "@taskflow/constants";
 // i18n
-import { useTranslation } from "@plane/i18n";
+import { useTranslation } from "@taskflow/i18n";
 // types
-import type { IIssueDisplayFilterOptions, IIssueDisplayProperties } from "@plane/types";
-import { EIssuesStoreType, EIssueLayoutTypes } from "@plane/types";
+import type { IIssueDisplayFilterOptions, IIssueDisplayProperties } from "@taskflow/types";
+import { EIssuesStoreType, EIssueLayoutTypes } from "@taskflow/types";
 // components
 import { DisplayFiltersSelection, FiltersDropdown, LayoutSelection } from "@/components/issues/issue-layouts/filters";
 import { WorkItemFiltersToggle } from "@/components/work-item-filters/filters-toggle";

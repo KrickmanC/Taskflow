@@ -1,12 +1,12 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 //
-import type { ChartDataType } from "@plane/types";
-import { EStartOfTheWeek } from "@plane/types";
+import type { ChartDataType } from "@taskflow/types";
+import { EStartOfTheWeek } from "@taskflow/types";
 import { months, generateWeeks } from "../data";
 import { getNumberOfDaysBetweenTwoDates, getWeekNumberByDate } from "./helpers";
 export interface IDayBlock {

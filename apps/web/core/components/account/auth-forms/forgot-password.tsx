@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -10,12 +10,12 @@ import { useSearchParams } from "next/navigation";
 import { Controller, useForm } from "react-hook-form";
 // icons
 import { CircleCheck } from "lucide-react";
-// plane imports
-import { useTranslation } from "@plane/i18n";
-import { Button, getButtonStyling } from "@plane/propel/button";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import { Input } from "@plane/ui";
-import { cn, checkEmailValidity } from "@plane/utils";
+// taskflow imports
+import { useTranslation } from "@taskflow/i18n";
+import { Button, getButtonStyling } from "@taskflow/propel/button";
+import { TOAST_TYPE, setToast } from "@taskflow/propel/toast";
+import { Input } from "@taskflow/ui";
+import { cn, checkEmailValidity } from "@taskflow/utils";
 // hooks
 import useTimer from "@/hooks/use-timer";
 // services
@@ -39,7 +39,7 @@ export const ForgotPasswordForm = observer(function ForgotPasswordForm() {
   // search params
   const searchParams = useSearchParams();
   const email = searchParams.get("email");
-  // plane hooks
+  // taskflow hooks
   const { t } = useTranslation();
   // timer
   const { timer: resendTimerCode, setTimer: setResendCodeTimer } = useTimer(0);

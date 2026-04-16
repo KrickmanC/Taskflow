@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -8,14 +8,14 @@ import { useState } from "react";
 import { observer } from "mobx-react";
 import type { Control } from "react-hook-form";
 import { Controller } from "react-hook-form";
-import { ETabIndices, EUserPermissions, EUserPermissionsLevel } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { ParentPropertyIcon } from "@plane/propel/icons";
+import { ETabIndices, EUserPermissions, EUserPermissionsLevel } from "@taskflow/constants";
+import { useTranslation } from "@taskflow/i18n";
+import { ParentPropertyIcon } from "@taskflow/propel/icons";
 // types
-import type { ISearchIssueResponse, TIssue } from "@plane/types";
+import type { ISearchIssueResponse, TIssue } from "@taskflow/types";
 // ui
-import { CustomMenu } from "@plane/ui";
-import { getDate, renderFormattedPayloadDate, getTabIndex } from "@plane/utils";
+import { CustomMenu } from "@taskflow/ui";
+import { getDate, renderFormattedPayloadDate, getTabIndex } from "@taskflow/utils";
 // components
 import { CycleDropdown } from "@/components/dropdowns/cycle";
 import { DateDropdown } from "@/components/dropdowns/date";
@@ -32,8 +32,8 @@ import { useProjectEstimates } from "@/hooks/store/estimates";
 import { useProject } from "@/hooks/store/use-project";
 import { useUserPermissions } from "@/hooks/store/user";
 import { usePlatformOS } from "@/hooks/use-platform-os";
-// plane web components
-import { IssueIdentifier } from "@/plane-web/components/issues/issue-details/issue-identifier";
+// taskflow web components
+import { IssueIdentifier } from "@/taskflow-web/components/issues/issue-details/issue-identifier";
 
 type TIssueDefaultPropertiesProps = {
   control: Control<TIssue>;

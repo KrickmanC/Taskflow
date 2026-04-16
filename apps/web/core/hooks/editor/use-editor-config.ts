@@ -1,18 +1,18 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { useCallback } from "react";
-// plane imports
-import type { TFileHandler } from "@plane/editor";
-import { getEditorAssetDownloadSrc, getEditorAssetSrc } from "@plane/utils";
+// taskflow imports
+import type { TFileHandler } from "@taskflow/editor";
+import { getEditorAssetDownloadSrc, getEditorAssetSrc } from "@taskflow/utils";
 // hooks
 import { useEditorAsset } from "@/hooks/store/use-editor-asset";
-// plane web hooks
-import { useExtendedEditorConfig } from "@/plane-web/hooks/editor/use-extended-editor-config";
-import { useFileSize } from "@/plane-web/hooks/use-file-size";
+// taskflow web hooks
+import { useExtendedEditorConfig } from "@/taskflow-web/hooks/editor/use-extended-editor-config";
+import { useFileSize } from "@/taskflow-web/hooks/use-file-size";
 // services
 import { FileService } from "@/services/file.service";
 const fileService = new FileService();

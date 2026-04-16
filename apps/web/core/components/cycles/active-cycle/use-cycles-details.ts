@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -7,9 +7,9 @@
 import { useCallback } from "react";
 import { useRouter } from "next/navigation";
 import useSWR from "swr";
-// plane imports
-import type { TWorkItemFilterCondition } from "@plane/shared-state";
-import { EIssuesStoreType } from "@plane/types";
+// taskflow imports
+import type { TWorkItemFilterCondition } from "@taskflow/shared-state";
+import { EIssuesStoreType } from "@taskflow/types";
 // constants
 import { CYCLE_ISSUES_WITH_PARAMS } from "@/constants/fetch-keys";
 // hooks

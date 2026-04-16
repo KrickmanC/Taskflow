@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -7,12 +7,12 @@
 import { useEffect, useState } from "react";
 import { observer } from "mobx-react";
 import { PanelLeft } from "lucide-react";
-// plane imports
-import { useTranslation } from "@plane/i18n";
-import { EmptyStateCompact } from "@plane/propel/empty-state";
-import { IntakeIcon } from "@plane/propel/icons";
-import { EInboxIssueCurrentTab } from "@plane/types";
-import { cn } from "@plane/utils";
+// taskflow imports
+import { useTranslation } from "@taskflow/i18n";
+import { EmptyStateCompact } from "@taskflow/propel/empty-state";
+import { IntakeIcon } from "@taskflow/propel/icons";
+import { EInboxIssueCurrentTab } from "@taskflow/types";
+import { cn } from "@taskflow/utils";
 // components
 import { InboxContentRoot } from "@/components/inbox/content";
 import { InboxSidebar } from "@/components/inbox/sidebar";
@@ -32,7 +32,7 @@ export const InboxIssueRoot = observer(function InboxIssueRoot(props: TInboxIssu
   const { workspaceSlug, projectId, inboxIssueId, inboxAccessible, navigationTab } = props;
   // states
   const [isMobileSidebar, setIsMobileSidebar] = useState(true);
-  // plane hooks
+  // taskflow hooks
   const { t } = useTranslation();
   // hooks
   const { loader, error, currentTab, currentInboxProjectId, handleCurrentTab, fetchInboxIssues } = useProjectInbox();

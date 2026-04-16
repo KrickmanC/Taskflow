@@ -1,14 +1,14 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { useRef, useEffect } from "react";
 import useSWR from "swr";
-// plane imports
-import { UserService } from "@plane/services";
-import type { IUser } from "@plane/types";
+// taskflow imports
+import { UserService } from "@taskflow/services";
+import type { IUser } from "@taskflow/types";
 
 export const useMention = () => {
   const userService = new UserService();

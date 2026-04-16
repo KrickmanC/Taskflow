@@ -1,12 +1,12 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
-import { MARKETING_PLANE_ONE_PAGE_LINK } from "@plane/constants";
-import { getButtonStyling } from "@plane/propel/button";
-import { cn } from "@plane/utils";
+import { MARKETING_TASKFLOW_ONE_PAGE_LINK } from "@taskflow/constants";
+import { getButtonStyling } from "@taskflow/propel/button";
+import { cn } from "@taskflow/utils";
 
 type Props = {
   className?: string;
@@ -23,7 +23,7 @@ export function BulkOperationsUpgradeBanner(props: Props) {
           operation.
         </p>
         <a
-          href={MARKETING_PLANE_ONE_PAGE_LINK}
+          href={MARKETING_TASKFLOW_ONE_PAGE_LINK}
           target="_blank"
           rel="noopener noreferrer"
           className={cn(getButtonStyling("primary", "base"), "flex-shrink-0")}

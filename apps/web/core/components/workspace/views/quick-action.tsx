@@ -1,17 +1,17 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { useState } from "react";
 import { observer } from "mobx-react";
-// plane imports
-import { EUserPermissions, EUserPermissionsLevel } from "@plane/constants";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import type { IWorkspaceView } from "@plane/types";
-import { CustomMenu } from "@plane/ui";
-import { copyUrlToClipboard, cn } from "@plane/utils";
+// taskflow imports
+import { EUserPermissions, EUserPermissionsLevel } from "@taskflow/constants";
+import { TOAST_TYPE, setToast } from "@taskflow/propel/toast";
+import type { IWorkspaceView } from "@taskflow/types";
+import { CustomMenu } from "@taskflow/ui";
+import { copyUrlToClipboard, cn } from "@taskflow/utils";
 // helpers
 import { useViewMenuItems } from "@/components/common/quick-actions-helper";
 // hooks

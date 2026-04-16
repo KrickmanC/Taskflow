@@ -1,15 +1,15 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import Link from "next/link";
-import { PROJECT_TRACKER_ELEMENTS } from "@plane/constants";
-import { ChevronRightIcon } from "@plane/propel/icons";
-import { EPillVariant, Pill, EPillSize } from "@plane/propel/pill";
-import { ToggleSwitch } from "@plane/ui";
-import { joinUrlPath } from "@plane/utils";
+import { PROJECT_TRACKER_ELEMENTS } from "@taskflow/constants";
+import { ChevronRightIcon } from "@taskflow/propel/icons";
+import { EPillVariant, Pill, EPillSize } from "@taskflow/propel/pill";
+import { ToggleSwitch } from "@taskflow/ui";
+import { joinUrlPath } from "@taskflow/utils";
 
 type Props = {
   workspaceSlug: string;

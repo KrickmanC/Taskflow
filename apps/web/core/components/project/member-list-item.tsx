@@ -1,19 +1,19 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { observer } from "mobx-react";
-// plane imports
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import { Table } from "@plane/ui";
+// taskflow imports
+import { TOAST_TYPE, setToast } from "@taskflow/propel/toast";
+import { Table } from "@taskflow/ui";
 // hooks
 import { useMember } from "@/hooks/store/use-member";
 import { useUser, useUserPermissions } from "@/hooks/store/user";
 import { useAppRouter } from "@/hooks/use-app-router";
-// plane web imports
-import { useProjectColumns } from "@/plane-web/components/projects/settings/useProjectColumns";
+// taskflow web imports
+import { useProjectColumns } from "@/taskflow-web/components/projects/settings/useProjectColumns";
 // store
 import type { IProjectMemberDetails } from "@/store/member/project/base-project-member.store";
 // local imports

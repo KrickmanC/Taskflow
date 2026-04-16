@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -8,16 +8,16 @@ import React, { useMemo } from "react";
 import { observer } from "mobx-react";
 import { Ellipsis } from "lucide-react";
 import { Disclosure, Transition } from "@headlessui/react";
-// plane imports
+// taskflow imports
 import {
   WORKSPACE_SIDEBAR_DYNAMIC_NAVIGATION_ITEMS_LINKS,
   WORKSPACE_SIDEBAR_STATIC_NAVIGATION_ITEMS,
   WORKSPACE_SIDEBAR_STATIC_NAVIGATION_ITEMS_LINKS,
   WORKSPACE_SIDEBAR_STATIC_PINNED_NAVIGATION_ITEMS_LINKS,
-} from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { ChevronRightIcon } from "@plane/propel/icons";
-import { cn } from "@plane/utils";
+} from "@taskflow/constants";
+import { useTranslation } from "@taskflow/i18n";
+import { ChevronRightIcon } from "@taskflow/propel/icons";
+import { cn } from "@taskflow/utils";
 // components
 import { SidebarNavItem } from "@/components/sidebar/sidebar-navigation";
 // store hooks
@@ -27,8 +27,8 @@ import {
   usePersonalNavigationPreferences,
   useWorkspaceNavigationPreferences,
 } from "@/hooks/use-navigation-preferences";
-// plane-web imports
-import { SidebarItem } from "@/plane-web/components/workspace/sidebar/sidebar-item";
+// taskflow-web imports
+import { SidebarItem } from "@/taskflow-web/components/workspace/sidebar/sidebar-item";
 
 export const SidebarMenuItems = observer(function SidebarMenuItems() {
   // routers

@@ -1,13 +1,13 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import React, { useEffect, useState, useCallback } from "react";
 import { observer } from "mobx-react";
-import type { TIssue, TIssueServiceType } from "@plane/types";
-import { EIssueServiceType, EIssuesStoreType } from "@plane/types";
+import type { TIssue, TIssueServiceType } from "@taskflow/types";
+import { EIssueServiceType, EIssuesStoreType } from "@taskflow/types";
 // components
 import { DeleteIssueModal } from "@/components/issues/delete-issue-modal";
 // hooks

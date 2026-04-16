@@ -1,13 +1,13 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { useEffect, useRef } from "react";
-// plane imports
-import type { IWorkspaceMemberInvitation } from "@plane/types";
-import { EOnboardingSteps } from "@plane/types";
+// taskflow imports
+import type { IWorkspaceMemberInvitation } from "@taskflow/types";
+import { EOnboardingSteps } from "@taskflow/types";
 // local components
 import { ProfileSetupStep } from "./profile";
 import { RoleSetupStep } from "./role";

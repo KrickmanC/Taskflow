@@ -1,10 +1,10 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
-import type { EUserPermissions, IJiraMetadata } from "@plane/types";
+import type { EUserPermissions, IJiraMetadata } from "@taskflow/types";
 
 const paramsToKey = (params: any) => {
   const {

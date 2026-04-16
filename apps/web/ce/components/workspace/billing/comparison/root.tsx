@@ -1,17 +1,17 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { observer } from "mobx-react";
-// plane imports
-import type { EProductSubscriptionEnum, TBillingFrequency } from "@plane/types";
+// taskflow imports
+import type { EProductSubscriptionEnum, TBillingFrequency } from "@taskflow/types";
 // components
 import { PlansComparisonBase, shouldRenderPlanDetail } from "@/components/workspace/billing/comparison/base";
-import type { TPlanePlans } from "@/constants/plans";
-import { PLANE_PLANS } from "@/constants/plans";
-// plane web imports
+import type { TTaskflowPlans } from "@/constants/plans";
+import { TASKFLOW_PLANS } from "@/constants/plans";
+// taskflow web imports
 import { PlanDetail } from "./plan-detail";
 
 type TPlansComparisonProps = {
@@ -29,12 +29,12 @@ export const PlansComparison = observer(function PlansComparison(props: TPlansCo
     setIsCompareAllFeaturesSectionOpen,
   } = props;
   // plan details
-  const { planDetails } = PLANE_PLANS;
+  const { planDetails } = TASKFLOW_PLANS;
 
   return (
     <PlansComparisonBase
-      planeDetails={Object.entries(planDetails).map(([planKey, plan]) => {
-        const currentPlanKey = planKey as TPlanePlans;
+      taskflowDetails={Object.entries(planDetails).map(([planKey, plan]) => {
+        const currentPlanKey = planKey as TTaskflowPlans;
         if (!shouldRenderPlanDetail(currentPlanKey)) return null;
         return (
           <PlanDetail

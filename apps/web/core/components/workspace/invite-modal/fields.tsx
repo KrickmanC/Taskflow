@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -7,12 +7,12 @@
 import { observer } from "mobx-react";
 import type { Control, FieldArrayWithId, FormState } from "react-hook-form";
 import { Controller } from "react-hook-form";
-// plane imports
-import { ROLE } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { CloseIcon } from "@plane/propel/icons";
-import { CustomSelect, Input } from "@plane/ui";
-import { cn } from "@plane/utils";
+// taskflow imports
+import { ROLE } from "@taskflow/constants";
+import { useTranslation } from "@taskflow/i18n";
+import { CloseIcon } from "@taskflow/propel/icons";
+import { CustomSelect, Input } from "@taskflow/ui";
+import { cn } from "@taskflow/utils";
 // hooks
 import { useUserPermissions } from "@/hooks/store/user";
 import type { InvitationFormValues } from "@/hooks/use-workspace-invitation";
@@ -35,7 +35,7 @@ export const InvitationFields = observer(function InvitationFields(props: TInvit
     remove,
     className,
   } = props;
-  // plane hooks
+  // taskflow hooks
   const { t } = useTranslation();
   // store hooks
   const { workspaceInfoBySlug } = useUserPermissions();

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -10,9 +10,9 @@ import { useParams } from "next/navigation";
 import { Controller, useForm } from "react-hook-form";
 import { Info, SquareUser } from "lucide-react";
 import { Disclosure, Transition } from "@headlessui/react";
-import { MODULE_STATUS, EUserPermissions, EUserPermissionsLevel, EEstimateSystem } from "@plane/constants";
-// plane types
-import { useTranslation } from "@plane/i18n";
+import { MODULE_STATUS, EUserPermissions, EUserPermissionsLevel, EEstimateSystem } from "@taskflow/constants";
+// taskflow types
+import { useTranslation } from "@taskflow/i18n";
 import {
   PlusIcon,
   MembersPropertyIcon,
@@ -21,14 +21,14 @@ import {
   StartDatePropertyIcon,
   ChevronDownIcon,
   ChevronRightIcon,
-} from "@plane/propel/icons";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import type { ILinkDetails, IModule, ModuleLink } from "@plane/types";
-// plane ui
-import { Loader, CustomSelect, TextArea } from "@plane/ui";
+} from "@taskflow/propel/icons";
+import { TOAST_TYPE, setToast } from "@taskflow/propel/toast";
+import type { ILinkDetails, IModule, ModuleLink } from "@taskflow/types";
+// taskflow ui
+import { Loader, CustomSelect, TextArea } from "@taskflow/ui";
 // components
 // helpers
-import { getDate, renderFormattedPayloadDate } from "@plane/utils";
+import { getDate, renderFormattedPayloadDate } from "@taskflow/utils";
 import { DateRangeDropdown } from "@/components/dropdowns/date-range";
 import { MemberDropdown } from "@/components/dropdowns/member/dropdown";
 import { CreateUpdateModuleLinkModal, ModuleAnalyticsProgress, ModuleLinksList } from "@/components/modules";
@@ -36,7 +36,7 @@ import { CreateUpdateModuleLinkModal, ModuleAnalyticsProgress, ModuleLinksList }
 import { useProjectEstimates } from "@/hooks/store/estimates";
 import { useModule } from "@/hooks/store/use-module";
 import { useUserPermissions } from "@/hooks/store/user";
-// plane web constants
+// taskflow web constants
 const defaultValues: Partial<IModule> = {
   lead_id: "",
   member_ids: [],

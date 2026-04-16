@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -7,11 +7,11 @@
 import { useRef } from "react";
 import { observer } from "mobx-react";
 import type { UseFormSetValue } from "react-hook-form";
-// plane imports
-import { useTranslation } from "@plane/i18n";
-import { Button } from "@plane/propel/button";
-import { setToast, TOAST_TYPE } from "@plane/propel/toast";
-import type { IUserTheme } from "@plane/types";
+// taskflow imports
+import { useTranslation } from "@taskflow/i18n";
+import { Button } from "@taskflow/propel/button";
+import { setToast, TOAST_TYPE } from "@taskflow/propel/toast";
+import type { IUserTheme } from "@taskflow/types";
 
 type Props = {
   handleUpdateTheme: (formData: IUserTheme) => Promise<void>;

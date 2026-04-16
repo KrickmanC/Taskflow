@@ -1,20 +1,20 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { useEffect, useState } from "react";
 // constants
-import type { EPageAccess } from "@plane/constants";
-import type { TPage } from "@plane/types";
+import type { EPageAccess } from "@taskflow/constants";
+import type { TPage } from "@taskflow/types";
 // ui
-import { EModalPosition, EModalWidth, ModalCore } from "@plane/ui";
+import { EModalPosition, EModalWidth, ModalCore } from "@taskflow/ui";
 // hooks
 import { useAppRouter } from "@/hooks/use-app-router";
-// plane web hooks
-import type { EPageStoreType } from "@/plane-web/hooks/store";
-import { usePageStore } from "@/plane-web/hooks/store";
+// taskflow web hooks
+import type { EPageStoreType } from "@/taskflow-web/hooks/store";
+import { usePageStore } from "@/taskflow-web/hooks/store";
 // local imports
 import { PageForm } from "./page-form";
 

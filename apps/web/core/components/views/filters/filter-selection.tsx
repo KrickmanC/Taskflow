@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -7,9 +7,9 @@
 import { useState } from "react";
 import { observer } from "mobx-react";
 
-import { SearchIcon, CloseIcon } from "@plane/propel/icons";
-import type { TViewFilterProps, TViewFilters } from "@plane/types";
-import { EViewAccess } from "@plane/types";
+import { SearchIcon, CloseIcon } from "@taskflow/propel/icons";
+import type { TViewFilterProps, TViewFilters } from "@taskflow/types";
+import { EViewAccess } from "@taskflow/types";
 // components
 import { FilterCreatedDate } from "@/components/common/filters/created-at";
 import { FilterCreatedBy } from "@/components/common/filters/created-by";
@@ -17,8 +17,8 @@ import { FilterOption } from "@/components/issues/issue-layouts/filters";
 // constants
 // hooks
 import { usePlatformOS } from "@/hooks/use-platform-os";
-// plane web components
-import { FilterByAccess } from "@/plane-web/components/views/filters/access-filter";
+// taskflow web components
+import { FilterByAccess } from "@/taskflow-web/components/views/filters/access-filter";
 
 type Props = {
   filters: TViewFilters;

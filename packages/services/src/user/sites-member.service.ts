@@ -1,20 +1,20 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
-// plane imports
-import { API_BASE_URL } from "@plane/constants";
-import type { TPublicMember } from "@plane/types";
+// taskflow imports
+import { API_BASE_URL } from "@taskflow/constants";
+import type { TPublicMember } from "@taskflow/types";
 // api service
 import { APIService } from "../api.service";
 
 /**
- * Service class for managing members operations within plane sites application.
+ * Service class for managing members operations within taskflow sites application.
  * Extends APIService to handle HTTP requests to the member-related endpoints.
  * @extends {APIService}
- * @remarks This service is only available for plane sites
+ * @remarks This service is only available for taskflow sites
  */
 export class SitesMemberService extends APIService {
   constructor(BASE_URL?: string) {

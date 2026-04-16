@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -7,14 +7,14 @@
 import { addons } from "storybook/manager-api";
 import { create } from "storybook/theming";
 
-const planeTheme = create({
+const taskflowTheme = create({
   base: "dark",
-  brandTitle: "Plane UI",
-  brandUrl: "https://plane.so",
-  brandImage: "plane-lockup-light.svg",
+  brandTitle: "Taskflow UI",
+  brandUrl: "https://taskflow.so",
+  brandImage: "taskflow-lockup-light.svg",
   brandTarget: "_self",
 });
 
 addons.setConfig({
-  theme: planeTheme,
+  theme: taskflowTheme,
 });

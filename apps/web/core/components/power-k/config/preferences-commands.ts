@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -7,10 +7,10 @@
 import { useCallback } from "react";
 import { useTheme } from "next-themes";
 import { Calendar, Earth, Languages, Palette } from "lucide-react";
-// plane imports
-import { useTranslation } from "@plane/i18n";
-import { setToast, TOAST_TYPE } from "@plane/propel/toast";
-import type { EStartOfTheWeek, TUserProfile } from "@plane/types";
+// taskflow imports
+import { useTranslation } from "@taskflow/i18n";
+import { setToast, TOAST_TYPE } from "@taskflow/propel/toast";
+import type { EStartOfTheWeek, TUserProfile } from "@taskflow/types";
 // components
 import type { TPowerKCommandConfig } from "@/components/power-k/core/types";
 // hooks

@@ -1,14 +1,14 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { observer } from "mobx-react";
-// plane imports
-import { SUPPORTED_LANGUAGES, useTranslation } from "@plane/i18n";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import { CustomSelect } from "@plane/ui";
+// taskflow imports
+import { SUPPORTED_LANGUAGES, useTranslation } from "@taskflow/i18n";
+import { TOAST_TYPE, setToast } from "@taskflow/propel/toast";
+import { CustomSelect } from "@taskflow/ui";
 // components
 import { TimezoneSelect } from "@/components/global";
 import { StartOfWeekPreference } from "@/components/profile/start-of-week-preference";

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -7,13 +7,13 @@
 import React, { useCallback, useEffect } from "react";
 import { observer } from "mobx-react";
 import { useParams } from "next/navigation";
-// plane imports
-import { ALL_ISSUES, EUserPermissions, EUserPermissionsLevel } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import type { EIssuesStoreType, IBlockUpdateData, TIssue } from "@plane/types";
-import { EIssueLayoutTypes, GANTT_TIMELINE_TYPE } from "@plane/types";
-import { renderFormattedPayloadDate } from "@plane/utils";
+// taskflow imports
+import { ALL_ISSUES, EUserPermissions, EUserPermissionsLevel } from "@taskflow/constants";
+import { useTranslation } from "@taskflow/i18n";
+import { TOAST_TYPE, setToast } from "@taskflow/propel/toast";
+import type { EIssuesStoreType, IBlockUpdateData, TIssue } from "@taskflow/types";
+import { EIssueLayoutTypes, GANTT_TIMELINE_TYPE } from "@taskflow/types";
+import { renderFormattedPayloadDate } from "@taskflow/utils";
 // components
 import { TimeLineTypeContext } from "@/components/gantt-chart/contexts";
 import { GanttChartRoot } from "@/components/gantt-chart/root";
@@ -24,8 +24,8 @@ import { useUserPermissions } from "@/hooks/store/user";
 import { useIssueStoreType } from "@/hooks/use-issue-layout-store";
 import { useIssuesActions } from "@/hooks/use-issues-actions";
 import { useTimeLineChart } from "@/hooks/use-timeline-chart";
-// plane web hooks
-import { useBulkOperationStatus } from "@/plane-web/hooks/use-bulk-operation-status";
+// taskflow web hooks
+import { useBulkOperationStatus } from "@/taskflow-web/hooks/use-bulk-operation-status";
 
 import { IssueLayoutHOC } from "../issue-layout-HOC";
 import { GanttQuickAddIssueButton, QuickAddIssueRoot } from "../quick-add";
@@ -58,7 +58,7 @@ export const BaseGanttRoot = observer(function BaseGanttRoot(props: IBaseGanttRo
   const { allowPermissions } = useUserPermissions();
 
   const appliedDisplayFilters = issuesFilter.issueFilters?.displayFilters;
-  // plane web hooks
+  // taskflow web hooks
   const isBulkOperationsEnabled = useBulkOperationStatus();
   // derived values
   const targetDate = new Date();

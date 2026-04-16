@@ -1,15 +1,15 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import type { LucideIcon } from "lucide-react";
-import { VIEW_ACCESS_SPECIFIERS as VIEW_ACCESS_SPECIFIERS_CONSTANTS } from "@plane/constants";
-import { GlobeIcon, LockIcon } from "@plane/propel/icons";
+import { VIEW_ACCESS_SPECIFIERS as VIEW_ACCESS_SPECIFIERS_CONSTANTS } from "@taskflow/constants";
+import { GlobeIcon, LockIcon } from "@taskflow/propel/icons";
 
-import type { ISvgIcons } from "@plane/propel/icons";
-import { EViewAccess } from "@plane/types";
+import type { ISvgIcons } from "@taskflow/propel/icons";
+import { EViewAccess } from "@taskflow/types";
 
 const VIEW_ACCESS_ICONS = {
   [EViewAccess.PUBLIC]: GlobeIcon,

@@ -1,11 +1,11 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
-import { useTranslation } from "@plane/i18n";
-import { PlusIcon } from "@plane/propel/icons";
+import { useTranslation } from "@taskflow/i18n";
+import { PlusIcon } from "@taskflow/propel/icons";
 
 type TProps = {
   onClick: () => void;

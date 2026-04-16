@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -15,11 +15,11 @@ import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
 import Masonry from "react-masonry-component";
 
-// plane imports
-import { EUserPermissionsLevel } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { PlusIcon } from "@plane/propel/icons";
-import { EUserWorkspaceRoles } from "@plane/types";
+// taskflow imports
+import { EUserPermissionsLevel } from "@taskflow/constants";
+import { useTranslation } from "@taskflow/i18n";
+import { PlusIcon } from "@taskflow/propel/icons";
+import { EUserWorkspaceRoles } from "@taskflow/types";
 // assets
 import darkStickiesAsset from "@/app/assets/empty-state/stickies/stickies-dark.webp?url";
 import lightStickiesAsset from "@/app/assets/empty-state/stickies/stickies-light.webp?url";
@@ -53,7 +53,7 @@ export const StickiesList = observer(function StickiesList(props: TProps) {
   const pathname = usePathname();
   // theme hook
   const { resolvedTheme } = useTheme();
-  // plane hooks
+  // taskflow hooks
   const { t } = useTranslation();
   // store hooks
   const { getWorkspaceStickyIds, toggleShowNewSticky, searchQuery, loader } = useSticky();

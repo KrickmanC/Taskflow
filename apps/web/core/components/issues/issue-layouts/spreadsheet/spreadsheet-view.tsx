@@ -1,24 +1,24 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import React, { useRef } from "react";
 import { observer } from "mobx-react";
-// plane constants
-import { SPREADSHEET_SELECT_GROUP, SPREADSHEET_PROPERTY_LIST } from "@plane/constants";
+// taskflow constants
+import { SPREADSHEET_SELECT_GROUP, SPREADSHEET_PROPERTY_LIST } from "@taskflow/constants";
 // types
-import type { TIssue, IIssueDisplayFilterOptions, IIssueDisplayProperties } from "@plane/types";
-import { EIssueLayoutTypes } from "@plane/types";
+import type { TIssue, IIssueDisplayFilterOptions, IIssueDisplayProperties } from "@taskflow/types";
+import { EIssueLayoutTypes } from "@taskflow/types";
 // components
 import { MultipleSelectGroup } from "@/components/core/multiple-select";
 // hooks
 import { useProject } from "@/hooks/store/use-project";
-// plane web components
-import { IssueBulkOperationsRoot } from "@/plane-web/components/issues/bulk-operations";
-// plane web hooks
-import { useBulkOperationStatus } from "@/plane-web/hooks/use-bulk-operation-status";
+// taskflow web components
+import { IssueBulkOperationsRoot } from "@/taskflow-web/components/issues/bulk-operations";
+// taskflow web hooks
+import { useBulkOperationStatus } from "@/taskflow-web/hooks/use-bulk-operation-status";
 // local imports
 import type { TRenderQuickActions } from "../list/list-view-types";
 import { QuickAddIssueRoot, SpreadsheetAddIssueButton } from "../quick-add";
@@ -64,7 +64,7 @@ export const SpreadsheetView = observer(function SpreadsheetView(props: Props) {
   const portalRef = useRef<HTMLDivElement | null>(null);
   // store hooks
   const { currentProjectDetails } = useProject();
-  // plane web hooks
+  // taskflow web hooks
   const isBulkOperationsEnabled = useBulkOperationStatus();
 
   const isEstimateEnabled: boolean = currentProjectDetails?.estimate !== null;

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -14,8 +14,8 @@ import type {
   IGanttBlock,
   TGanttViews,
   EGanttBlockType,
-} from "@plane/types";
-import { renderFormattedPayloadDate } from "@plane/utils";
+} from "@taskflow/types";
+import { renderFormattedPayloadDate } from "@taskflow/utils";
 import { currentViewDataWithView } from "@/components/gantt-chart/data";
 import {
   getDateFromPositionOnGantt,
@@ -24,7 +24,7 @@ import {
 } from "@/components/gantt-chart/views/helpers";
 // helpers
 // store
-import type { RootStore } from "@/plane-web/store/root.store";
+import type { RootStore } from "@/taskflow-web/store/root.store";
 
 // types
 type BlockData = {

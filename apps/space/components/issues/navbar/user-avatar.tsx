@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -11,12 +11,12 @@ import { usePathname, useSearchParams } from "next/navigation";
 import { usePopper } from "react-popper";
 import { LogOut } from "lucide-react";
 import { Popover, Transition } from "@headlessui/react";
-// plane imports
-import { API_BASE_URL } from "@plane/constants";
-import { Button } from "@plane/propel/button";
-import { AuthService } from "@plane/services";
-import { Avatar } from "@plane/ui";
-import { getFileURL } from "@plane/utils";
+// taskflow imports
+import { API_BASE_URL } from "@taskflow/constants";
+import { Button } from "@taskflow/propel/button";
+import { AuthService } from "@taskflow/services";
+import { Avatar } from "@taskflow/ui";
+import { getFileURL } from "@taskflow/utils";
 // helpers
 import { queryParamGenerator } from "@/helpers/query-param-generator";
 // hooks

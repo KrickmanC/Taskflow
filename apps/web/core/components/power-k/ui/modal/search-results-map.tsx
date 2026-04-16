@@ -1,25 +1,25 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { Briefcase, FileText, Layers, LayoutGrid } from "lucide-react";
-// plane imports
-import { ContrastIcon, DiceIcon } from "@plane/propel/icons";
+// taskflow imports
+import { ContrastIcon, DiceIcon } from "@taskflow/propel/icons";
 import type {
   IWorkspaceDefaultSearchResult,
   IWorkspaceIssueSearchResult,
   IWorkspacePageSearchResult,
   IWorkspaceProjectSearchResult,
   IWorkspaceSearchResult,
-} from "@plane/types";
-import { generateWorkItemLink } from "@plane/utils";
+} from "@taskflow/types";
+import { generateWorkItemLink } from "@taskflow/utils";
 // components
 import type { TPowerKSearchResultsKeys } from "@/components/power-k/core/types";
-// plane web imports
-import { SEARCH_RESULTS_GROUPS_MAP_EXTENDED } from "@/plane-web/components/command-palette/power-k/search/search-results-map";
-import { IssueIdentifier } from "@/plane-web/components/issues/issue-details/issue-identifier";
+// taskflow web imports
+import { SEARCH_RESULTS_GROUPS_MAP_EXTENDED } from "@/taskflow-web/components/command-palette/power-k/search/search-results-map";
+import { IssueIdentifier } from "@/taskflow-web/components/issues/issue-details/issue-identifier";
 
 export type TPowerKSearchResultGroupDetails = {
   icon?: React.ComponentType<{ className?: string }>;

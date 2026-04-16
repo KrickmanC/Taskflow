@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -7,17 +7,17 @@
 import type { MutableRefObject } from "react";
 import { useRef, useState } from "react";
 import type { LucideIcon } from "lucide-react";
-// plane helpers
-import { PROJECT_SETTINGS_TRACKER_ELEMENTS } from "@plane/constants";
-import { useOutsideClickDetector } from "@plane/hooks";
-import type { ISvgIcons } from "@plane/propel/icons";
-import { CloseIcon } from "@plane/propel/icons";
+// taskflow helpers
+import { PROJECT_SETTINGS_TRACKER_ELEMENTS } from "@taskflow/constants";
+import { useOutsideClickDetector } from "@taskflow/hooks";
+import type { ISvgIcons } from "@taskflow/propel/icons";
+import { CloseIcon } from "@taskflow/propel/icons";
 // types
-import type { IIssueLabel } from "@plane/types";
+import type { IIssueLabel } from "@taskflow/types";
 // ui
-import { CustomMenu, DragHandle } from "@plane/ui";
+import { CustomMenu, DragHandle } from "@taskflow/ui";
 // helpers
-import { cn } from "@plane/utils";
+import { cn } from "@taskflow/utils";
 // components
 import { LabelName } from "./label-name";
 

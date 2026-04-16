@@ -1,15 +1,15 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { useEffect, useRef } from "react";
-// plane imports
-import { Tooltip } from "@plane/propel/tooltip";
-import { cn } from "@plane/propel/utils";
-import type { SingleOrArray, TFilterValue } from "@plane/types";
-import { hasValidValue } from "@plane/utils";
+// taskflow imports
+import { Tooltip } from "@taskflow/propel/tooltip";
+import { cn } from "@taskflow/propel/utils";
+import type { SingleOrArray, TFilterValue } from "@taskflow/types";
+import { hasValidValue } from "@taskflow/utils";
 
 interface FilterItemContainerProps {
   children: React.ReactNode;

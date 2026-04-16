@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -7,8 +7,8 @@
 import { observer } from "mobx-react";
 import { useParams } from "next/navigation";
 
-// plane ui
-import { RecentStickyIcon, PlusIcon, CloseIcon } from "@plane/propel/icons";
+// taskflow ui
+import { RecentStickyIcon, PlusIcon, CloseIcon } from "@taskflow/propel/icons";
 // hooks
 import { useSticky } from "@/hooks/use-stickies";
 // components

@@ -1,16 +1,16 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { action, makeObservable, observable } from "mobx";
 import { computedFn } from "mobx-utils";
-// plane imports
-import type { TExpressionOptions } from "@plane/constants";
-import type { EIssuesStoreType, TWorkItemFilterExpression, TWorkItemFilterProperty } from "@plane/types";
-import { LOGICAL_OPERATOR } from "@plane/types";
-import { getOperatorForPayload } from "@plane/utils";
+// taskflow imports
+import type { TExpressionOptions } from "@taskflow/constants";
+import type { EIssuesStoreType, TWorkItemFilterExpression, TWorkItemFilterProperty } from "@taskflow/types";
+import { LOGICAL_OPERATOR } from "@taskflow/types";
+import { getOperatorForPayload } from "@taskflow/utils";
 // local imports
 import type { TWorkItemFilterCondition } from "../../utils";
 import { buildWorkItemFilterExpressionFromConditions } from "../../utils";

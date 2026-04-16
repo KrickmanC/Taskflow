@@ -1,14 +1,14 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { useRouter } from "next/navigation";
-// plane types
-import { Logo } from "@plane/propel/emoji-icon-picker";
-import type { TActivityEntityData, TProjectEntityData } from "@plane/types";
-import { calculateTimeAgo } from "@plane/utils";
+// taskflow types
+import { Logo } from "@taskflow/propel/emoji-icon-picker";
+import type { TActivityEntityData, TProjectEntityData } from "@taskflow/types";
+import { calculateTimeAgo } from "@taskflow/utils";
 // components
 import { ListItem } from "@/components/core/list";
 import { MemberDropdown } from "@/components/dropdowns/member/dropdown";

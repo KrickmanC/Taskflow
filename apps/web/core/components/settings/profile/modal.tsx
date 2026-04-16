@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -7,9 +7,9 @@
 import { useCallback } from "react";
 import { X } from "lucide-react";
 import { observer } from "mobx-react";
-// plane imports
-import { IconButton } from "@plane/propel/icon-button";
-import { EModalPosition, EModalWidth, ModalCore } from "@plane/ui";
+// taskflow imports
+import { IconButton } from "@taskflow/propel/icon-button";
+import { EModalPosition, EModalWidth, ModalCore } from "@taskflow/ui";
 // hooks
 import { useCommandPalette } from "@/hooks/store/use-command-palette";
 // local imports

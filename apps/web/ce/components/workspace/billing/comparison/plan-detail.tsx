@@ -1,21 +1,21 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { observer } from "mobx-react";
-// plane imports
+// taskflow imports
 import {
   SUBSCRIPTION_REDIRECTION_URLS,
   SUBSCRIPTION_WITH_BILLING_FREQUENCY,
   TALK_TO_SALES_URL,
-} from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { Button } from "@plane/propel/button";
-import type { TBillingFrequency } from "@plane/types";
-import { EProductSubscriptionEnum } from "@plane/types";
-import { getSubscriptionName } from "@plane/utils";
+} from "@taskflow/constants";
+import { useTranslation } from "@taskflow/i18n";
+import { Button } from "@taskflow/propel/button";
+import type { TBillingFrequency } from "@taskflow/types";
+import { EProductSubscriptionEnum } from "@taskflow/types";
+import { getSubscriptionName } from "@taskflow/utils";
 // components
 import { DiscountInfo } from "@/components/license/modal/card/discount-info";
 import type { TPlanDetail } from "@/constants/plans";
@@ -31,7 +31,7 @@ type TPlanDetailProps = {
 
 export const PlanDetail = observer(function PlanDetail(props: TPlanDetailProps) {
   const { subscriptionType, planDetail, billingFrequency, setBillingFrequency } = props;
-  // plane hooks
+  // taskflow hooks
   const { t } = useTranslation();
   // subscription details
   const subscriptionName = getSubscriptionName(subscriptionType);

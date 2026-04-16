@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -7,11 +7,11 @@
 import { useCallback, useEffect, useState } from "react";
 import { observer } from "mobx-react";
 import { Clock, FileStack, MoreHorizontal, MoveRight } from "lucide-react";
-// plane imports
-import { EUserPermissions, EUserPermissionsLevel } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { Button } from "@plane/propel/button";
-import { IconButton, getIconButtonStyling } from "@plane/propel/icon-button";
+// taskflow imports
+import { EUserPermissions, EUserPermissionsLevel } from "@taskflow/constants";
+import { useTranslation } from "@taskflow/i18n";
+import { Button } from "@taskflow/propel/button";
+import { IconButton, getIconButtonStyling } from "@taskflow/propel/icon-button";
 import {
   LinkIcon,
   CopyIcon,
@@ -21,12 +21,12 @@ import {
   ChevronUpIcon,
   CheckCircleFilledIcon,
   CloseCircleFilledIcon,
-} from "@plane/propel/icons";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import type { TNameDescriptionLoader } from "@plane/types";
-import { EInboxIssueStatus } from "@plane/types";
-import { ControlLink, CustomMenu, Row } from "@plane/ui";
-import { copyUrlToClipboard, findHowManyDaysLeft, generateWorkItemLink } from "@plane/utils";
+} from "@taskflow/propel/icons";
+import { TOAST_TYPE, setToast } from "@taskflow/propel/toast";
+import type { TNameDescriptionLoader } from "@taskflow/types";
+import { EInboxIssueStatus } from "@taskflow/types";
+import { ControlLink, CustomMenu, Row } from "@taskflow/ui";
+import { copyUrlToClipboard, findHowManyDaysLeft, generateWorkItemLink } from "@taskflow/utils";
 // components
 import { CreateUpdateIssueModal } from "@/components/issues/issue-modal/modal";
 import { NameDescriptionUpdateStatus } from "@/components/issues/issue-update-status";

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -8,11 +8,11 @@ import type { CSSProperties } from "react";
 import { extractInstruction } from "@atlaskit/pragmatic-drag-and-drop-hitbox/tree-item";
 import { clone, isNil, pull, uniq, concat } from "lodash-es";
 import scrollIntoView from "smooth-scroll-into-view-if-needed";
-// plane types
-import { EIconSize, ISSUE_PRIORITIES, STATE_GROUPS } from "@plane/constants";
-import { Logo } from "@plane/propel/emoji-icon-picker";
-import type { ISvgIcons } from "@plane/propel/icons";
-import { CycleGroupIcon, CycleIcon, ModuleIcon, PriorityIcon, StateGroupIcon } from "@plane/propel/icons";
+// taskflow types
+import { EIconSize, ISSUE_PRIORITIES, STATE_GROUPS } from "@taskflow/constants";
+import { Logo } from "@taskflow/propel/emoji-icon-picker";
+import type { ISvgIcons } from "@taskflow/propel/icons";
+import { CycleGroupIcon, CycleIcon, ModuleIcon, PriorityIcon, StateGroupIcon } from "@taskflow/propel/icons";
 import type {
   GroupByColumnTypes,
   IGroupByColumn,
@@ -26,20 +26,20 @@ import type {
   TGroupedIssues,
   IIssueDisplayFilterOptions,
   TGetColumns,
-} from "@plane/types";
-import { EIssuesStoreType } from "@plane/types";
-// plane ui
-import { Avatar } from "@plane/ui";
-import { renderFormattedDate, getFileURL } from "@plane/utils";
+} from "@taskflow/types";
+import { EIssuesStoreType } from "@taskflow/types";
+// taskflow ui
+import { Avatar } from "@taskflow/ui";
+import { renderFormattedDate, getFileURL } from "@taskflow/utils";
 // helpers
 // store
 import { store } from "@/lib/store-context";
-// plane web store
+// taskflow web store
 import {
   getScopeMemberIds,
   getTeamProjectColumns,
   SpreadSheetPropertyIconMap,
-} from "@/plane-web/components/issues/issue-layouts/utils";
+} from "@/taskflow-web/components/issues/issue-layouts/utils";
 // store
 import { ISSUE_FILTER_DEFAULT_DATA } from "@/store/issue/helpers/base-issues.store";
 import { DEFAULT_DISPLAY_PROPERTIES } from "@/store/issue/issue-details/sub_issues_filter.store";

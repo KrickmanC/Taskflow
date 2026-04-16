@@ -1,10 +1,10 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
-// plane imports
+// taskflow imports
 import { isEmpty } from "lodash-es";
 import type {
   SingleOrArray,
@@ -16,9 +16,9 @@ import type {
   TWorkItemFilterExpression,
   TWorkItemFilterExpressionData,
   TWorkItemFilterProperty,
-} from "@plane/types";
-import { LOGICAL_OPERATOR, MULTI_VALUE_OPERATORS, WORK_ITEM_FILTER_PROPERTY_KEYS } from "@plane/types";
-import { createConditionNode, createAndGroupNode, isAndGroupNode, isConditionNode } from "@plane/utils";
+} from "@taskflow/types";
+import { LOGICAL_OPERATOR, MULTI_VALUE_OPERATORS, WORK_ITEM_FILTER_PROPERTY_KEYS } from "@taskflow/types";
+import { createConditionNode, createAndGroupNode, isAndGroupNode, isConditionNode } from "@taskflow/utils";
 // local imports
 import { FilterAdapter } from "../rich-filters/adapter";
 

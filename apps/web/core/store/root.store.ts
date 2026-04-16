@@ -1,25 +1,25 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { enableStaticRendering } from "mobx-react";
-// plane imports
-import { FALLBACK_LANGUAGE, LANGUAGE_STORAGE_KEY } from "@plane/i18n";
-import type { IWorkItemFilterStore } from "@plane/shared-state";
-import { WorkItemFilterStore } from "@plane/shared-state";
-// plane web store
-import type { IAnalyticsStore } from "@/plane-web/store/analytics.store";
-import { AnalyticsStore } from "@/plane-web/store/analytics.store";
-import type { ICommandPaletteStore } from "@/plane-web/store/command-palette.store";
-import { CommandPaletteStore } from "@/plane-web/store/command-palette.store";
-import { PowerKStore } from "@/plane-web/store/power-k.store";
-import type { IPowerKStore } from "@/plane-web/store/power-k.store";
-import type { RootStore } from "@/plane-web/store/root.store";
-import type { IStateStore } from "@/plane-web/store/state.store";
-import { StateStore } from "@/plane-web/store/state.store";
-import { WorkspaceRootStore } from "@/plane-web/store/workspace";
+// taskflow imports
+import { FALLBACK_LANGUAGE, LANGUAGE_STORAGE_KEY } from "@taskflow/i18n";
+import type { IWorkItemFilterStore } from "@taskflow/shared-state";
+import { WorkItemFilterStore } from "@taskflow/shared-state";
+// taskflow web store
+import type { IAnalyticsStore } from "@/taskflow-web/store/analytics.store";
+import { AnalyticsStore } from "@/taskflow-web/store/analytics.store";
+import type { ICommandPaletteStore } from "@/taskflow-web/store/command-palette.store";
+import { CommandPaletteStore } from "@/taskflow-web/store/command-palette.store";
+import { PowerKStore } from "@/taskflow-web/store/power-k.store";
+import type { IPowerKStore } from "@/taskflow-web/store/power-k.store";
+import type { RootStore } from "@/taskflow-web/store/root.store";
+import type { IStateStore } from "@/taskflow-web/store/state.store";
+import { StateStore } from "@/taskflow-web/store/state.store";
+import { WorkspaceRootStore } from "@/taskflow-web/store/workspace";
 // stores
 import type { ICycleStore } from "./cycle.store";
 import { CycleStore } from "./cycle.store";

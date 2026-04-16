@@ -1,17 +1,17 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
-// plane imports
-import { STATE_GROUPS } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { PieChart } from "@plane/propel/charts/pie-chart";
-import { EmptyStateCompact } from "@plane/propel/empty-state";
-import type { IUserProfileData, IUserStateDistribution } from "@plane/types";
-import { Card } from "@plane/ui";
-import { capitalizeFirstLetter } from "@plane/utils";
+// taskflow imports
+import { STATE_GROUPS } from "@taskflow/constants";
+import { useTranslation } from "@taskflow/i18n";
+import { PieChart } from "@taskflow/propel/charts/pie-chart";
+import { EmptyStateCompact } from "@taskflow/propel/empty-state";
+import type { IUserProfileData, IUserStateDistribution } from "@taskflow/types";
+import { Card } from "@taskflow/ui";
+import { capitalizeFirstLetter } from "@taskflow/utils";
 
 type Props = {
   stateDistribution: IUserStateDistribution[];

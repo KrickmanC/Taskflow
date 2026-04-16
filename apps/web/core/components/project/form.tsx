@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -7,18 +7,18 @@
 import { useEffect, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { Info } from "lucide-react";
-import { NETWORK_CHOICES } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-// plane imports
-import { Button } from "@plane/propel/button";
-import { EmojiPicker, EmojiIconPickerTypes, Logo } from "@plane/propel/emoji-icon-picker";
-import { LockIcon } from "@plane/propel/icons";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import { Tooltip } from "@plane/propel/tooltip";
-import { EFileAssetType } from "@plane/types";
-import type { IProject, IWorkspace } from "@plane/types";
-import { CustomSelect, Input, TextArea } from "@plane/ui";
-import { renderFormattedDate } from "@plane/utils";
+import { NETWORK_CHOICES } from "@taskflow/constants";
+import { useTranslation } from "@taskflow/i18n";
+// taskflow imports
+import { Button } from "@taskflow/propel/button";
+import { EmojiPicker, EmojiIconPickerTypes, Logo } from "@taskflow/propel/emoji-icon-picker";
+import { LockIcon } from "@taskflow/propel/icons";
+import { TOAST_TYPE, setToast } from "@taskflow/propel/toast";
+import { Tooltip } from "@taskflow/propel/tooltip";
+import { EFileAssetType } from "@taskflow/types";
+import type { IProject, IWorkspace } from "@taskflow/types";
+import { CustomSelect, Input, TextArea } from "@taskflow/ui";
+import { renderFormattedDate } from "@taskflow/utils";
 import { CoverImage } from "@/components/common/cover-image";
 import { ImagePickerPopover } from "@/components/core/image-picker-popover";
 import { TimezoneSelect } from "@/components/global";

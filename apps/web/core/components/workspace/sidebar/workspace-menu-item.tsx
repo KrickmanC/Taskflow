@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -7,18 +7,18 @@
 import { observer } from "mobx-react";
 import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
-// plane imports
-import { EUserPermissionsLevel } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import type { EUserWorkspaceRoles } from "@plane/types";
-import { cn } from "@plane/utils";
+// taskflow imports
+import { EUserPermissionsLevel } from "@taskflow/constants";
+import { useTranslation } from "@taskflow/i18n";
+import type { EUserWorkspaceRoles } from "@taskflow/types";
+import { cn } from "@taskflow/utils";
 // components
 import { SidebarNavItem } from "@/components/sidebar/sidebar-navigation";
 // hooks
 import { useAppTheme } from "@/hooks/store/use-app-theme";
 import { useUserPermissions } from "@/hooks/store/user";
-// plane web imports
-import { UpgradeBadge } from "@/plane-web/components/workspace/upgrade-badge";
+// taskflow web imports
+import { UpgradeBadge } from "@/taskflow-web/components/workspace/upgrade-badge";
 
 export type SidebarWorkspaceMenuItemProps = {
   item: {

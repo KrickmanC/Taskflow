@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -7,9 +7,9 @@
 import React from "react";
 import { observer } from "mobx-react";
 import { useParams } from "next/navigation";
-// plane ui
-import { WorkItemsIcon } from "@plane/propel/icons";
-import { Breadcrumbs, Header } from "@plane/ui";
+// taskflow ui
+import { WorkItemsIcon } from "@taskflow/propel/icons";
+import { Breadcrumbs, Header } from "@taskflow/ui";
 // components
 import { BreadcrumbLink } from "@/components/common/breadcrumb-link";
 import { IssueDetailQuickActions } from "@/components/issues/issue-detail/issue-detail-quick-actions";
@@ -17,8 +17,8 @@ import { IssueDetailQuickActions } from "@/components/issues/issue-detail/issue-
 import { useIssueDetail } from "@/hooks/store/use-issue-detail";
 import { useProject } from "@/hooks/store/use-project";
 import { useAppRouter } from "@/hooks/use-app-router";
-// plane web imports
-import { CommonProjectBreadcrumbs } from "@/plane-web/components/breadcrumbs/common";
+// taskflow web imports
+import { CommonProjectBreadcrumbs } from "@/taskflow-web/components/breadcrumbs/common";
 
 export const WorkItemDetailsHeader = observer(function WorkItemDetailsHeader() {
   // router

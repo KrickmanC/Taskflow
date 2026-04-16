@@ -1,22 +1,22 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { isNil } from "lodash-es";
 // types
-import { EIconSize, ISSUE_PRIORITIES } from "@plane/constants";
-import { CycleGroupIcon, CycleIcon, ModuleIcon, PriorityIcon, StateGroupIcon } from "@plane/propel/icons";
+import { EIconSize, ISSUE_PRIORITIES } from "@taskflow/constants";
+import { CycleGroupIcon, CycleIcon, ModuleIcon, PriorityIcon, StateGroupIcon } from "@taskflow/propel/icons";
 import type {
   GroupByColumnTypes,
   IGroupByColumn,
   TCycleGroups,
   IIssueDisplayProperties,
   TGroupedIssues,
-} from "@plane/types";
+} from "@taskflow/types";
 // ui
-import { Avatar } from "@plane/ui";
+import { Avatar } from "@taskflow/ui";
 // components
 // constants
 // stores

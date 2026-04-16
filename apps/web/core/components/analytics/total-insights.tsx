@@ -1,18 +1,18 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
-// plane package imports
+// taskflow package imports
 import { observer } from "mobx-react";
 import { useParams } from "next/navigation";
 import useSWR from "swr";
-import type { IInsightField } from "@plane/constants";
-import { ANALYTICS_INSIGHTS_FIELDS } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import type { IAnalyticsResponse, TAnalyticsTabsBase } from "@plane/types";
-import { cn } from "@plane/utils";
+import type { IInsightField } from "@taskflow/constants";
+import { ANALYTICS_INSIGHTS_FIELDS } from "@taskflow/constants";
+import { useTranslation } from "@taskflow/i18n";
+import type { IAnalyticsResponse, TAnalyticsTabsBase } from "@taskflow/types";
+import { cn } from "@taskflow/utils";
 // hooks
 import { useAnalytics } from "@/hooks/store/use-analytics";
 // services

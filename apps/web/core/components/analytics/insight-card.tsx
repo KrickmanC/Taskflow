@@ -1,13 +1,13 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
-// plane package imports
+// taskflow package imports
 import React from "react";
-import type { IAnalyticsResponseFields } from "@plane/types";
-import { Loader } from "@plane/ui";
+import type { IAnalyticsResponseFields } from "@taskflow/types";
+import { Loader } from "@taskflow/ui";
 
 export type InsightCardProps = {
   data?: IAnalyticsResponseFields;

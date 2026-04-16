@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -8,19 +8,19 @@ import type { ReactNode } from "react";
 import { observer } from "mobx-react";
 import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
-// plane imports
-import type { IWorkspaceSidebarNavigationItem } from "@plane/constants";
-import { EUserPermissionsLevel } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { joinUrlPath } from "@plane/utils";
+// taskflow imports
+import type { IWorkspaceSidebarNavigationItem } from "@taskflow/constants";
+import { EUserPermissionsLevel } from "@taskflow/constants";
+import { useTranslation } from "@taskflow/i18n";
+import { joinUrlPath } from "@taskflow/utils";
 // components
 import { SidebarNavItem } from "@/components/sidebar/sidebar-navigation";
 // hooks
 import { useAppTheme } from "@/hooks/store/use-app-theme";
 import { useUser, useUserPermissions } from "@/hooks/store/user";
 import { useWorkspaceNavigationPreferences } from "@/hooks/use-navigation-preferences";
-// plane web imports
-import { getSidebarNavigationItemIcon } from "@/plane-web/components/workspace/sidebar/helper";
+// taskflow web imports
+import { getSidebarNavigationItemIcon } from "@/taskflow-web/components/workspace/sidebar/helper";
 
 type Props = {
   item: IWorkspaceSidebarNavigationItem;

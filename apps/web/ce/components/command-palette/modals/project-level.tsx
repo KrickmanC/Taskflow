@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -12,8 +12,8 @@ import { CreatePageModal } from "@/components/pages/modals/create-page-modal";
 import { CreateUpdateProjectViewModal } from "@/components/views/modal";
 // hooks
 import { useCommandPalette } from "@/hooks/store/use-command-palette";
-// plane web hooks
-import { EPageStoreType } from "@/plane-web/hooks/store";
+// taskflow web hooks
+import { EPageStoreType } from "@/taskflow-web/hooks/store";
 
 export type TProjectLevelModalsProps = {
   workspaceSlug: string;

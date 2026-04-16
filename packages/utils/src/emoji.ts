@@ -1,11 +1,11 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
-// plane imports
-import { RANDOM_EMOJI_CODES } from "@plane/constants";
+// taskflow imports
+import { RANDOM_EMOJI_CODES } from "@taskflow/constants";
 
 /**
  * Converts a hyphen-separated hexadecimal emoji code to its decimal representation

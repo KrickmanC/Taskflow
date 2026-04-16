@@ -1,14 +1,14 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { observer } from "mobx-react";
-// plane imports
-import { TALK_TO_SALES_URL } from "@plane/constants";
-import type { EProductSubscriptionEnum, IPaymentProduct, TSubscriptionPrice } from "@plane/types";
-import { calculateYearlyDiscount, getSubscriptionName, getSubscriptionPriceDetails } from "@plane/utils";
+// taskflow imports
+import { TALK_TO_SALES_URL } from "@taskflow/constants";
+import type { EProductSubscriptionEnum, IPaymentProduct, TSubscriptionPrice } from "@taskflow/types";
+import { calculateYearlyDiscount, getSubscriptionName, getSubscriptionPriceDetails } from "@taskflow/utils";
 // components
 import { BasePaidPlanCard, TalkToSalesCard } from "@/components/license";
 // local components
@@ -46,7 +46,7 @@ export const PlanUpgradeCard = observer(function PlanUpgradeCard(props: PlanUpgr
     isTrialAllowed,
   } = props;
   // price details
-  const planeName = getSubscriptionName(planVariant);
+  const taskflowName = getSubscriptionName(planVariant);
   const { monthlyPriceDetails, yearlyPriceDetails } = getSubscriptionPriceDetails(product);
   const yearlyDiscount = calculateYearlyDiscount(monthlyPriceDetails.price, yearlyPriceDetails.price);
   const prices = [monthlyPriceDetails, yearlyPriceDetails];
@@ -97,7 +97,7 @@ export const PlanUpgradeCard = observer(function PlanUpgradeCard(props: PlanUpgr
       renderPriceContent={renderPriceContent}
       renderActionButton={(price) => (
         <PlanCheckoutButton
-          planeName={planeName}
+          taskflowName={taskflowName}
           planVariant={planVariant}
           isLoading={isLoading}
           product={product}

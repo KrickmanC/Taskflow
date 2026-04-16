@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -11,15 +11,15 @@ import { observer } from "mobx-react";
 import { useParams, usePathname } from "next/navigation";
 import { Ellipsis } from "lucide-react";
 import { Disclosure, Transition } from "@headlessui/react";
-// plane imports
-import { EUserPermissions, EUserPermissionsLevel, PROJECT_TRACKER_ELEMENTS } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { PlusIcon, ChevronRightIcon } from "@plane/propel/icons";
-import { IconButton } from "@plane/propel/icon-button";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import { Tooltip } from "@plane/propel/tooltip";
-import { Loader } from "@plane/ui";
-import { copyUrlToClipboard, cn, orderJoinedProjects } from "@plane/utils";
+// taskflow imports
+import { EUserPermissions, EUserPermissionsLevel, PROJECT_TRACKER_ELEMENTS } from "@taskflow/constants";
+import { useTranslation } from "@taskflow/i18n";
+import { PlusIcon, ChevronRightIcon } from "@taskflow/propel/icons";
+import { IconButton } from "@taskflow/propel/icon-button";
+import { TOAST_TYPE, setToast } from "@taskflow/propel/toast";
+import { Tooltip } from "@taskflow/propel/tooltip";
+import { Loader } from "@taskflow/ui";
+import { copyUrlToClipboard, cn, orderJoinedProjects } from "@taskflow/utils";
 // components
 import { CreateProjectModal } from "@/components/project/create-project-modal";
 import { SidebarNavItem } from "@/components/sidebar/sidebar-navigation";
@@ -29,8 +29,8 @@ import { useCommandPalette } from "@/hooks/store/use-command-palette";
 import { useProject } from "@/hooks/store/use-project";
 import { useUserPermissions } from "@/hooks/store/user";
 import { useProjectNavigationPreferences } from "@/hooks/use-navigation-preferences";
-// plane web imports
-import type { TProject } from "@/plane-web/types";
+// taskflow web imports
+import type { TProject } from "@/taskflow-web/types";
 // local imports
 import { SidebarProjectsListItem } from "./projects-list-item";
 

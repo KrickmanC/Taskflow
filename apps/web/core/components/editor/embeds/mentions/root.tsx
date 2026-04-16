@@ -1,12 +1,12 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
-// plane web imports
-import type { TEditorMentionComponentProps } from "@/plane-web/components/editor/embeds/mentions";
-import { EditorAdditionalMentionsRoot } from "@/plane-web/components/editor/embeds/mentions";
+// taskflow web imports
+import type { TEditorMentionComponentProps } from "@/taskflow-web/components/editor/embeds/mentions";
+import { EditorAdditionalMentionsRoot } from "@/taskflow-web/components/editor/embeds/mentions";
 // local imports
 import { EditorUserMention } from "./user";
 

@@ -1,23 +1,23 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { observer } from "mobx-react";
-// plane imports
-import { useTranslation } from "@plane/i18n";
-import { setPromiseToast } from "@plane/propel/toast";
-import { Tooltip } from "@plane/propel/tooltip";
-import type { IProject } from "@plane/types";
-import { CycleIcon, IntakeIcon, ModuleIcon, PageIcon, ViewsIcon } from "@plane/propel/icons";
+// taskflow imports
+import { useTranslation } from "@taskflow/i18n";
+import { setPromiseToast } from "@taskflow/propel/toast";
+import { Tooltip } from "@taskflow/propel/tooltip";
+import type { IProject } from "@taskflow/types";
+import { CycleIcon, IntakeIcon, ModuleIcon, PageIcon, ViewsIcon } from "@taskflow/propel/icons";
 // components
 import { SettingsBoxedControlItem } from "@/components/settings/boxed-control-item";
 import { SettingsHeading } from "@/components/settings/heading";
 // hooks
 import { useProject } from "@/hooks/store/use-project";
-// plane web imports
-import { UpgradeBadge } from "@/plane-web/components/workspace/upgrade-badge";
+// taskflow web imports
+import { UpgradeBadge } from "@/taskflow-web/components/workspace/upgrade-badge";
 // local imports
 import { ProjectFeatureToggle } from "./helper";
 

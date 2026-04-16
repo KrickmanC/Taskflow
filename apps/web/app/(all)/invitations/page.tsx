@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -10,15 +10,15 @@ import Link from "next/link";
 
 import useSWR, { mutate } from "swr";
 import { CheckCircle2 } from "lucide-react";
-// plane imports
-import { ROLE } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
+// taskflow imports
+import { ROLE } from "@taskflow/constants";
+import { useTranslation } from "@taskflow/i18n";
 // types
-import { Button } from "@plane/propel/button";
-import { PlaneLogo } from "@plane/propel/icons";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import type { IWorkspaceMemberInvitation } from "@plane/types";
-import { truncateText } from "@plane/utils";
+import { Button } from "@taskflow/propel/button";
+import { TaskflowLogo } from "@taskflow/propel/icons";
+import { TOAST_TYPE, setToast } from "@taskflow/propel/toast";
+import type { IWorkspaceMemberInvitation } from "@taskflow/types";
+import { truncateText } from "@taskflow/utils";
 // assets
 import emptyInvitation from "@/app/assets/empty-state/invitation.svg?url";
 // components
@@ -31,7 +31,7 @@ import { useUser, useUserProfile } from "@/hooks/store/user";
 import { useAppRouter } from "@/hooks/use-app-router";
 // services
 import { AuthenticationWrapper } from "@/lib/wrappers/authentication-wrapper";
-// plane web services
+// taskflow web services
 import { WorkspaceService } from "@/services/workspace.service";
 
 const workspaceService = new WorkspaceService();
@@ -117,7 +117,7 @@ function UserInvitationsPage() {
             href="/"
             className="absolute top-1/2 left-5 z-10 grid -translate-y-1/2 place-items-center px-3 sm:top-12 sm:left-1/2 sm:-translate-x-[15px] sm:translate-y-0 sm:px-0 sm:py-5 md:left-1/3"
           >
-            <PlaneLogo className="h-9 w-auto text-primary" />
+            <TaskflowLogo className="h-9 w-auto text-primary" />
           </Link>
           <div className="absolute top-1/4 right-4 -translate-y-1/2 text-13 text-primary sm:fixed sm:top-12 sm:right-16 sm:translate-y-0 sm:py-5">
             {currentUser?.email}

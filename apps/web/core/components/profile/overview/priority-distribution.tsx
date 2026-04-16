@@ -1,16 +1,16 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
-// plane imports
-import { useTranslation } from "@plane/i18n";
-import { BarChart } from "@plane/propel/charts/bar-chart";
-import { EmptyStateCompact } from "@plane/propel/empty-state";
-import type { IUserProfileData } from "@plane/types";
-import { Loader, Card } from "@plane/ui";
-import { capitalizeFirstLetter } from "@plane/utils";
+// taskflow imports
+import { useTranslation } from "@taskflow/i18n";
+import { BarChart } from "@taskflow/propel/charts/bar-chart";
+import { EmptyStateCompact } from "@taskflow/propel/empty-state";
+import type { IUserProfileData } from "@taskflow/types";
+import { Loader, Card } from "@taskflow/ui";
+import { capitalizeFirstLetter } from "@taskflow/utils";
 
 type Props = {
   userProfile: IUserProfileData | undefined;

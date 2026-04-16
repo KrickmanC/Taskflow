@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -7,17 +7,17 @@
 import { observer } from "mobx-react";
 import { useParams } from "next/navigation";
 import { LinkIcon } from "lucide-react";
-// plane imports
-import { useTranslation } from "@plane/i18n";
+// taskflow imports
+import { useTranslation } from "@taskflow/i18n";
 import {
   StatePropertyIcon,
   StateGroupIcon,
   PriorityPropertyIcon,
   DueDatePropertyIcon,
   PriorityIcon,
-} from "@plane/propel/icons";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import { cn, getIssuePriorityFilters } from "@plane/utils";
+} from "@taskflow/propel/icons";
+import { TOAST_TYPE, setToast } from "@taskflow/propel/toast";
+import { cn, getIssuePriorityFilters } from "@taskflow/utils";
 // helpers
 import { renderFormattedDate } from "@/helpers/date-time.helper";
 import { shouldHighlightIssueDueDate } from "@/helpers/issue.helper";

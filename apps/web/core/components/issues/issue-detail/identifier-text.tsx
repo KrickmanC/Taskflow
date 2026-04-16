@@ -1,13 +1,13 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
-import { setToast, TOAST_TYPE } from "@plane/propel/toast";
-import { Tooltip } from "@plane/propel/tooltip";
-import type { TIdentifierTextProps, TIdentifierTextVariant, TIssueIdentifierSize } from "@plane/types";
-import { cn } from "@plane/utils";
+import { setToast, TOAST_TYPE } from "@taskflow/propel/toast";
+import { Tooltip } from "@taskflow/propel/tooltip";
+import type { TIdentifierTextProps, TIdentifierTextVariant, TIssueIdentifierSize } from "@taskflow/types";
+import { cn } from "@taskflow/utils";
 
 const SIZE_MAP: Record<TIssueIdentifierSize, string> = {
   xs: "text-caption-sm-regular",

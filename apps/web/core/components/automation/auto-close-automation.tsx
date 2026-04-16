@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -8,12 +8,12 @@ import { useMemo, useState } from "react";
 import { observer } from "mobx-react";
 import { useParams } from "next/navigation";
 import { ArchiveX } from "lucide-react";
-// plane imports
-import { PROJECT_AUTOMATION_MONTHS, EUserPermissions, EUserPermissionsLevel, EIconSize } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { StateGroupIcon, StatePropertyIcon } from "@plane/propel/icons";
-import type { IProject } from "@plane/types";
-import { CustomSelect, CustomSearchSelect, ToggleSwitch, Loader } from "@plane/ui";
+// taskflow imports
+import { PROJECT_AUTOMATION_MONTHS, EUserPermissions, EUserPermissionsLevel, EIconSize } from "@taskflow/constants";
+import { useTranslation } from "@taskflow/i18n";
+import { StateGroupIcon, StatePropertyIcon } from "@taskflow/propel/icons";
+import type { IProject } from "@taskflow/types";
+import { CustomSelect, CustomSearchSelect, ToggleSwitch, Loader } from "@taskflow/ui";
 import { SelectMonthModal } from "@/components/automation";
 import { SettingsControlItem } from "@/components/settings/control-item";
 // hooks

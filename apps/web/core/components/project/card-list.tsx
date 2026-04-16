@@ -1,17 +1,17 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { observer } from "mobx-react";
-// plane imports
-import { EUserPermissionsLevel, EUserPermissions } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { EmptyStateDetailed } from "@plane/propel/empty-state";
-import { ContentWrapper } from "@plane/ui";
+// taskflow imports
+import { EUserPermissionsLevel, EUserPermissions } from "@taskflow/constants";
+import { useTranslation } from "@taskflow/i18n";
+import { EmptyStateDetailed } from "@taskflow/propel/empty-state";
+import { ContentWrapper } from "@taskflow/ui";
 // components
-import { calculateTotalFilters } from "@plane/utils";
+import { calculateTotalFilters } from "@taskflow/utils";
 import { ProjectsLoader } from "@/components/ui/loader/projects-loader";
 // hooks
 import { useCommandPalette } from "@/hooks/store/use-command-palette";
@@ -28,7 +28,7 @@ type TProjectCardListProps = {
 
 export const ProjectCardList = observer(function ProjectCardList(props: TProjectCardListProps) {
   const { totalProjectIds: totalProjectIdsProps, filteredProjectIds: filteredProjectIdsProps } = props;
-  // plane hooks
+  // taskflow hooks
   const { t } = useTranslation();
   // store hooks
   const { toggleCreateProjectModal } = useCommandPalette();

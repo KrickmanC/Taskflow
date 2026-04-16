@@ -1,14 +1,14 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { useState, useEffect, useCallback, useMemo } from "react";
-import type { TDocumentEventsServer } from "@plane/editor";
-import type { TDocumentEventsClient } from "@plane/editor/lib";
-import { DocumentCollaborativeEvents, getServerEventName } from "@plane/editor/lib";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
+import type { TDocumentEventsServer } from "@taskflow/editor";
+import type { TDocumentEventsClient } from "@taskflow/editor/lib";
+import { DocumentCollaborativeEvents, getServerEventName } from "@taskflow/editor/lib";
+import { TOAST_TYPE, setToast } from "@taskflow/propel/toast";
 // store
 import type { TPageInstance } from "@/store/pages/base-page";
 

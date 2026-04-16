@@ -1,27 +1,27 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import React from "react";
 import { observer } from "mobx-react";
-import { useTranslation } from "@plane/i18n";
-import { LinkIcon, EditIcon, TrashIcon, CloseIcon } from "@plane/propel/icons";
-// plane imports
-import { Tooltip } from "@plane/propel/tooltip";
-import type { TIssue, TIssueServiceType } from "@plane/types";
-import { EIssueServiceType } from "@plane/types";
-import { ControlLink, CustomMenu } from "@plane/ui";
-import { generateWorkItemLink } from "@plane/utils";
+import { useTranslation } from "@taskflow/i18n";
+import { LinkIcon, EditIcon, TrashIcon, CloseIcon } from "@taskflow/propel/icons";
+// taskflow imports
+import { Tooltip } from "@taskflow/propel/tooltip";
+import type { TIssue, TIssueServiceType } from "@taskflow/types";
+import { EIssueServiceType } from "@taskflow/types";
+import { ControlLink, CustomMenu } from "@taskflow/ui";
+import { generateWorkItemLink } from "@taskflow/utils";
 // hooks
 import { useIssueDetail } from "@/hooks/store/use-issue-detail";
 import { useProject } from "@/hooks/store/use-project";
 import useIssuePeekOverviewRedirection from "@/hooks/use-issue-peek-overview-redirection";
 import { usePlatformOS } from "@/hooks/use-platform-os";
-// plane web imports
-import { IssueIdentifier } from "@/plane-web/components/issues/issue-details/issue-identifier";
-import type { TIssueRelationTypes } from "@/plane-web/types";
+// taskflow web imports
+import { IssueIdentifier } from "@/taskflow-web/components/issues/issue-details/issue-identifier";
+import type { TIssueRelationTypes } from "@/taskflow-web/types";
 // local imports
 import { useRelationOperations } from "../issue-detail-widgets/relations/helper";
 import { RelationIssueProperty } from "./properties";

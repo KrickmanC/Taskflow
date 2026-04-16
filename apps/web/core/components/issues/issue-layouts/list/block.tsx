@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -10,15 +10,15 @@ import { combine } from "@atlaskit/pragmatic-drag-and-drop/combine";
 import { draggable } from "@atlaskit/pragmatic-drag-and-drop/element/adapter";
 import { observer } from "mobx-react";
 import { useParams } from "next/navigation";
-import { ChevronRightIcon } from "@plane/propel/icons";
+import { ChevronRightIcon } from "@taskflow/propel/icons";
 // types
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import { Tooltip } from "@plane/propel/tooltip";
-import type { TIssue, IIssueDisplayProperties, TIssueMap } from "@plane/types";
-import { EIssueServiceType } from "@plane/types";
+import { TOAST_TYPE, setToast } from "@taskflow/propel/toast";
+import { Tooltip } from "@taskflow/propel/tooltip";
+import type { TIssue, IIssueDisplayProperties, TIssueMap } from "@taskflow/types";
+import { EIssueServiceType } from "@taskflow/types";
 // ui
-import { Spinner, ControlLink, Row } from "@plane/ui";
-import { cn, generateWorkItemLink } from "@plane/utils";
+import { Spinner, ControlLink, Row } from "@taskflow/ui";
+import { cn, generateWorkItemLink } from "@taskflow/utils";
 // components
 import { MultipleSelectEntityAction } from "@/components/core/multiple-select";
 import { IssueProperties } from "@/components/issues/issue-layouts/properties";
@@ -29,9 +29,9 @@ import { useIssueDetail } from "@/hooks/store/use-issue-detail";
 import { useProject } from "@/hooks/store/use-project";
 import type { TSelectionHelper } from "@/hooks/use-multiple-select";
 import { usePlatformOS } from "@/hooks/use-platform-os";
-// plane web components
-import { IssueIdentifier } from "@/plane-web/components/issues/issue-details/issue-identifier";
-import { IssueStats } from "@/plane-web/components/issues/issue-layouts/issue-stats";
+// taskflow web components
+import { IssueIdentifier } from "@/taskflow-web/components/issues/issue-details/issue-identifier";
+import { IssueStats } from "@/taskflow-web/components/issues/issue-layouts/issue-stats";
 // types
 import { WithDisplayPropertiesHOC } from "../properties/with-display-properties-HOC";
 import { calculateIdentifierWidth } from "../utils";

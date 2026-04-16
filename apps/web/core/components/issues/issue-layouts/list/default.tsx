@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -8,8 +8,8 @@ import { useEffect, useRef } from "react";
 import { combine } from "@atlaskit/pragmatic-drag-and-drop/combine";
 import { autoScrollForElements } from "@atlaskit/pragmatic-drag-and-drop-auto-scroll/element";
 import { observer } from "mobx-react";
-// plane constants
-import { ALL_ISSUES } from "@plane/constants";
+// taskflow constants
+import { ALL_ISSUES } from "@taskflow/constants";
 // types
 import type {
   GroupByColumnTypes,
@@ -21,15 +21,15 @@ import type {
   TIssueOrderByOptions,
   IGroupByColumn,
   TIssueKanbanFilters,
-} from "@plane/types";
+} from "@taskflow/types";
 // components
 import { MultipleSelectGroup } from "@/components/core/multiple-select";
 // hooks
 import { useIssueStoreType } from "@/hooks/use-issue-layout-store";
-// plane web components
-import { IssueBulkOperationsRoot } from "@/plane-web/components/issues/bulk-operations";
-// plane web hooks
-import { useBulkOperationStatus } from "@/plane-web/hooks/use-bulk-operation-status";
+// taskflow web components
+import { IssueBulkOperationsRoot } from "@/taskflow-web/components/issues/bulk-operations";
+// taskflow web hooks
+import { useBulkOperationStatus } from "@/taskflow-web/hooks/use-bulk-operation-status";
 // utils
 import type { GroupDropLocation } from "../utils";
 import { getGroupByColumns, isWorkspaceLevel, isSubGrouped } from "../utils";
@@ -82,7 +82,7 @@ export const List = observer(function List(props: IList) {
   } = props;
 
   const storeType = useIssueStoreType();
-  // plane web hooks
+  // taskflow web hooks
   const isBulkOperationsEnabled = useBulkOperationStatus();
 
   const containerRef = useRef<HTMLDivElement | null>(null);

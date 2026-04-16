@@ -1,13 +1,13 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { useMemo } from "react";
-import { useTranslation } from "@plane/i18n";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import type { TProjectLink } from "@plane/types";
+import { useTranslation } from "@taskflow/i18n";
+import { TOAST_TYPE, setToast } from "@taskflow/propel/toast";
+import type { TProjectLink } from "@taskflow/types";
 import { useHome } from "@/hooks/store/use-home";
 
 export type TLinkOperations = {

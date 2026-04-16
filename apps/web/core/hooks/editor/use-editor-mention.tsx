@@ -1,20 +1,20 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { useCallback } from "react";
-// plane editor
-import type { TMentionSection, TMentionSuggestion } from "@plane/editor";
-// plane types
-import type { TSearchEntities, TSearchEntityRequestPayload, TSearchResponse, TUserSearchResponse } from "@plane/types";
-// plane ui
-import { Avatar } from "@plane/ui";
+// taskflow editor
+import type { TMentionSection, TMentionSuggestion } from "@taskflow/editor";
+// taskflow types
+import type { TSearchEntities, TSearchEntityRequestPayload, TSearchResponse, TUserSearchResponse } from "@taskflow/types";
+// taskflow ui
+import { Avatar } from "@taskflow/ui";
 // helpers
-import { getFileURL } from "@plane/utils";
-// plane web hooks
-import { useAdditionalEditorMention } from "@/plane-web/hooks/use-additional-editor-mention";
+import { getFileURL } from "@taskflow/utils";
+// taskflow web hooks
+import { useAdditionalEditorMention } from "@/taskflow-web/hooks/use-additional-editor-mention";
 
 type TArgs = {
   enableAdvancedMentions?: boolean;

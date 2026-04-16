@@ -1,14 +1,14 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
-// plane imports
-import type { ADDITIONAL_EXTENSIONS } from "@plane/utils";
-import { CORE_EXTENSIONS } from "@plane/utils";
-// plane editor imports
-import type { ExtensionFileSetStorageKey } from "@/plane-editor/types/storage";
+// taskflow imports
+import type { ADDITIONAL_EXTENSIONS } from "@taskflow/utils";
+import { CORE_EXTENSIONS } from "@taskflow/utils";
+// taskflow editor imports
+import type { ExtensionFileSetStorageKey } from "@/taskflow-editor/types/storage";
 
 export type NodeFileMapType = Partial<
   Record<

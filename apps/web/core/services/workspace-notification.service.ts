@@ -1,18 +1,18 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 /* eslint-disable no-useless-catch */
 
-import { API_BASE_URL } from "@plane/constants";
+import { API_BASE_URL } from "@taskflow/constants";
 import type {
   TNotificationPaginatedInfo,
   TNotificationPaginatedInfoQueryParams,
   TNotification,
   TUnreadNotificationsCount,
-} from "@plane/types";
+} from "@taskflow/types";
 // helpers
 // services
 import { APIService } from "@/services/api.service";

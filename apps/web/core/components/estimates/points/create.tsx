@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -8,19 +8,19 @@ import type { FormEvent } from "react";
 import { useState } from "react";
 import { observer } from "mobx-react";
 import { Info } from "lucide-react";
-import { EEstimateSystem, MAX_ESTIMATE_POINT_INPUT_LENGTH } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { CheckIcon, CloseIcon } from "@plane/propel/icons";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import { Tooltip } from "@plane/propel/tooltip";
-import type { TEstimatePointsObject, TEstimateSystemKeys, TEstimateTypeErrorObject } from "@plane/types";
-import { Spinner } from "@plane/ui";
-import { cn, isEstimatePointValuesRepeated } from "@plane/utils";
+import { EEstimateSystem, MAX_ESTIMATE_POINT_INPUT_LENGTH } from "@taskflow/constants";
+import { useTranslation } from "@taskflow/i18n";
+import { CheckIcon, CloseIcon } from "@taskflow/propel/icons";
+import { TOAST_TYPE, setToast } from "@taskflow/propel/toast";
+import { Tooltip } from "@taskflow/propel/tooltip";
+import type { TEstimatePointsObject, TEstimateSystemKeys, TEstimateTypeErrorObject } from "@taskflow/types";
+import { Spinner } from "@taskflow/ui";
+import { cn, isEstimatePointValuesRepeated } from "@taskflow/utils";
 import { EstimateInputRoot } from "@/components/estimates/inputs/root";
 // helpers
 // hooks
 import { useEstimate } from "@/hooks/store/estimates/use-estimate";
-// plane web constants
+// taskflow web constants
 
 type TEstimatePointCreate = {
   workspaceSlug: string;

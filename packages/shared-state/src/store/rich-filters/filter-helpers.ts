@@ -1,14 +1,14 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { cloneDeep } from "lodash-es";
 import { action, makeObservable, observable, toJS } from "mobx";
-// plane imports
-import type { TAutoVisibilityOptions, TExpressionOptions } from "@plane/constants";
-import { DEFAULT_FILTER_EXPRESSION_OPTIONS } from "@plane/constants";
+// taskflow imports
+import type { TAutoVisibilityOptions, TExpressionOptions } from "@taskflow/constants";
+import { DEFAULT_FILTER_EXPRESSION_OPTIONS } from "@taskflow/constants";
 import type {
   IFilterAdapter,
   TSupportedOperators,
@@ -19,9 +19,9 @@ import type {
   TExternalFilter,
   TLogicalOperator,
   TFilterConditionPayload,
-} from "@plane/types";
-import { LOGICAL_OPERATOR } from "@plane/types";
-import { addAndCondition, createConditionNode, updateNodeInExpression } from "@plane/utils";
+} from "@taskflow/types";
+import { LOGICAL_OPERATOR } from "@taskflow/types";
+import { addAndCondition, createConditionNode, updateNodeInExpression } from "@taskflow/utils";
 // local imports
 import type { IFilterInstance } from "./filter";
 

@@ -1,16 +1,16 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
-import { USER_TRACKER_ELEMENTS } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
+import { USER_TRACKER_ELEMENTS } from "@taskflow/constants";
+import { useTranslation } from "@taskflow/i18n";
 // ui
-import { getButtonStyling } from "@plane/propel/button";
-import { PlaneLogo } from "@plane/propel/icons";
+import { getButtonStyling } from "@taskflow/propel/button";
+import { TaskflowLogo } from "@taskflow/propel/icons";
 // helpers
-import { cn } from "@plane/utils";
+import { cn } from "@taskflow/utils";
 
 export function ProductUpdatesFooter() {
   const { t } = useTranslation();
@@ -18,7 +18,7 @@ export function ProductUpdatesFooter() {
     <div className="m-6 mb-4 flex flex-shrink-0 items-center justify-between gap-4">
       <div className="flex items-center gap-2">
         <a
-          href="https://go.plane.so/p-docs"
+          href="https://go.taskflow.so/p-docs"
           target="_blank"
           className="text-13 text-secondary underline-offset-1 outline-none hover:text-primary hover:underline"
           rel="noreferrer"
@@ -30,7 +30,7 @@ export function ProductUpdatesFooter() {
         </svg>
         <a
           data-ph-element={USER_TRACKER_ELEMENTS.CHANGELOG_REDIRECTED}
-          href="https://go.plane.so/p-changelog"
+          href="https://go.taskflow.so/p-changelog"
           target="_blank"
           className="text-13 text-secondary underline-offset-1 outline-none hover:text-primary hover:underline"
           rel="noreferrer"
@@ -41,7 +41,7 @@ export function ProductUpdatesFooter() {
           <circle cx={1} cy={1} r={1} />
         </svg>
         <a
-          href="mailto:support@plane.so"
+          href="mailto:support@taskflow.so"
           target="_blank"
           className="text-13 text-secondary underline-offset-1 outline-none hover:text-primary hover:underline"
           rel="noreferrer"
@@ -52,7 +52,7 @@ export function ProductUpdatesFooter() {
           <circle cx={1} cy={1} r={1} />
         </svg>
         <a
-          href="https://forum.plane.so"
+          href="https://forum.taskflow.so"
           target="_blank"
           className="text-13 text-secondary underline-offset-1 outline-none hover:text-primary hover:underline"
           rel="noreferrer"
@@ -61,7 +61,7 @@ export function ProductUpdatesFooter() {
         </a>
       </div>
       <a
-        href="https://plane.so/pages"
+        href="https://taskflow.so/pages"
         target="_blank"
         className={cn(
           getButtonStyling("secondary", "base"),
@@ -69,8 +69,8 @@ export function ProductUpdatesFooter() {
         )}
         rel="noreferrer"
       >
-        <PlaneLogo className="h-4 w-auto text-primary" />
-        {t("powered_by_plane_pages")}
+        <TaskflowLogo className="h-4 w-auto text-primary" />
+        {t("powered_by_taskflow_pages")}
       </a>
     </div>
   );

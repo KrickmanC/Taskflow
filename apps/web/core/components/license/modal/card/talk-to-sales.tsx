@@ -1,16 +1,16 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { observer } from "mobx-react";
 // types
-// plane imports
-import { getButtonStyling } from "@plane/propel/button";
-import type { EProductSubscriptionEnum, IPaymentProduct, TSubscriptionPrice } from "@plane/types";
-import { Loader } from "@plane/ui";
-import { cn } from "@plane/utils";
+// taskflow imports
+import { getButtonStyling } from "@taskflow/propel/button";
+import type { EProductSubscriptionEnum, IPaymentProduct, TSubscriptionPrice } from "@taskflow/types";
+import { Loader } from "@taskflow/ui";
+import { cn } from "@taskflow/utils";
 // local imports
 import { BasePaidPlanCard } from "./base-paid-plan-card";
 

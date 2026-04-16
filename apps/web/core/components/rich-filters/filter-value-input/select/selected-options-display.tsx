@@ -1,14 +1,14 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import React from "react";
 import { Transition } from "@headlessui/react";
-// plane imports
-import type { SingleOrArray, IFilterOption, TFilterValue } from "@plane/types";
-import { cn, toFilterArray } from "@plane/utils";
+// taskflow imports
+import type { SingleOrArray, IFilterOption, TFilterValue } from "@taskflow/types";
+import { cn, toFilterArray } from "@taskflow/utils";
 import { EMPTY_FILTER_PLACEHOLDER_TEXT } from "../../shared";
 
 type TSelectedOptionsDisplayProps<V extends TFilterValue> = {

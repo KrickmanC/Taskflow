@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -7,16 +7,16 @@
 import React from "react";
 import { observer } from "mobx-react";
 
-import { useTranslation } from "@plane/i18n";
-import { PlusIcon } from "@plane/propel/icons";
-// plane imports
-import type { TIssueServiceType } from "@plane/types";
-import { CustomMenu } from "@plane/ui";
+import { useTranslation } from "@taskflow/i18n";
+import { PlusIcon } from "@taskflow/propel/icons";
+// taskflow imports
+import type { TIssueServiceType } from "@taskflow/types";
+import { CustomMenu } from "@taskflow/ui";
 // hooks
 import { useIssueDetail } from "@/hooks/store/use-issue-detail";
-// Plane-web
-import { useTimeLineRelationOptions } from "@/plane-web/components/relations";
-import type { TIssueRelationTypes } from "@/plane-web/types";
+// Taskflow-web
+import { useTimeLineRelationOptions } from "@/taskflow-web/components/relations";
+import type { TIssueRelationTypes } from "@/taskflow-web/types";
 
 type Props = {
   issueId: string;

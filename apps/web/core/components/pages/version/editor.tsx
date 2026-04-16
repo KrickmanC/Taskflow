@@ -1,23 +1,23 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { observer } from "mobx-react";
 import { useParams } from "next/navigation";
-// plane imports
-import type { TDisplayConfig } from "@plane/editor";
-import type { JSONContent, TPageVersion } from "@plane/types";
-import { Loader } from "@plane/ui";
-import { isJSONContentEmpty } from "@plane/utils";
+// taskflow imports
+import type { TDisplayConfig } from "@taskflow/editor";
+import type { JSONContent, TPageVersion } from "@taskflow/types";
+import { Loader } from "@taskflow/ui";
+import { isJSONContentEmpty } from "@taskflow/utils";
 // components
 import { DocumentEditor } from "@/components/editor/document/editor";
 // hooks
 import { useWorkspace } from "@/hooks/store/use-workspace";
 import { usePageFilters } from "@/hooks/use-page-filters";
-// plane web hooks
-import type { EPageStoreType } from "@/plane-web/hooks/store";
+// taskflow web hooks
+import type { EPageStoreType } from "@/taskflow-web/hooks/store";
 
 export type TVersionEditorProps = {
   activeVersion: string | null;

@@ -1,14 +1,14 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { useMemo, useCallback } from "react";
-// plane imports
-import { EUserPermissions, EUserPermissionsLevel } from "@plane/constants";
-import { CycleIcon, IntakeIcon, ModuleIcon, PageIcon, ViewsIcon, WorkItemsIcon } from "@plane/propel/icons";
-import type { EUserProjectRoles, IPartialProject } from "@plane/types";
+// taskflow imports
+import { EUserPermissions, EUserPermissionsLevel } from "@taskflow/constants";
+import { CycleIcon, IntakeIcon, ModuleIcon, PageIcon, ViewsIcon, WorkItemsIcon } from "@taskflow/propel/icons";
+import type { EUserProjectRoles, IPartialProject } from "@taskflow/types";
 import type { TNavigationItem } from "@/components/navigation/tab-navigation-root";
 
 type UseNavigationItemsProps = {

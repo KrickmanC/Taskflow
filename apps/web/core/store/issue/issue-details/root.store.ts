@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -15,15 +15,15 @@ import type {
   TIssueReaction,
   TIssueServiceType,
   TWorkItemWidgets,
-} from "@plane/types";
-// plane web store
-import { IssueActivityStore } from "@/plane-web/store/issue/issue-details/activity.store";
+} from "@taskflow/types";
+// taskflow web store
+import { IssueActivityStore } from "@/taskflow-web/store/issue/issue-details/activity.store";
 import type {
   IIssueActivityStore,
   IIssueActivityStoreActions,
   TActivityLoader,
-} from "@/plane-web/store/issue/issue-details/activity.store";
-import type { TIssueRelationTypes } from "@/plane-web/types";
+} from "@/taskflow-web/store/issue/issue-details/activity.store";
+import type { TIssueRelationTypes } from "@/taskflow-web/types";
 import type { IIssueRootStore } from "../root.store";
 import { IssueAttachmentStore } from "./attachment.store";
 import type { IIssueAttachmentStore, IIssueAttachmentStoreActions } from "./attachment.store";

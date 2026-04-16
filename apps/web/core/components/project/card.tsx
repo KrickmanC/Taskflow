@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -9,18 +9,18 @@ import { observer } from "mobx-react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { ArchiveRestoreIcon, Settings, UserPlus } from "lucide-react";
-// plane imports
-import { EUserPermissions, EUserPermissionsLevel, IS_FAVORITE_MENU_OPEN } from "@plane/constants";
-import { useLocalStorage } from "@plane/hooks";
-import { Button } from "@plane/propel/button";
-import { Logo } from "@plane/propel/emoji-icon-picker";
-import { LinkIcon, LockIcon, NewTabIcon, TrashIcon, CheckIcon } from "@plane/propel/icons";
-import { setPromiseToast, setToast, TOAST_TYPE } from "@plane/propel/toast";
-import { Tooltip } from "@plane/propel/tooltip";
-import type { IProject } from "@plane/types";
-import type { TContextMenuItem } from "@plane/ui";
-import { Avatar, AvatarGroup, ContextMenu, FavoriteStar } from "@plane/ui";
-import { copyUrlToClipboard, cn, getFileURL, renderFormattedDate } from "@plane/utils";
+// taskflow imports
+import { EUserPermissions, EUserPermissionsLevel, IS_FAVORITE_MENU_OPEN } from "@taskflow/constants";
+import { useLocalStorage } from "@taskflow/hooks";
+import { Button } from "@taskflow/propel/button";
+import { Logo } from "@taskflow/propel/emoji-icon-picker";
+import { LinkIcon, LockIcon, NewTabIcon, TrashIcon, CheckIcon } from "@taskflow/propel/icons";
+import { setPromiseToast, setToast, TOAST_TYPE } from "@taskflow/propel/toast";
+import { Tooltip } from "@taskflow/propel/tooltip";
+import type { IProject } from "@taskflow/types";
+import type { TContextMenuItem } from "@taskflow/ui";
+import { Avatar, AvatarGroup, ContextMenu, FavoriteStar } from "@taskflow/ui";
+import { copyUrlToClipboard, cn, getFileURL, renderFormattedDate } from "@taskflow/utils";
 // components
 // hooks
 import { useMember } from "@/hooks/store/use-member";

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -8,12 +8,12 @@ import { useState, useEffect } from "react";
 import { observer } from "mobx-react";
 import { useRouter } from "next/navigation";
 import { LogOut, Settings, Settings2 } from "lucide-react";
-// plane imports
-import { GOD_MODE_URL } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import { Avatar, CustomMenu } from "@plane/ui";
-import { getFileURL } from "@plane/utils";
+// taskflow imports
+import { GOD_MODE_URL } from "@taskflow/constants";
+import { useTranslation } from "@taskflow/i18n";
+import { TOAST_TYPE, setToast } from "@taskflow/propel/toast";
+import { Avatar, CustomMenu } from "@taskflow/ui";
+import { getFileURL } from "@taskflow/utils";
 // components
 import { CoverImage } from "@/components/common/cover-image";
 import { AppSidebarItem } from "@/components/sidebar/sidebar-item";

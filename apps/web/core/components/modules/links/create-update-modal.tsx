@@ -1,17 +1,17 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { useEffect } from "react";
 import { Controller, useForm } from "react-hook-form";
-// plane types
-import { Button } from "@plane/propel/button";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import type { ILinkDetails, ModuleLink } from "@plane/types";
-// plane ui
-import { Input, ModalCore } from "@plane/ui";
+// taskflow types
+import { Button } from "@taskflow/propel/button";
+import { TOAST_TYPE, setToast } from "@taskflow/propel/toast";
+import type { ILinkDetails, ModuleLink } from "@taskflow/types";
+// taskflow ui
+import { Input, ModalCore } from "@taskflow/ui";
 
 type Props = {
   createLink: (formData: ModuleLink) => Promise<void>;

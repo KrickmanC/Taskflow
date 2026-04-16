@@ -1,14 +1,14 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
-// plane imports
-import type { TIssuePriorities } from "@plane/constants";
-import { ISSUE_PRIORITIES } from "@plane/constants";
-import type { TFilterProperty, TSupportedOperators } from "@plane/types";
-import { EQUALITY_OPERATOR, COLLECTION_OPERATOR } from "@plane/types";
+// taskflow imports
+import type { TIssuePriorities } from "@taskflow/constants";
+import { ISSUE_PRIORITIES } from "@taskflow/constants";
+import type { TFilterProperty, TSupportedOperators } from "@taskflow/types";
+import { EQUALITY_OPERATOR, COLLECTION_OPERATOR } from "@taskflow/types";
 // local imports
 import type { TCreateFilterConfigParams, IFilterIconConfig, TCreateFilterConfig } from "../../../rich-filters";
 import { createFilterConfig, getMultiSelectConfig, createOperatorConfigEntry } from "../../../rich-filters";

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -10,16 +10,16 @@ import { observer } from "mobx-react";
 import { useParams, usePathname, useSearchParams } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { Eye, ArrowRight, CalendarDays } from "lucide-react";
-// plane imports
-import { EUserPermissions, EUserPermissionsLevel, IS_FAVORITE_MENU_OPEN } from "@plane/constants";
-import { useLocalStorage } from "@plane/hooks";
-import { useTranslation } from "@plane/i18n";
-import { TransferIcon, WorkItemsIcon, MembersPropertyIcon } from "@plane/propel/icons";
-import { setPromiseToast } from "@plane/propel/toast";
-import { Tooltip } from "@plane/propel/tooltip";
-import type { ICycle, TCycleGroups } from "@plane/types";
-import { Avatar, AvatarGroup, FavoriteStar } from "@plane/ui";
-import { getDate, getFileURL, generateQueryParams } from "@plane/utils";
+// taskflow imports
+import { EUserPermissions, EUserPermissionsLevel, IS_FAVORITE_MENU_OPEN } from "@taskflow/constants";
+import { useLocalStorage } from "@taskflow/hooks";
+import { useTranslation } from "@taskflow/i18n";
+import { TransferIcon, WorkItemsIcon, MembersPropertyIcon } from "@taskflow/propel/icons";
+import { setPromiseToast } from "@taskflow/propel/toast";
+import { Tooltip } from "@taskflow/propel/tooltip";
+import type { ICycle, TCycleGroups } from "@taskflow/types";
+import { Avatar, AvatarGroup, FavoriteStar } from "@taskflow/ui";
+import { getDate, getFileURL, generateQueryParams } from "@taskflow/utils";
 // components
 import { DateRangeDropdown } from "@/components/dropdowns/date-range";
 import { ButtonAvatars } from "@/components/dropdowns/member/avatar";
@@ -31,8 +31,8 @@ import { useUserPermissions } from "@/hooks/store/user";
 import { useAppRouter } from "@/hooks/use-app-router";
 import { usePlatformOS } from "@/hooks/use-platform-os";
 import { useTimeZoneConverter } from "@/hooks/use-timezone-converter";
-// plane web components
-import { CycleAdditionalActions } from "@/plane-web/components/cycles";
+// taskflow web components
+import { CycleAdditionalActions } from "@/taskflow-web/components/cycles";
 // local imports
 import { CycleQuickActions } from "../quick-actions";
 import { TransferIssuesModal } from "../transfer-issues-modal";

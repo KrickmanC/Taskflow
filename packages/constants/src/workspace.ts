@@ -1,11 +1,11 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
-import type { TStaticViewTypes, IWorkspaceSearchResults } from "@plane/types";
-import { EUserWorkspaceRoles } from "@plane/types";
+import type { TStaticViewTypes, IWorkspaceSearchResults } from "@taskflow/types";
+import { EUserWorkspaceRoles } from "@taskflow/types";
 
 export const ORGANIZATION_SIZE: string[] = ["Just myself", "2-10", "11-50", "51-200", "201-500", "500+"];
 
@@ -26,10 +26,10 @@ export const RESTRICTED_URLS: string[] = [
   "monitor",
   "monitoring",
   "ingest",
-  "plane-pro",
-  "plane-ultimate",
+  "taskflow-pro",
+  "taskflow-ultimate",
   "enterprise",
-  "plane-enterprise",
+  "taskflow-enterprise",
   "disco",
   "silo",
   "chat",

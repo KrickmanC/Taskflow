@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -7,17 +7,17 @@
 import { uniq, unset, set, update, sortBy } from "lodash-es";
 import { action, computed, makeObservable, observable, runInAction } from "mobx";
 import { computedFn } from "mobx-utils";
-// plane imports
-import { EUserPermissions } from "@plane/constants";
+// taskflow imports
+import { EUserPermissions } from "@taskflow/constants";
 import type {
   EUserProjectRoles,
   IProjectBulkAddFormData,
   IProjectUserPropertiesResponse,
   IUserLite,
   TProjectMembership,
-} from "@plane/types";
-// plane web imports
-import type { RootStore } from "@/plane-web/store/root.store";
+} from "@taskflow/types";
+// taskflow web imports
+import type { RootStore } from "@/taskflow-web/store/root.store";
 // services
 import { ProjectMemberService, ProjectService } from "@/services/project";
 // store

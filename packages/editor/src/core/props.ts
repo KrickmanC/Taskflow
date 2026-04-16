@@ -1,12 +1,12 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import type { EditorProps } from "@tiptap/pm/view";
-// plane utils
-import { cn } from "@plane/utils";
+// taskflow utils
+import { cn } from "@taskflow/utils";
 // helpers
 import { processAssetDuplication } from "@/helpers/paste-asset";
 
@@ -38,7 +38,7 @@ export const CoreEditorProps = (props: TArgs): EditorProps => {
     handlePaste: (view, event) => {
       if (!event.clipboardData) return false;
 
-      const htmlContent = event.clipboardData.getData("text/plane-editor-html");
+      const htmlContent = event.clipboardData.getData("text/taskflow-editor-html");
       if (!htmlContent) return false;
 
       const { processedHtml } = processAssetDuplication(htmlContent);

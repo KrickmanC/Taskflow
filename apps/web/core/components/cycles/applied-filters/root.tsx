@@ -1,17 +1,17 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { observer } from "mobx-react";
-// plane imports
-import { EUserPermissions, EUserPermissionsLevel } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { CloseIcon } from "@plane/propel/icons";
-import type { TCycleFilters } from "@plane/types";
-import { Tag } from "@plane/ui";
-import { replaceUnderscoreIfSnakeCase } from "@plane/utils";
+// taskflow imports
+import { EUserPermissions, EUserPermissionsLevel } from "@taskflow/constants";
+import { useTranslation } from "@taskflow/i18n";
+import { CloseIcon } from "@taskflow/propel/icons";
+import type { TCycleFilters } from "@taskflow/types";
+import { Tag } from "@taskflow/ui";
+import { replaceUnderscoreIfSnakeCase } from "@taskflow/utils";
 // hooks
 import { useUserPermissions } from "@/hooks/store/user";
 // local imports

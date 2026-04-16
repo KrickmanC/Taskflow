@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -8,13 +8,13 @@ import { useState } from "react";
 import { observer } from "mobx-react";
 import { MoreHorizontal } from "lucide-react";
 // ui
-import { EUserPermissions, EUserPermissionsLevel } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { IconButton } from "@plane/propel/icon-button";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import type { TContextMenuItem } from "@plane/ui";
-import { ContextMenu, CustomMenu } from "@plane/ui";
-import { copyUrlToClipboard, cn } from "@plane/utils";
+import { EUserPermissions, EUserPermissionsLevel } from "@taskflow/constants";
+import { useTranslation } from "@taskflow/i18n";
+import { IconButton } from "@taskflow/propel/icon-button";
+import { TOAST_TYPE, setToast } from "@taskflow/propel/toast";
+import type { TContextMenuItem } from "@taskflow/ui";
+import { ContextMenu, CustomMenu } from "@taskflow/ui";
+import { copyUrlToClipboard, cn } from "@taskflow/utils";
 // hooks
 import { useCycleMenuItems } from "@/components/common/quick-actions-helper";
 import { useCycle } from "@/hooks/store/use-cycle";

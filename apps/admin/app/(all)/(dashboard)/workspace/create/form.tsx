@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
@@ -8,15 +8,15 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Controller, useForm } from "react-hook-form";
-// plane imports
-import { WEB_BASE_URL, ORGANIZATION_SIZE, RESTRICTED_URLS } from "@plane/constants";
-import { Button, getButtonStyling } from "@plane/propel/button";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import { InstanceWorkspaceService } from "@plane/services";
-import type { IWorkspace } from "@plane/types";
-import { validateSlug, validateWorkspaceName } from "@plane/utils";
+// taskflow imports
+import { WEB_BASE_URL, ORGANIZATION_SIZE, RESTRICTED_URLS } from "@taskflow/constants";
+import { Button, getButtonStyling } from "@taskflow/propel/button";
+import { TOAST_TYPE, setToast } from "@taskflow/propel/toast";
+import { InstanceWorkspaceService } from "@taskflow/services";
+import type { IWorkspace } from "@taskflow/types";
+import { validateSlug, validateWorkspaceName } from "@taskflow/utils";
 // components
-import { CustomSelect, Input } from "@plane/ui";
+import { CustomSelect, Input } from "@taskflow/ui";
 // hooks
 import { useWorkspace } from "@/hooks/store";
 

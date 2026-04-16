@@ -1,13 +1,13 @@
 /**
- * Copyright (c) 2023-present Plane Software, Inc. and contributors
+ * Copyright (c) 2023-present Taskflow Software, Inc. and contributors
  * SPDX-License-Identifier: AGPL-3.0-only
  * See the LICENSE file for details.
  */
 
 import { useCallback, useMemo } from "react";
 import { AtSign, Briefcase } from "lucide-react";
-// plane imports
-import { Logo } from "@plane/propel/emoji-icon-picker";
+// taskflow imports
+import { Logo } from "@taskflow/propel/emoji-icon-picker";
 import {
   CalendarLayoutIcon,
   CycleGroupIcon,
@@ -22,7 +22,7 @@ import {
   DueDatePropertyIcon,
   UserCirclePropertyIcon,
   PriorityPropertyIcon,
-} from "@plane/propel/icons";
+} from "@taskflow/propel/icons";
 import type {
   ICycle,
   IState,
@@ -32,8 +32,8 @@ import type {
   IModule,
   IProject,
   TWorkItemFilterProperty,
-} from "@plane/types";
-import { Avatar } from "@plane/ui";
+} from "@taskflow/types";
+import { Avatar } from "@taskflow/ui";
 import {
   getAssigneeFilterConfig,
   getCreatedAtFilterConfig,
@@ -52,7 +52,7 @@ import {
   getTargetDateFilterConfig,
   getUpdatedAtFilterConfig,
   isLoaderReady,
-} from "@plane/utils";
+} from "@taskflow/utils";
 // store hooks
 import { useCycle } from "@/hooks/store/use-cycle";
 import { useLabel } from "@/hooks/store/use-label";
@@ -60,8 +60,8 @@ import { useMember } from "@/hooks/store/use-member";
 import { useModule } from "@/hooks/store/use-module";
 import { useProject } from "@/hooks/store/use-project";
 import { useProjectState } from "@/hooks/store/use-project-state";
-// plane web imports
-import { useFiltersOperatorConfigs } from "@/plane-web/hooks/rich-filters/use-filters-operator-configs";
+// taskflow web imports
+import { useFiltersOperatorConfigs } from "@/taskflow-web/hooks/rich-filters/use-filters-operator-configs";
 
 export type TWorkItemFiltersEntityProps = {
   workspaceSlug: string;
