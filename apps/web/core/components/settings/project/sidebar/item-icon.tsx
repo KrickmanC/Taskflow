@@ -5,7 +5,7 @@
  */
 
 import type { LucideIcon } from "lucide-react";
-import { Users, Zap } from "lucide-react";
+import { SlidersHorizontal, Users, Zap } from "lucide-react";
 // taskflow imports
 import type { ISvgIcons } from "@taskflow/propel/icons";
 import {
@@ -33,5 +33,6 @@ export const PROJECT_SETTINGS_ICONS: Record<TProjectSettingsTabs, LucideIcon | R
   states: StatePropertyIcon,
   labels: LabelPropertyIcon,
   estimates: EstimatePropertyIcon,
+  parameters: SlidersHorizontal,
   automations: Zap,
 };

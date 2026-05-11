@@ -7,9 +7,9 @@
   "scripts": {
     "dev": "react-router dev --port 3002",
     "build": "react-router build",
-    "preview": "react-router build && PORT=3002 react-router-serve ./build/server/index.js",
-    "start": "PORT=3002 react-router-serve ./build/server/index.js",
-    "clean": "rm -rf .turbo && rm -rf .next && rm -rf .react-router && rm -rf node_modules && rm -rf dist && rm -rf build",
+    "preview": "react-router build && cross-env PORT=3002 react-router-serve ./build/server/index.js",
+    "start": "cross-env PORT=3002 react-router-serve ./build/server/index.js",
+    "clean": "rimraf .turbo .next .react-router node_modules dist build",
     "check:lint": "oxlint --max-warnings=676 .",
     "check:types": "react-router typegen && tsc --noEmit",
     "check:format": "oxfmt --check .",

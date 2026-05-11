@@ -1,0 +1,16 @@
+[Unit]
+Description=Taskflow MinIO S3 Storage
+After=network.target
+
+[Service]
+Type=simple
+User=taskflow
+Group=taskflow
+EnvironmentFile=/etc/taskflow/minio.env
+ExecStart=/opt/taskflow/bin/minio server $MINIO_VOLUMES $MINIO_OPTS
+Restart=always
+RestartSec=5
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target

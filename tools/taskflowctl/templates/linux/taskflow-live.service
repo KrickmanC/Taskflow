@@ -1,0 +1,19 @@
+[Unit]
+Description=Taskflow Live Collaboration Server
+After=redis-server.service taskflow-api.service
+Requires=redis-server.service taskflow-api.service
+
+[Service]
+Type=simple
+User=taskflow
+Group=taskflow
+WorkingDirectory=/opt/taskflow/repo/apps/live
+EnvironmentFile=/etc/taskflow/live.env
+ExecStart=/usr/bin/pnpm start
+Restart=always
+RestartSec=5
+StandardOutput=append:/var/log/taskflow/live.log
+StandardError=append:/var/log/taskflow/live.err.log
+
+[Install]
+WantedBy=multi-user.target

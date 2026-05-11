@@ -1,0 +1,13 @@
+<service>
+  <id>taskflow-redis</id>
+  <name>Taskflow Redis</name>
+  <description>Taskflow bundled Redis-compatible cache service</description>
+
+  <workingdirectory>C:\Program Files\Taskflow\redis</workingdirectory>
+  <executable>C:\Program Files\Taskflow\redis\redis-server.exe</executable>
+  <arguments>--bind 127.0.0.1 --port 6379</arguments>
+
+  <logpath>C:\ProgramData\Taskflow\logs</logpath>
+  <log mode="roll"/>
+  <onfailure action="restart" delay="5 sec"/>
+</service>

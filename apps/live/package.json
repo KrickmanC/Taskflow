@@ -24,7 +24,7 @@
     "check:format": "oxfmt --check .",
     "fix:lint": "oxlint --fix .",
     "fix:format": "oxfmt .",
-    "clean": "rm -rf .turbo && rm -rf .next && rm -rf node_modules && rm -rf dist"
+    "clean": "rimraf .turbo .next node_modules dist"
   },
   "dependencies": {
     "@effect/platform": "^0.94.0",

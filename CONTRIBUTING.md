@@ -36,9 +36,9 @@ This helps us triage and manage issues more efficiently.
 
 ### Requirements
 
-- Docker Engine installed and running
-- Node.js version 20+ [LTS version](https://nodejs.org/en/about/previous-releases)
-- Python version 3.8+
+- Docker Engine installed and running for Docker-based local development
+- Node.js version 22.18.0+ for native installer work
+- Python version 3.12 recommended for native installer work
 - Postgres version v14
 - Redis version v6.2.7
 - **Memory**: Minimum **12 GB RAM** recommended
@@ -63,6 +63,14 @@ chmod +x setup.sh
 ```bash
 ./setup.sh
 ```
+
+For Docker-free native setup, use:
+
+```bash
+./setup.sh --native
+```
+
+Then start PostgreSQL, Redis, RabbitMQ and MinIO natively, run `python3 tools/taskflowctl/taskflowctl.py migrate`, and follow [docs/native-install-overview.md](./docs/native-install-overview.md).
 
 3. Start the containers
 

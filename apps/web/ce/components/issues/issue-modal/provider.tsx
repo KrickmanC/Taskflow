@@ -4,14 +4,21 @@
  * See the LICENSE file for details.
  */
 
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { observer } from "mobx-react";
 // taskflow imports
-import type { ISearchIssueResponse, TIssue } from "@taskflow/types";
+import type {
+  ISearchIssueResponse,
+  TIssue,
+  TIssueTaskParameterValuePayload,
+  TProjectTaskParameterValue,
+} from "@taskflow/types";
 // components
 import { IssueModalContext } from "@/components/issues/issue-modal/context";
 // hooks
 import { useUser } from "@/hooks/store/user/user-user";
+// services
+import { IssueService } from "@/services/issue";
 
 export type TIssueModalProviderProps = {
   templateId?: string;
@@ -24,10 +31,20 @@ export const IssueModalProvider = observer(function IssueModalProvider(props: TI
   const { children, allowedProjectIds } = props;
   // states
   const [selectedParentIssue, setSelectedParentIssue] = useState<ISearchIssueResponse | null>(null);
+  const [issuePropertyValues, setIssuePropertyValues] = useState<Record<string, TProjectTaskParameterValue>>({});
+  const [issuePropertyValueErrors, setIssuePropertyValueErrors] = useState<Record<string, string>>({});
   // store hooks
   const { projectsWithCreatePermissions } = useUser();
+  // services
+  const issueService = useMemo(() => new IssueService(), []);
   // derived values
   const projectIdsWithCreatePermissions = Object.keys(projectsWithCreatePermissions ?? {});
+
+  const getParameterPayload = (): TIssueTaskParameterValuePayload[] =>
+    Object.entries(issuePropertyValues).map(([parameterId, value]) => ({
+      parameter_id: parameterId,
+      value,
+    }));
 
   return (
     <IssueModalContext.Provider
@@ -39,14 +56,19 @@ export const IssueModalProvider = observer(function IssueModalProvider(props: TI
         setIsApplyingTemplate: () => {},
         selectedParentIssue,
         setSelectedParentIssue,
-        issuePropertyValues: {},
-        setIssuePropertyValues: () => {},
-        issuePropertyValueErrors: {},
-        setIssuePropertyValueErrors: () => {},
+        issuePropertyValues,
+        setIssuePropertyValues,
+        issuePropertyValueErrors,
+        setIssuePropertyValueErrors,
         getIssueTypeIdOnProjectChange: () => null,
-        getActiveAdditionalPropertiesLength: () => 0,
-        handlePropertyValuesValidation: () => true,
-        handleCreateUpdatePropertyValues: () => Promise.resolve(),
+        getActiveAdditionalPropertiesLength: () => Object.keys(issuePropertyValues).length,
+        handlePropertyValuesValidation: () => Object.keys(issuePropertyValueErrors).length === 0,
+        handleCreateUpdatePropertyValues: async ({ issueId, projectId, workspaceSlug, isDraft }) => {
+          if (isDraft) return;
+          const payload = getParameterPayload();
+          if (payload.length === 0) return;
+          await issueService.updateIssueParameterValues(workspaceSlug, projectId, issueId, payload);
+        },
         handleProjectEntitiesFetch: () => Promise.resolve(),
         handleTemplateChange: () => Promise.resolve(),
         handleConvert: () => Promise.resolve(),

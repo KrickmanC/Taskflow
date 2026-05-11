@@ -59,6 +59,7 @@ from .project import (
     ProjectPublicMember,
     ProjectUserProperty,
 )
+from .project_parameter import IssueTaskParameterValue, ProjectTaskParameter, ProjectTaskParameterType
 from .session import Session
 from .social_connection import SocialLoginConnection
 from .state import State, StateGroup, DEFAULT_STATES

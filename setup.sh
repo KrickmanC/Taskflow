@@ -18,6 +18,19 @@ echo -e "${BOLD}${BLUE}                   Taskflow - Project Management Tool    
 echo -e "${BOLD}${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e "${BOLD}Setting up your development environment...${NC}\n"
 
+if [ "${1:-}" = "--native" ]; then
+    echo -e "${YELLOW}Setting up native environment files...${NC}"
+    python3 tools/taskflowctl/taskflowctl.py init-env
+    corepack enable pnpm
+    pnpm install
+    echo -e "${GREEN}✓${NC} Native environment setup completed."
+    echo -e "Next steps:"
+    echo -e "1. Start PostgreSQL, Redis, RabbitMQ and MinIO natively"
+    echo -e "2. Run: python3 tools/taskflowctl/taskflowctl.py migrate"
+    echo -e "3. Run the native app processes from docs/native-install-overview.md"
+    exit 0
+fi
+
 # Function to handle file copying with error checking
 copy_env_file() {
     local source=$1

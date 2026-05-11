@@ -31,6 +31,7 @@ from taskflow.app.views import (
     WorkItemDescriptionVersionEndpoint,
     IssueMetaEndpoint,
     IssueDetailIdentifierEndpoint,
+    IssueTaskParameterValueEndpoint,
 )
 
 urlpatterns = [
@@ -67,6 +68,11 @@ urlpatterns = [
             }
         ),
         name="project-issue",
+    ),
+    path(
+        "workspaces/<str:slug>/projects/<uuid:project_id>/issues/<uuid:issue_id>/parameter-values/",
+        IssueTaskParameterValueEndpoint.as_view(),
+        name="issue-task-parameter-values",
     ),
     path(
         "workspaces/<str:slug>/projects/<uuid:project_id>/issue-labels/",

@@ -123,6 +123,7 @@ export const IssueFormRoot = observer(function IssueFormRoot(props: IssueFormPro
     selectedParentIssue,
     setWorkItemTemplateId,
     setSelectedParentIssue,
+    issuePropertyValues,
     getIssueTypeIdOnProjectChange,
     getActiveAdditionalPropertiesLength,
     handlePropertyValuesValidation,
@@ -238,6 +239,11 @@ export const IssueFormRoot = observer(function IssueFormRoot(props: IssueFormPro
     )
       return;
 
+    const parameterValues = Object.entries(issuePropertyValues).map(([parameterId, value]) => ({
+      parameter_id: parameterId,
+      value,
+    }));
+
     const submitData = !data?.id
       ? formData
       : {
@@ -247,6 +253,8 @@ export const IssueFormRoot = observer(function IssueFormRoot(props: IssueFormPro
           description_html: formData.description_html ?? "<p></p>",
           type_id: getValues<"type_id">("type_id"),
         };
+
+    if (parameterValues.length > 0) submitData.parameter_values = parameterValues;
 
     // this condition helps to move the issues from draft to project issues
     if (formData.hasOwnProperty("is_draft")) submitData.is_draft = formData.is_draft;

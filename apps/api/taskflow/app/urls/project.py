@@ -18,6 +18,7 @@ from taskflow.app.views import (
     UserProjectRolesEndpoint,
     ProjectArchiveUnarchiveEndpoint,
     ProjectMemberPreferenceEndpoint,
+    ProjectTaskParameterViewSet,
 )
 
 
@@ -98,6 +99,16 @@ urlpatterns = [
         "workspaces/<str:slug>/projects/<uuid:project_id>/project-members/me/",
         ProjectMemberUserEndpoint.as_view(),
         name="project-member-view",
+    ),
+    path(
+        "workspaces/<str:slug>/projects/<uuid:project_id>/parameters/",
+        ProjectTaskParameterViewSet.as_view({"get": "list", "post": "create"}),
+        name="project-task-parameters",
+    ),
+    path(
+        "workspaces/<str:slug>/projects/<uuid:project_id>/parameters/<uuid:pk>/",
+        ProjectTaskParameterViewSet.as_view({"get": "retrieve", "patch": "partial_update", "delete": "destroy"}),
+        name="project-task-parameters",
     ),
     path(
         "workspaces/<str:slug>/user-favorite-projects/",

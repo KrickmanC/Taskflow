@@ -1,0 +1,19 @@
+[Unit]
+Description=Taskflow Space UI
+After=taskflow-api.service
+Requires=taskflow-api.service
+
+[Service]
+Type=simple
+User=taskflow
+Group=taskflow
+WorkingDirectory=/opt/taskflow/repo/apps/space
+EnvironmentFile=/etc/taskflow/space.env
+ExecStart=/usr/bin/pnpm start
+Restart=always
+RestartSec=5
+StandardOutput=append:/var/log/taskflow/space.log
+StandardError=append:/var/log/taskflow/space.err.log
+
+[Install]
+WantedBy=multi-user.target

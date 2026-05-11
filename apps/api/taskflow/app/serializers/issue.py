@@ -17,6 +17,11 @@ from .user import UserLiteSerializer
 from .state import StateLiteSerializer
 from .project import ProjectLiteSerializer
 from .workspace import WorkspaceLiteSerializer
+from .project_parameter import (
+    IssueTaskParameterValueSerializer,
+    upsert_issue_parameter_values,
+    validate_issue_parameter_values,
+)
 from taskflow.db.models import (
     User,
     Issue,
@@ -97,6 +102,7 @@ class IssueCreateSerializer(BaseSerializer):
         write_only=True,
         required=False,
     )
+    parameter_values = serializers.ListField(child=serializers.DictField(), write_only=True, required=False)
     project_id = serializers.UUIDField(source="project.id", read_only=True)
     workspace_id = serializers.UUIDField(source="workspace.id", read_only=True)
 
@@ -193,11 +199,18 @@ class IssueCreateSerializer(BaseSerializer):
         ):
             raise serializers.ValidationError("Estimate point is not valid please pass a valid estimate_point_id")
 
+        if "parameter_values" in attrs:
+            attrs["parameter_values"] = validate_issue_parameter_values(
+                self.context.get("project_id"),
+                attrs.get("parameter_values"),
+            )
+
         return attrs
 
     def create(self, validated_data):
         assignees = validated_data.pop("assignee_ids", None)
         labels = validated_data.pop("label_ids", None)
+        parameter_values = validated_data.pop("parameter_values", None)
 
         project_id = self.context["project_id"]
         workspace_id = self.context["workspace_id"]
@@ -270,11 +283,14 @@ class IssueCreateSerializer(BaseSerializer):
             except IntegrityError:
                 pass
 
+        upsert_issue_parameter_values(issue=issue, parameter_values=parameter_values)
+
         return issue
 
     def update(self, instance, validated_data):
         assignees = validated_data.pop("assignee_ids", None)
         labels = validated_data.pop("label_ids", None)
+        parameter_values = validated_data.pop("parameter_values", None)
 
         # Related models
         project_id = instance.project_id
@@ -326,7 +342,9 @@ class IssueCreateSerializer(BaseSerializer):
 
         # Time updation occues even when other related models are updated
         instance.updated_at = timezone.now()
-        return super().update(instance, validated_data)
+        issue = super().update(instance, validated_data)
+        upsert_issue_parameter_values(issue=issue, parameter_values=parameter_values)
+        return issue
 
 
 class IssueActivitySerializer(BaseSerializer):
@@ -761,6 +779,7 @@ class IssueSerializer(DynamicBaseSerializer):
     # ids
     cycle_id = serializers.PrimaryKeyRelatedField(read_only=True)
     module_ids = serializers.ListField(child=serializers.UUIDField(), required=False)
+    parameter_values = serializers.SerializerMethodField()
 
     # Many to many
     label_ids = serializers.ListField(child=serializers.UUIDField(), required=False)
@@ -790,6 +809,7 @@ class IssueSerializer(DynamicBaseSerializer):
             "module_ids",
             "label_ids",
             "assignee_ids",
+            "parameter_values",
             "sub_issues_count",
             "created_at",
             "updated_at",
@@ -809,6 +829,12 @@ class IssueSerializer(DynamicBaseSerializer):
         ):
             raise serializers.ValidationError("State is not valid please pass a valid state_id")
         return data
+
+    def get_parameter_values(self, obj):
+        if not hasattr(obj, "task_parameter_values"):
+            return []
+        values = obj.task_parameter_values.select_related("parameter").all()
+        return IssueTaskParameterValueSerializer(values, many=True).data
 
 
 class IssueListDetailSerializer(serializers.Serializer):

@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+systemctl stop taskflow-space || true
+systemctl stop taskflow-admin || true
+systemctl stop taskflow-web || true
+systemctl stop taskflow-live || true
+systemctl stop taskflow-beat || true
+systemctl stop taskflow-worker || true
+systemctl stop taskflow-api || true
+systemctl stop taskflow-minio || true
+
+systemctl disable taskflow-space || true
+systemctl disable taskflow-admin || true
+systemctl disable taskflow-web || true
+systemctl disable taskflow-live || true
+systemctl disable taskflow-beat || true
+systemctl disable taskflow-worker || true
+systemctl disable taskflow-api || true
+systemctl disable taskflow-minio || true

@@ -42,6 +42,7 @@ Getting started with Taskflow is simple. Choose the setup that works best for yo
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Docker               | [![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)](https://developers.taskflow.so/self-hosting/methods/docker-compose)         |
 | Kubernetes           | [![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)](https://developers.taskflow.so/self-hosting/methods/kubernetes) |
+| Native Windows/Linux | [Native installer overview](./docs/native-install-overview.md)                                                                                                                          |
 
 `Instance admins` can configure instance settings with [God mode](https://developers.taskflow.so/self-hosting/govern/instance-admin).
 
@@ -68,6 +69,8 @@ Getting started with Taskflow is simple. Choose the setup that works best for yo
 ## 🛠️ Local development
 
 See [CONTRIBUTING](./CONTRIBUTING.md)
+
+For Docker-free local setup and installer packaging, see [Native install overview](./docs/native-install-overview.md), [Linux native install](./docs/native-install-linux.md), and [Windows native install](./docs/native-install-windows.md).
 
 ## ⚙️ Built with
 

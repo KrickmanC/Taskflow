@@ -1,0 +1,19 @@
+[Unit]
+Description=Taskflow Celery Beat
+After=taskflow-api.service rabbitmq-server.service redis-server.service
+Requires=rabbitmq-server.service redis-server.service
+
+[Service]
+Type=simple
+User=taskflow
+Group=taskflow
+WorkingDirectory=/opt/taskflow/repo/apps/api
+EnvironmentFile=/etc/taskflow/api.env
+ExecStart=/opt/taskflow/venv/bin/python /opt/taskflow/repo/apps/api/bin/native_beat_start.py
+Restart=always
+RestartSec=5
+StandardOutput=append:/var/log/taskflow/beat.log
+StandardError=append:/var/log/taskflow/beat.err.log
+
+[Install]
+WantedBy=multi-user.target

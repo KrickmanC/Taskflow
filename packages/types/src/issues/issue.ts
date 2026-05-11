@@ -5,6 +5,7 @@
  */
 
 import type { TIssuePriorities } from "../issues";
+import type { TIssueTaskParameterValue, TIssueTaskParameterValuePayload } from "../project";
 import type { TStateGroups } from "../state";
 import type { TIssuePublicComment } from "./activity/issue_comment";
 import type { TIssueAttachment } from "./issue_attachment";
@@ -96,6 +97,7 @@ export type TIssue = TBaseIssue & {
   issue_link?: TIssueLink[];
   issue_relation?: IssueRelation[];
   issue_related?: IssueRelation[];
+  parameter_values?: TIssueTaskParameterValue[] | TIssueTaskParameterValuePayload[];
   // tempId is used for optimistic updates. It is not a part of the API response.
   tempId?: string;
   // sourceIssueId is used to store the original issue id when creating a copy of an issue. Used in cloning property values. It is not a part of the API response.

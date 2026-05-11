@@ -1,0 +1,85 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+TASKFLOW_HOME="/opt/taskflow"
+TASKFLOW_REPO="/opt/taskflow/repo"
+TASKFLOW_VENV="/opt/taskflow/venv"
+
+chown -R taskflow:taskflow /opt/taskflow /var/lib/taskflow /var/log/taskflow
+
+mkdir -p "$TASKFLOW_HOME/bin"
+if [ ! -x "$TASKFLOW_HOME/bin/minio" ]; then
+  echo "[Taskflow] Installing MinIO binary"
+  curl -fsSL https://dl.min.io/server/minio/release/linux-amd64/minio -o "$TASKFLOW_HOME/bin/minio"
+  chmod 755 "$TASKFLOW_HOME/bin/minio"
+fi
+
+if ! command -v node >/dev/null 2>&1; then
+  echo "[Taskflow] Installing Node.js 22 from NodeSource"
+  curl -fsSL https://deb.nodesource.com/setup_22.x -o /tmp/taskflow-nodesource-setup.sh
+  bash /tmp/taskflow-nodesource-setup.sh
+  apt-get install -y nodejs
+  rm -f /tmp/taskflow-nodesource-setup.sh
+fi
+
+echo "[Taskflow] Enabling corepack"
+corepack enable || true
+
+echo "[Taskflow] Creating Python virtual environment"
+python3 -m venv "$TASKFLOW_VENV"
+
+echo "[Taskflow] Installing Python dependencies"
+cd "$TASKFLOW_REPO/apps/api"
+"$TASKFLOW_VENV/bin/pip" install --upgrade pip wheel setuptools
+"$TASKFLOW_VENV/bin/pip" install -r requirements/native.txt --compile --no-cache-dir
+
+echo "[Taskflow] Installing Node dependencies"
+cd "$TASKFLOW_REPO"
+pnpm install --frozen-lockfile
+
+echo "[Taskflow] Initializing environment"
+python3 "$TASKFLOW_REPO/tools/taskflowctl/taskflowctl.py" --system init-env
+ln -sf "$TASKFLOW_REPO/tools/taskflowctl/taskflowctl.py" /usr/local/bin/taskflowctl
+
+cp /etc/taskflow/.env "$TASKFLOW_REPO/.env"
+cp /etc/taskflow/api.env "$TASKFLOW_REPO/apps/api/.env"
+cp /etc/taskflow/web.env "$TASKFLOW_REPO/apps/web/.env"
+cp /etc/taskflow/admin.env "$TASKFLOW_REPO/apps/admin/.env"
+cp /etc/taskflow/space.env "$TASKFLOW_REPO/apps/space/.env"
+cp /etc/taskflow/live.env "$TASKFLOW_REPO/apps/live/.env"
+
+echo "[Taskflow] Building frontend"
+pnpm build
+
+echo "[Taskflow] Initializing PostgreSQL"
+python3 "$TASKFLOW_REPO/tools/taskflowctl/taskflowctl.py" --system db-init
+
+echo "[Taskflow] Initializing RabbitMQ"
+python3 "$TASKFLOW_REPO/tools/taskflowctl/taskflowctl.py" --system rabbitmq-init
+
+echo "[Taskflow] Installing systemd services"
+cp "$TASKFLOW_REPO/tools/taskflowctl/templates/linux/"*.service /etc/systemd/system/
+systemctl daemon-reload
+
+echo "[Taskflow] Starting dependencies"
+systemctl enable postgresql redis-server rabbitmq-server taskflow-minio
+systemctl start postgresql redis-server rabbitmq-server taskflow-minio
+
+echo "[Taskflow] Running migrations"
+python3 "$TASKFLOW_REPO/tools/taskflowctl/taskflowctl.py" --system migrate
+
+echo "[Taskflow] Initializing MinIO bucket"
+python3 "$TASKFLOW_REPO/tools/taskflowctl/taskflowctl.py" --system minio-init
+
+echo "[Taskflow] Enabling Taskflow services"
+systemctl enable taskflow-api taskflow-worker taskflow-beat taskflow-live taskflow-web taskflow-admin taskflow-space
+
+echo "[Taskflow] Starting Taskflow services"
+systemctl start taskflow-api taskflow-worker taskflow-beat taskflow-live taskflow-web taskflow-admin taskflow-space
+
+chmod 600 /etc/taskflow/*.env
+chown root:taskflow /etc/taskflow/*.env
+
+echo "[Taskflow] Installation completed."
+echo "Open: http://localhost:3001/god-mode/"
+echo "Then: http://localhost:3000/"

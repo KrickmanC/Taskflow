@@ -1,0 +1,15 @@
+<service>
+  <id>taskflow-web</id>
+  <name>Taskflow Web</name>
+  <description>Taskflow Web UI</description>
+
+  <workingdirectory>C:\Program Files\Taskflow\repo\apps\web</workingdirectory>
+  <executable>C:\Program Files\nodejs\pnpm.cmd</executable>
+  <arguments>start</arguments>
+
+  <env name="TASKFLOW_ENV_FILE" value="C:\ProgramData\Taskflow\web.env"/>
+
+  <logpath>C:\ProgramData\Taskflow\logs</logpath>
+  <log mode="roll"/>
+  <onfailure action="restart" delay="5 sec"/>
+</service>

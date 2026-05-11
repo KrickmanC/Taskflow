@@ -23,6 +23,7 @@ from .project.member import (
     UserProjectRolesEndpoint,
     ProjectMemberPreferenceEndpoint,
 )
+from .project.parameter import IssueTaskParameterValueEndpoint, ProjectTaskParameterViewSet
 
 from .user.base import (
     UserEndpoint,

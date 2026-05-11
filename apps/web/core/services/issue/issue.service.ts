@@ -14,6 +14,8 @@ import type {
   TIssue,
   TIssueActivity,
   TIssueLink,
+  TIssueTaskParameterValue,
+  TIssueTaskParameterValuePayload,
   TIssueServiceType,
   TIssuesResponse,
   TIssueSubIssues,
@@ -131,6 +133,38 @@ export class IssueService extends APIService {
       params: { issues: issueIds.join(",") },
     })
       .then(async (response) => response?.data)
+      .catch((error) => {
+        throw error?.response?.data;
+      });
+  }
+
+  async getIssueParameterValues(
+    workspaceSlug: string,
+    projectId: string,
+    issueId: string
+  ): Promise<TIssueTaskParameterValue[]> {
+    return this.get(
+      `/api/workspaces/${workspaceSlug}/projects/${projectId}/${this.serviceType}/${issueId}/parameter-values/`
+    )
+      .then((response) => response?.data)
+      .catch((error) => {
+        throw error?.response?.data;
+      });
+  }
+
+  async updateIssueParameterValues(
+    workspaceSlug: string,
+    projectId: string,
+    issueId: string,
+    parameterValues: TIssueTaskParameterValuePayload[]
+  ): Promise<TIssueTaskParameterValue[]> {
+    return this.patch(
+      `/api/workspaces/${workspaceSlug}/projects/${projectId}/${this.serviceType}/${issueId}/parameter-values/`,
+      {
+        parameter_values: parameterValues,
+      }
+    )
+      .then((response) => response?.data)
       .catch((error) => {
         throw error?.response?.data;
       });

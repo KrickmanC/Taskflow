@@ -1,0 +1,4 @@
+-r base.txt
+
+# Cross-platform production server option
+waitress==3.0.0

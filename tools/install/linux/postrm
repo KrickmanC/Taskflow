@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+if [ "${1:-}" = "purge" ]; then
+  rm -f /etc/systemd/system/taskflow-*.service
+  rm -f /usr/local/bin/taskflowctl
+  systemctl daemon-reload || true
+
+  rm -rf /opt/taskflow
+  rm -rf /etc/taskflow
+  rm -rf /var/lib/taskflow
+  rm -rf /var/log/taskflow
+
+  userdel taskflow || true
+fi
